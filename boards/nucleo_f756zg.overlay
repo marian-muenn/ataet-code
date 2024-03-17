@@ -1,0 +1,111 @@
+/* USE USART 3 FOR CONSOLE
+ * 
+ */
+/ { 
+    chosen {
+      zephyr,console = &usart3;
+      zephyr,shell-uart = &usart3;
+    };
+  };
+/ { 
+      zephyr,user {
+          modem-gpios = <&gpiod 7 GPIO_ACTIVE_HIGH> ;
+      };
+  };
+/*
+ * USE USART2 FOR GSM MODEM
+ */
+&usart2 {
+	status = "okay";
+	current-speed = <115200>;
+	gsm: gsm-modem {
+		compatible = "zephyr,gsm-ppp";
+	};
+};
+/*
+ * FOR ESP WFI
+ * &usart2 {
+ * compatible = "st,stm32-uart";
+ * status = "okay";
+ * current-speed = <115200>;
+ *   esp8266{
+ *       compatible = "espressif,esp-at";
+ *       external-reset;
+ *       label = "esp8266";
+ *       status = "okay";
+ *   };
+ * };
+*/
+&uart5 {
+  pinctrl-0 = <&uart5_tx_pc12 &uart5_rx_pd2>;
+  pinctrl-names = "default";
+  current-speed = <19200>;
+  status = "okay";
+};
+&usart6 {
+  pinctrl-0 = <&usart6_tx_pg14 &usart6_rx_pg9>;
+  pinctrl-names = "default";
+  current-speed = <19200>;
+  status = "okay";
+};
+&uart7 {
+  pinctrl-0 = <&uart7_tx_pe8 &uart7_rx_pe7>;
+  pinctrl-names = "default";
+  current-speed = <19700>;
+  status = "okay";
+};
+/*
+ * WITHOUT HSE
+ *&pll {
+ *  clocks = < &clk_hsi >;
+ *};
+ *&clk_hsi{
+ *status = "okay";
+ *};
+ *&clk_hse{
+ *  status = "disabled";
+ *};
+*/
+
+
+
+/ {
+  w1: w1 {
+    compatible = "zephyr,w1-gpio";
+    gpios = <&gpiof 13 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN)>;
+    ds18b20 {
+      compatible = "maxim,ds18b20";
+      family-code = <0x28>;
+      resolution = <12>;
+      status = "okay";
+    };
+  };
+};
+&spi1{
+  cs-gpios = <&gpiod 14 GPIO_ACTIVE_LOW>;
+  clock-frequency = <8000000>;
+  pinctrl-names = "default";
+  pinctrl-0 = <&spi1_miso_pa6 &spi1_sck_pa5 &spi1_mosi_pa7 >;
+  status = "disabled";
+};
+&spi3{
+  clock-frequency = <250000>;
+  cs-gpios = <&gpioa 4 GPIO_ACTIVE_LOW>;
+  pinctrl-0 = <&spi3_mosi_pb5 &spi3_miso_pb4 &spi3_sck_pb3>;
+  pinctrl-names = "default";
+  status="okay";
+  arducam: arducam_mega@0 {
+    spi-max-frequency = <8000000>;
+    compatible = "arducam,mega";
+    reg = <0x0>;
+  };
+};
+&rng {
+  compatible = "st,stm32-rng";
+  status = "okay";
+};
+&mac {
+  compatible = "st,stm32-ethernet";
+  status = "disabled";
+};
+
