@@ -1,0 +1,2280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Victron IOT: src/arducam_mega.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Victron IOT<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('arducam__mega_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Datenstrukturen</a> &#124;
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#typedef-members">Typdefinitionen</a> &#124;
+<a href="#enum-members">Aufzählungen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle"><div class="title">arducam_mega.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;zephyr/device.h&gt;</code><br />
+<code>#include &lt;zephyr/drivers/gpio.h&gt;</code><br />
+<code>#include &lt;zephyr/drivers/spi.h&gt;</code><br />
+</div>
+<p><a href="arducam__mega_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Datenstrukturen</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcamera__info.html">camera_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structarducam__mega__data.html">arducam_mega_data</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structarducam__mega__config.html">arducam_mega_config</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:adf232ea04c78a9e3ef3778799c9d796a" id="r_adf232ea04c78a9e3ef3778799c9d796a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf232ea04c78a9e3ef3778799c9d796a">ARDUCHIP_FRAMES</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:adf232ea04c78a9e3ef3778799c9d796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c224f04c33ed156d59b12eba2727cfb" id="r_a7c224f04c33ed156d59b12eba2727cfb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c224f04c33ed156d59b12eba2727cfb">ARDUCHIP_TEST1</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a7c224f04c33ed156d59b12eba2727cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6132301e0f6a940eaefbaba3180b6fe" id="r_af6132301e0f6a940eaefbaba3180b6fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6132301e0f6a940eaefbaba3180b6fe">ARDUCHIP_FIFO</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:af6132301e0f6a940eaefbaba3180b6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4fe1aaf814163616420b9871e41273d" id="r_ab4fe1aaf814163616420b9871e41273d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4fe1aaf814163616420b9871e41273d">ARDUCHIP_FIFO_2</a>&#160;&#160;&#160;0x07</td></tr>
+<tr class="separator:ab4fe1aaf814163616420b9871e41273d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8124b0eafee74eb0ed8673ec30eb4fd" id="r_ab8124b0eafee74eb0ed8673ec30eb4fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8124b0eafee74eb0ed8673ec30eb4fd">FIFO_CLEAR_MASK</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:ab8124b0eafee74eb0ed8673ec30eb4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1beabd8e1d6b83ee2a0de689791c50ea" id="r_a1beabd8e1d6b83ee2a0de689791c50ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1beabd8e1d6b83ee2a0de689791c50ea">FIFO_CLEAR_ID_MASK</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a1beabd8e1d6b83ee2a0de689791c50ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe0137398848bbb88d72da90f29936b" id="r_affe0137398848bbb88d72da90f29936b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affe0137398848bbb88d72da90f29936b">FIFO_START_MASK</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:affe0137398848bbb88d72da90f29936b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541c22ba6964a045778357c81a8d732c" id="r_a541c22ba6964a045778357c81a8d732c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a541c22ba6964a045778357c81a8d732c">FIFO_RDPTR_RST_MASK</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:a541c22ba6964a045778357c81a8d732c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad739c3e2a5a808f3c3d6f53e8e871d36" id="r_ad739c3e2a5a808f3c3d6f53e8e871d36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad739c3e2a5a808f3c3d6f53e8e871d36">FIFO_WRPTR_RST_MASK</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:ad739c3e2a5a808f3c3d6f53e8e871d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b2584c4cdd1fdaa27aa887a6496339" id="r_ae3b2584c4cdd1fdaa27aa887a6496339"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b2584c4cdd1fdaa27aa887a6496339">ARDUCHIP_TRIG</a>&#160;&#160;&#160;0x44</td></tr>
+<tr class="separator:ae3b2584c4cdd1fdaa27aa887a6496339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758ab82ae7e3a2b3cdd148e6260b58bf" id="r_a758ab82ae7e3a2b3cdd148e6260b58bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758ab82ae7e3a2b3cdd148e6260b58bf">VSYNC_MASK</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a758ab82ae7e3a2b3cdd148e6260b58bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e26042239c6acec576d9677b63d8e66" id="r_a2e26042239c6acec576d9677b63d8e66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e26042239c6acec576d9677b63d8e66">SHUTTER_MASK</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a2e26042239c6acec576d9677b63d8e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6045b59f0ca9ce215a0f694ce0c1a2" id="r_acb6045b59f0ca9ce215a0f694ce0c1a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb6045b59f0ca9ce215a0f694ce0c1a2">CAP_DONE_MASK</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:acb6045b59f0ca9ce215a0f694ce0c1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cbd6ea3b650346f753f1f866639687d" id="r_a3cbd6ea3b650346f753f1f866639687d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cbd6ea3b650346f753f1f866639687d">FIFO_SIZE1</a>&#160;&#160;&#160;0x45</td></tr>
+<tr class="separator:a3cbd6ea3b650346f753f1f866639687d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d1e04d10d7013b1a8bea1c0338e015" id="r_a48d1e04d10d7013b1a8bea1c0338e015"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48d1e04d10d7013b1a8bea1c0338e015">FIFO_SIZE2</a>&#160;&#160;&#160;0x46</td></tr>
+<tr class="separator:a48d1e04d10d7013b1a8bea1c0338e015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b1afd3673603f6d6062728675d08da" id="r_a71b1afd3673603f6d6062728675d08da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71b1afd3673603f6d6062728675d08da">FIFO_SIZE3</a>&#160;&#160;&#160;0x47</td></tr>
+<tr class="separator:a71b1afd3673603f6d6062728675d08da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b16bb8bcac0961f7b0a26e465b1dcd" id="r_aa5b16bb8bcac0961f7b0a26e465b1dcd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5b16bb8bcac0961f7b0a26e465b1dcd">BURST_FIFO_READ</a>&#160;&#160;&#160;0x3C</td></tr>
+<tr class="separator:aa5b16bb8bcac0961f7b0a26e465b1dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54506b20ccb1c48f6be74be2d5db063e" id="r_a54506b20ccb1c48f6be74be2d5db063e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54506b20ccb1c48f6be74be2d5db063e">SINGLE_FIFO_READ</a>&#160;&#160;&#160;0x3D</td></tr>
+<tr class="separator:a54506b20ccb1c48f6be74be2d5db063e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ad15f39ddac9a49d50809a899e951b" id="r_a47ad15f39ddac9a49d50809a899e951b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47ad15f39ddac9a49d50809a899e951b">BUF_MAX_LENGTH</a>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:a47ad15f39ddac9a49d50809a899e951b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17ac3bcf7e9f3ba9b18ebe4f02db00f" id="r_af17ac3bcf7e9f3ba9b18ebe4f02db00f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af17ac3bcf7e9f3ba9b18ebe4f02db00f">CAPRURE_MAX_NUM</a>&#160;&#160;&#160;0xff</td></tr>
+<tr class="separator:af17ac3bcf7e9f3ba9b18ebe4f02db00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff094b332ebbb47502e02d159aa6ff5f" id="r_aff094b332ebbb47502e02d159aa6ff5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff094b332ebbb47502e02d159aa6ff5f">CAM_REG_POWER_CONTROL</a>&#160;&#160;&#160;0X02</td></tr>
+<tr class="separator:aff094b332ebbb47502e02d159aa6ff5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62d2bb26fd5c141e6085ea5e6de1b67" id="r_ad62d2bb26fd5c141e6085ea5e6de1b67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad62d2bb26fd5c141e6085ea5e6de1b67">CAM_REG_SENSOR_RESET</a>&#160;&#160;&#160;0X07</td></tr>
+<tr class="separator:ad62d2bb26fd5c141e6085ea5e6de1b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0102f12eb2a1ee4d8d0890c14317a063" id="r_a0102f12eb2a1ee4d8d0890c14317a063"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0102f12eb2a1ee4d8d0890c14317a063">CAM_REG_FORMAT</a>&#160;&#160;&#160;0X20</td></tr>
+<tr class="separator:a0102f12eb2a1ee4d8d0890c14317a063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad721762755cd514f33d80fc9d0c29100" id="r_ad721762755cd514f33d80fc9d0c29100"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad721762755cd514f33d80fc9d0c29100">CAM_REG_CAPTURE_RESOLUTION</a>&#160;&#160;&#160;0X21</td></tr>
+<tr class="separator:ad721762755cd514f33d80fc9d0c29100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3086b712d32e1f6c6179f3c2e8b4d3d6" id="r_a3086b712d32e1f6c6179f3c2e8b4d3d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3086b712d32e1f6c6179f3c2e8b4d3d6">CAM_REG_BRIGHTNESS_CONTROL</a>&#160;&#160;&#160;0X22</td></tr>
+<tr class="separator:a3086b712d32e1f6c6179f3c2e8b4d3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e272ae590e53ab91b6ad73ed74bdb7c" id="r_a4e272ae590e53ab91b6ad73ed74bdb7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e272ae590e53ab91b6ad73ed74bdb7c">CAM_REG_CONTRAST_CONTROL</a>&#160;&#160;&#160;0X23</td></tr>
+<tr class="separator:a4e272ae590e53ab91b6ad73ed74bdb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069302b0dab4b0081720720b9c8edb45" id="r_a069302b0dab4b0081720720b9c8edb45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a069302b0dab4b0081720720b9c8edb45">CAM_REG_SATURATION_CONTROL</a>&#160;&#160;&#160;0X24</td></tr>
+<tr class="separator:a069302b0dab4b0081720720b9c8edb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57632709b0022f883994ade7f4983075" id="r_a57632709b0022f883994ade7f4983075"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57632709b0022f883994ade7f4983075">CAM_REG_EV_CONTROL</a>&#160;&#160;&#160;0X25</td></tr>
+<tr class="separator:a57632709b0022f883994ade7f4983075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c4c361759e417205c23c7c15003e69" id="r_a58c4c361759e417205c23c7c15003e69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58c4c361759e417205c23c7c15003e69">CAM_REG_WHILEBALANCE_MODE_CONTROL</a>&#160;&#160;&#160;0X26</td></tr>
+<tr class="separator:a58c4c361759e417205c23c7c15003e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b57b5ce79ec5c92f7b69c3367a1869" id="r_a58b57b5ce79ec5c92f7b69c3367a1869"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b57b5ce79ec5c92f7b69c3367a1869">CAM_REG_COLOR_EFFECT_CONTROL</a>&#160;&#160;&#160;0X27</td></tr>
+<tr class="separator:a58b57b5ce79ec5c92f7b69c3367a1869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bddf52778da199a2ae11179d49bd51a" id="r_a2bddf52778da199a2ae11179d49bd51a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bddf52778da199a2ae11179d49bd51a">CAM_REG_SHARPNESS_CONTROL</a>&#160;&#160;&#160;0X28</td></tr>
+<tr class="separator:a2bddf52778da199a2ae11179d49bd51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c57675c6d9c646cab2fdb4ede902efd" id="r_a8c57675c6d9c646cab2fdb4ede902efd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c57675c6d9c646cab2fdb4ede902efd">CAM_REG_AUTO_FOCUS_CONTROL</a>&#160;&#160;&#160;0X29</td></tr>
+<tr class="separator:a8c57675c6d9c646cab2fdb4ede902efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d74731909cff73cb7e0b5d87e87218e" id="r_a0d74731909cff73cb7e0b5d87e87218e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d74731909cff73cb7e0b5d87e87218e">CAM_REG_EXPOSURE_GAIN_WHILEBALANCE_CONTROL</a>&#160;&#160;&#160;0X2A</td></tr>
+<tr class="separator:a0d74731909cff73cb7e0b5d87e87218e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1737ccbd04c59056dc94291edd1e078" id="r_ae1737ccbd04c59056dc94291edd1e078"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1737ccbd04c59056dc94291edd1e078">CAM_REG_MANUAL_GAIN_BIT_9_8</a>&#160;&#160;&#160;0X2B</td></tr>
+<tr class="separator:ae1737ccbd04c59056dc94291edd1e078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae701768cc86281a2b49d8c39dbd58b91" id="r_ae701768cc86281a2b49d8c39dbd58b91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae701768cc86281a2b49d8c39dbd58b91">CAM_REG_MANUAL_GAIN_BIT_7_0</a>&#160;&#160;&#160;0X2C</td></tr>
+<tr class="separator:ae701768cc86281a2b49d8c39dbd58b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f36a6e9d805f26cd73d5cfd7d0b1a7a" id="r_a0f36a6e9d805f26cd73d5cfd7d0b1a7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f36a6e9d805f26cd73d5cfd7d0b1a7a">CAM_REG_MANUAL_EXPOSURE_BIT_19_16</a>&#160;&#160;&#160;0X2D</td></tr>
+<tr class="separator:a0f36a6e9d805f26cd73d5cfd7d0b1a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5abddabe00897005cf4451eca27972" id="r_ada5abddabe00897005cf4451eca27972"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada5abddabe00897005cf4451eca27972">CAM_REG_MANUAL_EXPOSURE_BIT_15_8</a>&#160;&#160;&#160;0X2E</td></tr>
+<tr class="separator:ada5abddabe00897005cf4451eca27972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b0ba770cb9339f59efe40a86e3e4b3" id="r_a50b0ba770cb9339f59efe40a86e3e4b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50b0ba770cb9339f59efe40a86e3e4b3">CAM_REG_MANUAL_EXPOSURE_BIT_7_0</a>&#160;&#160;&#160;0X2F</td></tr>
+<tr class="separator:a50b0ba770cb9339f59efe40a86e3e4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e2de1f4b7569a9a375a6d8bb04585e" id="r_a15e2de1f4b7569a9a375a6d8bb04585e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15e2de1f4b7569a9a375a6d8bb04585e">CAM_REG_SENSOR_ID</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:a15e2de1f4b7569a9a375a6d8bb04585e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc08dbd25f7a8381c673138255664c8a" id="r_adc08dbd25f7a8381c673138255664c8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc08dbd25f7a8381c673138255664c8a">CAM_REG_YEAR_ID</a>&#160;&#160;&#160;0x41</td></tr>
+<tr class="separator:adc08dbd25f7a8381c673138255664c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae55fe64a598b12036f17390759d2e8" id="r_a8ae55fe64a598b12036f17390759d2e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae55fe64a598b12036f17390759d2e8">CAM_REG_MONTH_ID</a>&#160;&#160;&#160;0x42</td></tr>
+<tr class="separator:a8ae55fe64a598b12036f17390759d2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5beb8e96162208dd3e49461cd7d1f8bb" id="r_a5beb8e96162208dd3e49461cd7d1f8bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5beb8e96162208dd3e49461cd7d1f8bb">CAM_REG_DAY_ID</a>&#160;&#160;&#160;0x43</td></tr>
+<tr class="separator:a5beb8e96162208dd3e49461cd7d1f8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb270a69d6c31aeb4084d0ee363035c4" id="r_abb270a69d6c31aeb4084d0ee363035c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb270a69d6c31aeb4084d0ee363035c4">CAM_REG_SENSOR_STATE</a>&#160;&#160;&#160;0x44</td></tr>
+<tr class="separator:abb270a69d6c31aeb4084d0ee363035c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741756188796ba6cc94a4c1aa4a94818" id="r_a741756188796ba6cc94a4c1aa4a94818"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a741756188796ba6cc94a4c1aa4a94818">CAM_REG_DEBUG_DEVICE_ADDRESS</a>&#160;&#160;&#160;0X0A</td></tr>
+<tr class="separator:a741756188796ba6cc94a4c1aa4a94818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb7ff439284ef5fd97bfe2ac1b00ed8" id="r_abfb7ff439284ef5fd97bfe2ac1b00ed8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfb7ff439284ef5fd97bfe2ac1b00ed8">CAM_REG_DEBUG_REGISTER_HIGH</a>&#160;&#160;&#160;0X0B</td></tr>
+<tr class="separator:abfb7ff439284ef5fd97bfe2ac1b00ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4cfbd7490b87866e2c375c3a87165b" id="r_a2e4cfbd7490b87866e2c375c3a87165b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e4cfbd7490b87866e2c375c3a87165b">CAM_REG_DEBUG_REGISTER_LOW</a>&#160;&#160;&#160;0X0C</td></tr>
+<tr class="separator:a2e4cfbd7490b87866e2c375c3a87165b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0a059ea451b439bfc91e4c67074991" id="r_a8e0a059ea451b439bfc91e4c67074991"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e0a059ea451b439bfc91e4c67074991">CAM_REG_DEBUG_REGISTER_VALUE</a>&#160;&#160;&#160;0X0D</td></tr>
+<tr class="separator:a8e0a059ea451b439bfc91e4c67074991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe03346c966db2d523a881fb9017194" id="r_a8fe03346c966db2d523a881fb9017194"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fe03346c966db2d523a881fb9017194">CAM_REG_SENSOR_STATE_IDLE</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="separator:a8fe03346c966db2d523a881fb9017194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a9bfcf40b637d8337e7af72325a2a8" id="r_a40a9bfcf40b637d8337e7af72325a2a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40a9bfcf40b637d8337e7af72325a2a8">CAM_SENSOR_RESET_ENABLE</a>&#160;&#160;&#160;(1 &lt;&lt; 6)</td></tr>
+<tr class="separator:a40a9bfcf40b637d8337e7af72325a2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7258cb757a00a862e07c6d379c087c91" id="r_a7258cb757a00a862e07c6d379c087c91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7258cb757a00a862e07c6d379c087c91">CAM_FORMAT_BASICS</a>&#160;&#160;&#160;(0 &lt;&lt; 0)</td></tr>
+<tr class="separator:a7258cb757a00a862e07c6d379c087c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5a063ba51b930b508481653459cf41" id="r_a8e5a063ba51b930b508481653459cf41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e5a063ba51b930b508481653459cf41">CAM_SET_CAPTURE_MODE</a>&#160;&#160;&#160;(0 &lt;&lt; 7)</td></tr>
+<tr class="separator:a8e5a063ba51b930b508481653459cf41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe3ddc14c2f0443df04d244cdf976b0" id="r_aafe3ddc14c2f0443df04d244cdf976b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafe3ddc14c2f0443df04d244cdf976b0">CAM_SET_VIDEO_MODE</a>&#160;&#160;&#160;(1 &lt;&lt; 7)</td></tr>
+<tr class="separator:aafe3ddc14c2f0443df04d244cdf976b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec249d59f66684fc511a6a38a1d305ee" id="r_aec249d59f66684fc511a6a38a1d305ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec249d59f66684fc511a6a38a1d305ee">SET_WHILEBALANCE</a>&#160;&#160;&#160;0X02</td></tr>
+<tr class="separator:aec249d59f66684fc511a6a38a1d305ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f39ab794597303899bfe1b19c93738" id="r_a34f39ab794597303899bfe1b19c93738"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f39ab794597303899bfe1b19c93738">SET_EXPOSURE</a>&#160;&#160;&#160;0X01</td></tr>
+<tr class="separator:a34f39ab794597303899bfe1b19c93738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56700df5dc9d6b4220ea35af4cf5659" id="r_ab56700df5dc9d6b4220ea35af4cf5659"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab56700df5dc9d6b4220ea35af4cf5659">SET_GAIN</a>&#160;&#160;&#160;0X00</td></tr>
+<tr class="separator:ab56700df5dc9d6b4220ea35af4cf5659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e4bf5d4a00598bbc66284e3a31d4ba" id="r_af3e4bf5d4a00598bbc66284e3a31d4ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3e4bf5d4a00598bbc66284e3a31d4ba">CAMERA_TYPE_NUMBER</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:af3e4bf5d4a00598bbc66284e3a31d4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157b70caa517675a392de469f78d7ff8" id="r_a157b70caa517675a392de469f78d7ff8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a157b70caa517675a392de469f78d7ff8">CAMERA_OV5640</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a157b70caa517675a392de469f78d7ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a040eea39af965ddc1466d429de5b2026" id="r_a040eea39af965ddc1466d429de5b2026"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a040eea39af965ddc1466d429de5b2026">CAMERA_OV3640</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a040eea39af965ddc1466d429de5b2026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32398bd23ac7bd37e3c7100b1e4bdbbd" id="r_a32398bd23ac7bd37e3c7100b1e4bdbbd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32398bd23ac7bd37e3c7100b1e4bdbbd">FORMAT_JPEG</a>&#160;&#160;&#160;0X01</td></tr>
+<tr class="separator:a32398bd23ac7bd37e3c7100b1e4bdbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2955c12418707be451fb1665d6bb0efc" id="r_a2955c12418707be451fb1665d6bb0efc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2955c12418707be451fb1665d6bb0efc">FORMAT_RGB</a>&#160;&#160;&#160;0X02</td></tr>
+<tr class="separator:a2955c12418707be451fb1665d6bb0efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6c2b61070ddc982b7f86e084fcd117" id="r_adf6c2b61070ddc982b7f86e084fcd117"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf6c2b61070ddc982b7f86e084fcd117">FORMAT_YUV</a>&#160;&#160;&#160;0X03</td></tr>
+<tr class="separator:adf6c2b61070ddc982b7f86e084fcd117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaf5476d123d98c6cdd9b6b12d6e812c" id="r_acaf5476d123d98c6cdd9b6b12d6e812c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaf5476d123d98c6cdd9b6b12d6e812c">RESOLUTION_160X120</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="separator:acaf5476d123d98c6cdd9b6b12d6e812c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d69238349a671d74699456f8c99814" id="r_a18d69238349a671d74699456f8c99814"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18d69238349a671d74699456f8c99814">RESOLUTION_320X240</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="separator:a18d69238349a671d74699456f8c99814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46b5de7825f799b8b09333191b755f1" id="r_ab46b5de7825f799b8b09333191b755f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46b5de7825f799b8b09333191b755f1">RESOLUTION_640X480</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="separator:ab46b5de7825f799b8b09333191b755f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046691de3025d3bfd53dcabc711630e1" id="r_a046691de3025d3bfd53dcabc711630e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a046691de3025d3bfd53dcabc711630e1">RESOLUTION_800X600</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="separator:a046691de3025d3bfd53dcabc711630e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51da854d5155b18ce8e8dcf6cdc02132" id="r_a51da854d5155b18ce8e8dcf6cdc02132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51da854d5155b18ce8e8dcf6cdc02132">RESOLUTION_1280X720</a>&#160;&#160;&#160;(1 &lt;&lt; 4)</td></tr>
+<tr class="separator:a51da854d5155b18ce8e8dcf6cdc02132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759af3f0e0d953163e31e5f89018ca7f" id="r_a759af3f0e0d953163e31e5f89018ca7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a759af3f0e0d953163e31e5f89018ca7f">RESOLUTION_1280X960</a>&#160;&#160;&#160;(1 &lt;&lt; 5)</td></tr>
+<tr class="separator:a759af3f0e0d953163e31e5f89018ca7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d464191d4d07ab51148fd310b2cc41" id="r_a69d464191d4d07ab51148fd310b2cc41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69d464191d4d07ab51148fd310b2cc41">RESOLUTION_1600X1200</a>&#160;&#160;&#160;(1 &lt;&lt; 6)</td></tr>
+<tr class="separator:a69d464191d4d07ab51148fd310b2cc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c51696ac1a8ca091e811391fe00ff2" id="r_a00c51696ac1a8ca091e811391fe00ff2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00c51696ac1a8ca091e811391fe00ff2">RESOLUTION_1920X1080</a>&#160;&#160;&#160;(1 &lt;&lt; 7)</td></tr>
+<tr class="separator:a00c51696ac1a8ca091e811391fe00ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ad8f510772e43ca2cb9f4b096e4045" id="r_ad9ad8f510772e43ca2cb9f4b096e4045"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ad8f510772e43ca2cb9f4b096e4045">RESOLUTION_2048X1536</a>&#160;&#160;&#160;(1 &lt;&lt; 8)</td></tr>
+<tr class="separator:ad9ad8f510772e43ca2cb9f4b096e4045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcaefabb364b09b14fa77e52fb0bd0d8" id="r_afcaefabb364b09b14fa77e52fb0bd0d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcaefabb364b09b14fa77e52fb0bd0d8">RESOLUTION_2592X1944</a>&#160;&#160;&#160;(1 &lt;&lt; 9)</td></tr>
+<tr class="separator:afcaefabb364b09b14fa77e52fb0bd0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe56caf1a604f43d56623941dcde1a76" id="r_afe56caf1a604f43d56623941dcde1a76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe56caf1a604f43d56623941dcde1a76">RESOLUTION_320x320</a>&#160;&#160;&#160;(1 &lt;&lt; 10)</td></tr>
+<tr class="separator:afe56caf1a604f43d56623941dcde1a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f6a5ebe2239ffcfcd1bc61dee4ce15" id="r_a11f6a5ebe2239ffcfcd1bc61dee4ce15"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11f6a5ebe2239ffcfcd1bc61dee4ce15">RESOLUTION_128x128</a>&#160;&#160;&#160;(1 &lt;&lt; 11)</td></tr>
+<tr class="separator:a11f6a5ebe2239ffcfcd1bc61dee4ce15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5668848f23a44c336eaa105fb5f50bf" id="r_aa5668848f23a44c336eaa105fb5f50bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5668848f23a44c336eaa105fb5f50bf">RESOLUTION_96x96</a>&#160;&#160;&#160;(1 &lt;&lt; 12)</td></tr>
+<tr class="separator:aa5668848f23a44c336eaa105fb5f50bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d9a78e0b9a8dfd8da75b1b7ca6838e" id="r_ae1d9a78e0b9a8dfd8da75b1b7ca6838e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1d9a78e0b9a8dfd8da75b1b7ca6838e">SPECIAL_NORMAL</a>&#160;&#160;&#160;(0 &lt;&lt; 0)</td></tr>
+<tr class="separator:ae1d9a78e0b9a8dfd8da75b1b7ca6838e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae739cc3c7b096d3dd0a3f384fab7e659" id="r_ae739cc3c7b096d3dd0a3f384fab7e659"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae739cc3c7b096d3dd0a3f384fab7e659">SPECIAL_BLUEISH</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="separator:ae739cc3c7b096d3dd0a3f384fab7e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6ab5ab4e3e09faae466dd8aba4e808" id="r_a6b6ab5ab4e3e09faae466dd8aba4e808"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b6ab5ab4e3e09faae466dd8aba4e808">SPECIAL_REDISH</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="separator:a6b6ab5ab4e3e09faae466dd8aba4e808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad472bedfe061d9eb3892a9add5366f71" id="r_ad472bedfe061d9eb3892a9add5366f71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad472bedfe061d9eb3892a9add5366f71">SPECIAL_BW</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="separator:ad472bedfe061d9eb3892a9add5366f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4b0eb80ce879d261ce05d3ca6d2107" id="r_aff4b0eb80ce879d261ce05d3ca6d2107"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4b0eb80ce879d261ce05d3ca6d2107">SPECIAL_SEPIA</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="separator:aff4b0eb80ce879d261ce05d3ca6d2107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17d76944134f05272d8259df93452b9" id="r_af17d76944134f05272d8259df93452b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af17d76944134f05272d8259df93452b9">SPECIAL_NEGATIVE</a>&#160;&#160;&#160;(1 &lt;&lt; 4)</td></tr>
+<tr class="separator:af17d76944134f05272d8259df93452b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c9b735b72bc52e08d4644e514b8b1a" id="r_a64c9b735b72bc52e08d4644e514b8b1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c9b735b72bc52e08d4644e514b8b1a">SPECIAL_GREENISH</a>&#160;&#160;&#160;(1 &lt;&lt; 5)</td></tr>
+<tr class="separator:a64c9b735b72bc52e08d4644e514b8b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fafffbd87e2474cb97c1296dcd85987" id="r_a2fafffbd87e2474cb97c1296dcd85987"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fafffbd87e2474cb97c1296dcd85987">SPECIAL_YELLOWISH</a>&#160;&#160;&#160;(1 &lt;&lt; 8)</td></tr>
+<tr class="separator:a2fafffbd87e2474cb97c1296dcd85987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typdefinitionen</h2></td></tr>
+<tr class="memitem:a81b801c80862c07bcbe65126db52164c" id="r_a81b801c80862c07bcbe65126db52164c"><td class="memItemLeft" align="right" valign="top">typedef uint8_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81b801c80862c07bcbe65126db52164c">BUFFER_CALLBACK</a>) (uint8_t *buffer, uint8_t lenght)</td></tr>
+<tr class="separator:a81b801c80862c07bcbe65126db52164c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr class="memitem:a859449669e9de69e33ddd851c3eac6c1" id="r_a859449669e9de69e33ddd851c3eac6c1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a859449669e9de69e33ddd851c3eac6c1">CamStatus</a> { <a class="el" href="#a859449669e9de69e33ddd851c3eac6c1ad78fefb3ad26c90b550454e8b8505a1e">CAM_ERR_SUCCESS</a> = 0
+, <a class="el" href="#a859449669e9de69e33ddd851c3eac6c1a667dfc004f98c4948c41661580a45a28">CAM_ERR_NO_CALLBACK</a> = -1
+ }</td></tr>
+<tr class="memdesc:a859449669e9de69e33ddd851c3eac6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera status.  <a href="#a859449669e9de69e33ddd851c3eac6c1">Mehr ...</a><br /></td></tr>
+<tr class="separator:a859449669e9de69e33ddd851c3eac6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9c52a28f327c5d815f76befe687015" id="r_aad9c52a28f327c5d815f76befe687015"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a> { <br />
+&#160;&#160;<a class="el" href="#aad9c52a28f327c5d815f76befe687015a03362277ce6d8880e21b186451001f3a">CAM_IMAGE_MODE_QQVGA</a> = 0x00
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a7491cfab5664b60bfafa41bf26e59a5f">CAM_IMAGE_MODE_QVGA</a> = 0x01
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a43e66f40b7746cfa3626595dfafe1315">CAM_IMAGE_MODE_VGA</a> = 0x02
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a3c4e48a704ef557d74fb651d4443f105">CAM_IMAGE_MODE_SVGA</a> = 0x03
+, <br />
+&#160;&#160;<a class="el" href="#aad9c52a28f327c5d815f76befe687015a02b5580d07deb175b21529743e43497a">CAM_IMAGE_MODE_HD</a> = 0x04
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a305826f88a7e28698f8dafc3e76f4ca8">CAM_IMAGE_MODE_SXGAM</a> = 0x05
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a96ff299d23aa8d61a7991669ddffed63">CAM_IMAGE_MODE_UXGA</a> = 0x06
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a673bccb9bab53474c4cac256a18b7290">CAM_IMAGE_MODE_FHD</a> = 0x07
+, <br />
+&#160;&#160;<a class="el" href="#aad9c52a28f327c5d815f76befe687015a5aada59aa0f3d06c022c9674da6f31a0">CAM_IMAGE_MODE_QXGA</a> = 0x08
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015ad2563a3923a421d35d64192ad7e09b85">CAM_IMAGE_MODE_WQXGA2</a> = 0x09
+, <a class="el" href="#aad9c52a28f327c5d815f76befe687015a13d183bda4b7548947c2576d812c63b4">CAM_IMAGE_MODE_96X96</a> = 0x0a
+<br />
+ }</td></tr>
+<tr class="memdesc:aad9c52a28f327c5d815f76befe687015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure camera resolution.  <a href="#aad9c52a28f327c5d815f76befe687015">Mehr ...</a><br /></td></tr>
+<tr class="separator:aad9c52a28f327c5d815f76befe687015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039dba5eae31265427b4829d0db59231" id="r_a039dba5eae31265427b4829d0db59231"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a> { <br />
+&#160;&#160;<a class="el" href="#a039dba5eae31265427b4829d0db59231a9b033b978300e447a7e121ceb56c8fe5">CAM_CONTRAST_LEVEL_MINUS_3</a> = 6
+, <a class="el" href="#a039dba5eae31265427b4829d0db59231ad13726f2dfe529fe673b5902ffc9ac9a">CAM_CONTRAST_LEVEL_MINUS_2</a> = 4
+, <a class="el" href="#a039dba5eae31265427b4829d0db59231a3886a3200df9f8f761bb1fa2cc7b3a13">CAM_CONTRAST_LEVEL_MINUS_1</a> = 2
+, <a class="el" href="#a039dba5eae31265427b4829d0db59231ab46683fb5e0b681da8d34fb95d39c07c">CAM_CONTRAST_LEVEL_DEFAULT</a> = 0
+, <br />
+&#160;&#160;<a class="el" href="#a039dba5eae31265427b4829d0db59231aac51725ee26af7d2bc2581254b8d2aec">CAM_CONTRAST_LEVEL_1</a> = 1
+, <a class="el" href="#a039dba5eae31265427b4829d0db59231a617219ff57ab254702c5485762ba9eee">CAM_CONTRAST_LEVEL_2</a> = 3
+, <a class="el" href="#a039dba5eae31265427b4829d0db59231a418a4649ee36450b711a34f38605303d">CAM_CONTRAST_LEVEL_3</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:a039dba5eae31265427b4829d0db59231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure camera contrast level.  <a href="#a039dba5eae31265427b4829d0db59231">Mehr ...</a><br /></td></tr>
+<tr class="separator:a039dba5eae31265427b4829d0db59231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab97c4e8f129e7b064def02a3e9e19aff" id="r_ab97c4e8f129e7b064def02a3e9e19aff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab97c4e8f129e7b064def02a3e9e19aff">CAM_EV_LEVEL</a> { <br />
+&#160;&#160;<a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affacfb9c23415a7a622d739a294396e9aa5">CAM_EV_LEVEL_MINUS_3</a> = 6
+, <a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affa2eb5f0d1f02c82b42b49291d3ed8a7d6">CAM_EV_LEVEL_MINUS_2</a> = 4
+, <a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affaf17f251b5ab3d1f6fea9971614135211">CAM_EV_LEVEL_MINUS_1</a> = 2
+, <a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affa589e2e4864f518630aab919b36f3a8f6">CAM_EV_LEVEL_DEFAULT</a> = 0
+, <br />
+&#160;&#160;<a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affa30bffff8f7c413498cdfca7c69d52d0d">CAM_EV_LEVEL_1</a> = 1
+, <a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affa961fd26f93b132487d6c4730bb9816ca">CAM_EV_LEVEL_2</a> = 3
+, <a class="el" href="#ab97c4e8f129e7b064def02a3e9e19affa637dd6bf4e0512ad42736de67de2d35f">CAM_EV_LEVEL_3</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:ab97c4e8f129e7b064def02a3e9e19aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure camera EV level.  <a href="#ab97c4e8f129e7b064def02a3e9e19aff">Mehr ...</a><br /></td></tr>
+<tr class="separator:ab97c4e8f129e7b064def02a3e9e19aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e2fcb3eed1b1c2efa712d3193fb06c" id="r_ae0e2fcb3eed1b1c2efa712d3193fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a> { <br />
+&#160;&#160;<a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06ca05ab3b468ce93dbc99a1c90d413770c8">CAM_SATURATION_LEVEL_MINUS_3</a> = 6
+, <a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06caf16bcd8eff4b1ee04f05e23477cfee7d">CAM_SATURATION_LEVEL_MINUS_2</a> = 4
+, <a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06ca08ffde39a79d384401800af7cdd024ed">CAM_SATURATION_LEVEL_MINUS_1</a> = 2
+, <a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06ca8f84a5176da8b2bed2fcd4d4d8b100bb">CAM_SATURATION_LEVEL_DEFAULT</a> = 0
+, <br />
+&#160;&#160;<a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06ca4221f46e3c8cded55ed3212a1d09c316">CAM_SATURATION_LEVEL_1</a> = 1
+, <a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06ca8e80f78fbb53bd65d1356123fb6d4393">CAM_SATURATION_LEVEL_2</a> = 3
+, <a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06caadfb354c1c22f2b11455da4b70863d6f">CAM_SATURATION_LEVEL_3</a> = 5
+<br />
+ }</td></tr>
+<tr class="memdesc:ae0e2fcb3eed1b1c2efa712d3193fb06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure camera saturation level.  <a href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae0e2fcb3eed1b1c2efa712d3193fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf950e5ae505c62fabb157a5385c2c71" id="r_adf950e5ae505c62fabb157a5385c2c71"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a> { <br />
+&#160;&#160;<a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a0ced35cd858431788a18d11305942b2b">CAM_BRIGHTNESS_LEVEL_MINUS_4</a> = 8
+, <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a24a5961269a5957ec20c130ae1d08273">CAM_BRIGHTNESS_LEVEL_MINUS_3</a> = 6
+, <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71aa38090974c30465438adab560a012a9c">CAM_BRIGHTNESS_LEVEL_MINUS_2</a> = 4
+, <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a98c74b297dc8fb5d62ff570c3b494a99">CAM_BRIGHTNESS_LEVEL_MINUS_1</a> = 2
+, <br />
+&#160;&#160;<a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a0aa2a4f98eb36a1ff46031213aa69dbf">CAM_BRIGHTNESS_LEVEL_DEFAULT</a> = 0
+, <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a1acca8ec51ab8406ec2861df57a3be2e">CAM_BRIGHTNESS_LEVEL_1</a> = 1
+, <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71ae37e08e5e5ffcda7d38d4bf9af87f1d9">CAM_BRIGHTNESS_LEVEL_2</a> = 3
+, <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a25b6b6f8e0f0e29bf6466114509d3e2e">CAM_BRIGHTNESS_LEVEL_3</a> = 5
+, <br />
+&#160;&#160;<a class="el" href="#adf950e5ae505c62fabb157a5385c2c71a166e43e536a1b7684bf5ddc47e45885c">CAM_BRIGHTNESS_LEVEL_4</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:adf950e5ae505c62fabb157a5385c2c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure camera brightness level.  <a href="#adf950e5ae505c62fabb157a5385c2c71">Mehr ...</a><br /></td></tr>
+<tr class="separator:adf950e5ae505c62fabb157a5385c2c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe52c72b2eda519bcd2b9db8df0d13f7" id="r_afe52c72b2eda519bcd2b9db8df0d13f7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7">CAM_SHARPNESS_LEVEL</a> { <br />
+&#160;&#160;<a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7a56078d8749e436aac4f2c2ef92597ab1">CAM_SHARPNESS_LEVEL_AUTO</a> = 0
+, <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7aae9e8ea1af173d3418582874765cda8d">CAM_SHARPNESS_LEVEL_1</a>
+, <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7abe8405599dc09f7210f025b922a9134c">CAM_SHARPNESS_LEVEL_2</a>
+, <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7aa6751398f8b32bb16bd83457e4f7e11a">CAM_SHARPNESS_LEVEL_3</a>
+, <br />
+&#160;&#160;<a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7a770607f4263a3e91f9c7e95dd1462f81">CAM_SHARPNESS_LEVEL_4</a>
+, <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7a1075693be8bcef3d585a897294599311">CAM_SHARPNESS_LEVEL_5</a>
+, <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7a6414026ceddb166ede78020ccdc2c302">CAM_SHARPNESS_LEVEL_6</a>
+, <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7a3997104f0c7c04db4bb400ce61da2404">CAM_SHARPNESS_LEVEL_7</a>
+, <br />
+&#160;&#160;<a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7a579c04f9239f7758a46792a8184ea54a">CAM_SHARPNESS_LEVEL_8</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:afe52c72b2eda519bcd2b9db8df0d13f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure camera Sharpness level.  <a href="#afe52c72b2eda519bcd2b9db8df0d13f7">Mehr ...</a><br /></td></tr>
+<tr class="separator:afe52c72b2eda519bcd2b9db8df0d13f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f9eea25f8ca9df7e0773ab408baed7" id="r_a79f9eea25f8ca9df7e0773ab408baed7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79f9eea25f8ca9df7e0773ab408baed7">CAM_VIDEO_MODE</a> { <a class="el" href="#a79f9eea25f8ca9df7e0773ab408baed7a94446b4b6cb86a83016ed33022a8f09e">CAM_VIDEO_MODE_0</a> = 1
+, <a class="el" href="#a79f9eea25f8ca9df7e0773ab408baed7a573f34bb7a6e52f8b74da47385f3c550">CAM_VIDEO_MODE_1</a> = 2
+ }</td></tr>
+<tr class="memdesc:a79f9eea25f8ca9df7e0773ab408baed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure resolution in video streaming mode.  <a href="#a79f9eea25f8ca9df7e0773ab408baed7">Mehr ...</a><br /></td></tr>
+<tr class="separator:a79f9eea25f8ca9df7e0773ab408baed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9748ceecc6f11421cb46fc489606338" id="r_ae9748ceecc6f11421cb46fc489606338"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9748ceecc6f11421cb46fc489606338">CAM_IMAGE_PIX_FMT</a> { <a class="el" href="#ae9748ceecc6f11421cb46fc489606338ad6a378f425b18247bc2adce64fa3af9a">CAM_IMAGE_PIX_FMT_RGB565</a> = 0x02
+, <a class="el" href="#ae9748ceecc6f11421cb46fc489606338a8a7afaef9a95f8d85c7147481f395f36">CAM_IMAGE_PIX_FMT_JPG</a> = 0x01
+, <a class="el" href="#ae9748ceecc6f11421cb46fc489606338ab3e1c0bf1206a328aa95779d868024a2">CAM_IMAGE_PIX_FMT_YUV</a> = 0x03
+, <a class="el" href="#ae9748ceecc6f11421cb46fc489606338ad29ea6bdf677352692fedfaeec0ee750">CAM_IMAGE_PIX_FMT_NONE</a>
+ }</td></tr>
+<tr class="memdesc:ae9748ceecc6f11421cb46fc489606338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure image pixel format.  <a href="#ae9748ceecc6f11421cb46fc489606338">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae9748ceecc6f11421cb46fc489606338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643d0ad26131376e247aab82485e0095" id="r_a643d0ad26131376e247aab82485e0095"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a643d0ad26131376e247aab82485e0095">CAM_WHITE_BALANCE</a> { <br />
+&#160;&#160;<a class="el" href="#a643d0ad26131376e247aab82485e0095ab158e9dcb33756e8036f68502c627cb8">CAM_WHITE_BALANCE_MODE_DEFAULT</a> = 0
+, <a class="el" href="#a643d0ad26131376e247aab82485e0095a0066ad0339abd61e6a2878bca5bc4803">CAM_WHITE_BALANCE_MODE_SUNNY</a>
+, <a class="el" href="#a643d0ad26131376e247aab82485e0095a376561d470ebdb1fbfbc6464d556cbf3">CAM_WHITE_BALANCE_MODE_OFFICE</a>
+, <a class="el" href="#a643d0ad26131376e247aab82485e0095a774ec5e6f557a2ed4d2a1607917bf42a">CAM_WHITE_BALANCE_MODE_CLOUDY</a>
+, <br />
+&#160;&#160;<a class="el" href="#a643d0ad26131376e247aab82485e0095a587bdf93698d9b3a3d8b7f97304b139e">CAM_WHITE_BALANCE_MODE_HOME</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a643d0ad26131376e247aab82485e0095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure white balance mode.  <a href="#a643d0ad26131376e247aab82485e0095">Mehr ...</a><br /></td></tr>
+<tr class="separator:a643d0ad26131376e247aab82485e0095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1396f1daef6526339ee8abe10a55c375" id="r_a1396f1daef6526339ee8abe10a55c375"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1396f1daef6526339ee8abe10a55c375">CAM_COLOR_FX</a> { <br />
+&#160;&#160;<a class="el" href="#a1396f1daef6526339ee8abe10a55c375aa49d8377e2747f77e4bf613c850194ed">CAM_COLOR_FX_NONE</a> = 0
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375a11048290f31c05cbdb76f4b34a16d351">CAM_COLOR_FX_BLUEISH</a>
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375a69103867116a636e85511892cc61104f">CAM_COLOR_FX_REDISH</a>
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375abc189051b7ce7f3db2d97027064c22fd">CAM_COLOR_FX_BW</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1396f1daef6526339ee8abe10a55c375a62e9c1cde01042a1a1301d4b203a4295">CAM_COLOR_FX_SEPIA</a>
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375aa44e99955a02f7b181fa01b1f606cf05">CAM_COLOR_FX_NEGATIVE</a>
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375a7051f683fb111209375716eee162ba3b">CAM_COLOR_FX_GRASS_GREEN</a>
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375a965a6a727e8960b91144dc036e44506a">CAM_COLOR_FX_OVER_EXPOSURE</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1396f1daef6526339ee8abe10a55c375ac9ec846d3dab758529de003a1a9244d8">CAM_COLOR_FX_SOLARIZE</a>
+, <a class="el" href="#a1396f1daef6526339ee8abe10a55c375a1d8c4ae0e69935cfd0289e0c122aa58e">CAM_COLOR_FX_YELLOWISH</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a1396f1daef6526339ee8abe10a55c375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure special effects.  <a href="#a1396f1daef6526339ee8abe10a55c375">Mehr ...</a><br /></td></tr>
+<tr class="separator:a1396f1daef6526339ee8abe10a55c375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3641d9105e4d78a2b9cbcc72ce7a1f44" id="r_a3641d9105e4d78a2b9cbcc72ce7a1f44"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44">CAM_AUTO_FOCUS</a> { <br />
+&#160;&#160;<a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44a5e6f202282c013355bb018161acfe141">CAM_AUTO_FOCUS_DEFAULT</a>
+, <a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44a4b37c89f1435728f2c15c948b809d574">CAM_AUTO_FOCUS_SINGLE</a>
+, <a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44a470eac97be26dd1f48131d128fcba1c7">CAM_AUTO_FOCUS_CONTINUOUS</a>
+, <a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44ae3df384fb22095f8ceead1a842823cbe">CAM_AUTO_FOCUS_PAUSE</a>
+, <br />
+&#160;&#160;<a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44a20a9b9bf92332c277812ff2c437882eb">CAM_AUTO_FOCUS_DISABLE</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a3641d9105e4d78a2b9cbcc72ce7a1f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure auto focus mode.  <a href="#a3641d9105e4d78a2b9cbcc72ce7a1f44">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3641d9105e4d78a2b9cbcc72ce7a1f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a810e03a1d0bca32ef73c377a4c0e7a98" id="r_a810e03a1d0bca32ef73c377a4c0e7a98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a810e03a1d0bca32ef73c377a4c0e7a98">arducam_mega_init</a> ()</td></tr>
+<tr class="separator:a810e03a1d0bca32ef73c377a4c0e7a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfb274f183d9616092ab4a631bec3e4" id="r_accfb274f183d9616092ab4a631bec3e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accfb274f183d9616092ab4a631bec3e4">arducam_mega_capture_image</a> (<a class="el" href="#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a> mode, <a class="el" href="#ae9748ceecc6f11421cb46fc489606338">CAM_IMAGE_PIX_FMT</a> pixel_format)</td></tr>
+<tr class="separator:accfb274f183d9616092ab4a631bec3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bda6b901c9105ae54a6de53a56624d4" id="r_a3bda6b901c9105ae54a6de53a56624d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bda6b901c9105ae54a6de53a56624d4">arducam_mega_save_image</a> (char *filename, const char *mount_point, int image_length)</td></tr>
+<tr class="separator:a3bda6b901c9105ae54a6de53a56624d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df434c9f0b0281436292a6a823cf072" id="r_a2df434c9f0b0281436292a6a823cf072"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df434c9f0b0281436292a6a823cf072">arducam_mega_get_id</a> ()</td></tr>
+<tr class="separator:a2df434c9f0b0281436292a6a823cf072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375e6574eb760872ebd4270bc3fa49ff" id="r_a375e6574eb760872ebd4270bc3fa49ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375e6574eb760872ebd4270bc3fa49ff">arducam_mega_get_resolution</a> (char *resolution)</td></tr>
+<tr class="separator:a375e6574eb760872ebd4270bc3fa49ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bc61d9422d08b5a0e9a35dab9abed0" id="r_af6bc61d9422d08b5a0e9a35dab9abed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bc61d9422d08b5a0e9a35dab9abed0">arducam_mega_get_saturation</a> (char *saturation)</td></tr>
+<tr class="separator:af6bc61d9422d08b5a0e9a35dab9abed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b78859383cd02ed95264f28a5a5a220" id="r_a3b78859383cd02ed95264f28a5a5a220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b78859383cd02ed95264f28a5a5a220">arducam_mega_get_contrast</a> (char *contrast)</td></tr>
+<tr class="separator:a3b78859383cd02ed95264f28a5a5a220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4a6c05cd5f5375d2935f251c358296" id="r_a2d4a6c05cd5f5375d2935f251c358296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d4a6c05cd5f5375d2935f251c358296">arducam_mega_get_brightness</a> (char *brightness)</td></tr>
+<tr class="separator:a2d4a6c05cd5f5375d2935f251c358296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85546f6fd3162942cd8bc8c667ffb923" id="r_a85546f6fd3162942cd8bc8c667ffb923"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85546f6fd3162942cd8bc8c667ffb923">arducam_mega_set_saturation</a> (<a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a> saturation)</td></tr>
+<tr class="separator:a85546f6fd3162942cd8bc8c667ffb923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42a1100e5325d586ca8e983228e72c0" id="r_ae42a1100e5325d586ca8e983228e72c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42a1100e5325d586ca8e983228e72c0">arducam_mega_set_contrast</a> (<a class="el" href="#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a> contrast)</td></tr>
+<tr class="separator:ae42a1100e5325d586ca8e983228e72c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a125c665d94e3d20ddf23f9a271d282" id="r_a3a125c665d94e3d20ddf23f9a271d282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a125c665d94e3d20ddf23f9a271d282">arducam_mega_set_brightness</a> (<a class="el" href="#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a> brightness)</td></tr>
+<tr class="separator:a3a125c665d94e3d20ddf23f9a271d282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6888757ce6ec1622b5e63e15ea3549" id="r_ada6888757ce6ec1622b5e63e15ea3549"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6888757ce6ec1622b5e63e15ea3549">arducam_mega_set_autofocus</a> (<a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44">CAM_AUTO_FOCUS</a> autofocus)</td></tr>
+<tr class="separator:ada6888757ce6ec1622b5e63e15ea3549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab956b4af8b7cede870faaa09820d2f0b" id="r_ab956b4af8b7cede870faaa09820d2f0b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab956b4af8b7cede870faaa09820d2f0b">camera_read_byte</a> ()</td></tr>
+<tr class="separator:ab956b4af8b7cede870faaa09820d2f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a21bd18527fd94b86a5657e8d742dd6" id="r_a1a21bd18527fd94b86a5657e8d742dd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a21bd18527fd94b86a5657e8d742dd6">arducam_mega_print_info</a> ()</td></tr>
+<tr class="separator:a1a21bd18527fd94b86a5657e8d742dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a id="af6132301e0f6a940eaefbaba3180b6fe" name="af6132301e0f6a940eaefbaba3180b6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6132301e0f6a940eaefbaba3180b6fe">&#9670;&#160;</a></span>ARDUCHIP_FIFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARDUCHIP_FIFO&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4fe1aaf814163616420b9871e41273d" name="ab4fe1aaf814163616420b9871e41273d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fe1aaf814163616420b9871e41273d">&#9670;&#160;</a></span>ARDUCHIP_FIFO_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARDUCHIP_FIFO_2&#160;&#160;&#160;0x07</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf232ea04c78a9e3ef3778799c9d796a" name="adf232ea04c78a9e3ef3778799c9d796a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf232ea04c78a9e3ef3778799c9d796a">&#9670;&#160;</a></span>ARDUCHIP_FRAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARDUCHIP_FRAMES&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c224f04c33ed156d59b12eba2727cfb" name="a7c224f04c33ed156d59b12eba2727cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c224f04c33ed156d59b12eba2727cfb">&#9670;&#160;</a></span>ARDUCHIP_TEST1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARDUCHIP_TEST1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3b2584c4cdd1fdaa27aa887a6496339" name="ae3b2584c4cdd1fdaa27aa887a6496339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b2584c4cdd1fdaa27aa887a6496339">&#9670;&#160;</a></span>ARDUCHIP_TRIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARDUCHIP_TRIG&#160;&#160;&#160;0x44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47ad15f39ddac9a49d50809a899e951b" name="a47ad15f39ddac9a49d50809a899e951b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ad15f39ddac9a49d50809a899e951b">&#9670;&#160;</a></span>BUF_MAX_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUF_MAX_LENGTH&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5b16bb8bcac0961f7b0a26e465b1dcd" name="aa5b16bb8bcac0961f7b0a26e465b1dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b16bb8bcac0961f7b0a26e465b1dcd">&#9670;&#160;</a></span>BURST_FIFO_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BURST_FIFO_READ&#160;&#160;&#160;0x3C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7258cb757a00a862e07c6d379c087c91" name="a7258cb757a00a862e07c6d379c087c91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7258cb757a00a862e07c6d379c087c91">&#9670;&#160;</a></span>CAM_FORMAT_BASICS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_FORMAT_BASICS&#160;&#160;&#160;(0 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c57675c6d9c646cab2fdb4ede902efd" name="a8c57675c6d9c646cab2fdb4ede902efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c57675c6d9c646cab2fdb4ede902efd">&#9670;&#160;</a></span>CAM_REG_AUTO_FOCUS_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_AUTO_FOCUS_CONTROL&#160;&#160;&#160;0X29</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3086b712d32e1f6c6179f3c2e8b4d3d6" name="a3086b712d32e1f6c6179f3c2e8b4d3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3086b712d32e1f6c6179f3c2e8b4d3d6">&#9670;&#160;</a></span>CAM_REG_BRIGHTNESS_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_BRIGHTNESS_CONTROL&#160;&#160;&#160;0X22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad721762755cd514f33d80fc9d0c29100" name="ad721762755cd514f33d80fc9d0c29100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad721762755cd514f33d80fc9d0c29100">&#9670;&#160;</a></span>CAM_REG_CAPTURE_RESOLUTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_CAPTURE_RESOLUTION&#160;&#160;&#160;0X21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58b57b5ce79ec5c92f7b69c3367a1869" name="a58b57b5ce79ec5c92f7b69c3367a1869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b57b5ce79ec5c92f7b69c3367a1869">&#9670;&#160;</a></span>CAM_REG_COLOR_EFFECT_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_COLOR_EFFECT_CONTROL&#160;&#160;&#160;0X27</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e272ae590e53ab91b6ad73ed74bdb7c" name="a4e272ae590e53ab91b6ad73ed74bdb7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e272ae590e53ab91b6ad73ed74bdb7c">&#9670;&#160;</a></span>CAM_REG_CONTRAST_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_CONTRAST_CONTROL&#160;&#160;&#160;0X23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5beb8e96162208dd3e49461cd7d1f8bb" name="a5beb8e96162208dd3e49461cd7d1f8bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5beb8e96162208dd3e49461cd7d1f8bb">&#9670;&#160;</a></span>CAM_REG_DAY_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_DAY_ID&#160;&#160;&#160;0x43</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a741756188796ba6cc94a4c1aa4a94818" name="a741756188796ba6cc94a4c1aa4a94818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741756188796ba6cc94a4c1aa4a94818">&#9670;&#160;</a></span>CAM_REG_DEBUG_DEVICE_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_DEBUG_DEVICE_ADDRESS&#160;&#160;&#160;0X0A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfb7ff439284ef5fd97bfe2ac1b00ed8" name="abfb7ff439284ef5fd97bfe2ac1b00ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb7ff439284ef5fd97bfe2ac1b00ed8">&#9670;&#160;</a></span>CAM_REG_DEBUG_REGISTER_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_DEBUG_REGISTER_HIGH&#160;&#160;&#160;0X0B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e4cfbd7490b87866e2c375c3a87165b" name="a2e4cfbd7490b87866e2c375c3a87165b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4cfbd7490b87866e2c375c3a87165b">&#9670;&#160;</a></span>CAM_REG_DEBUG_REGISTER_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_DEBUG_REGISTER_LOW&#160;&#160;&#160;0X0C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e0a059ea451b439bfc91e4c67074991" name="a8e0a059ea451b439bfc91e4c67074991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0a059ea451b439bfc91e4c67074991">&#9670;&#160;</a></span>CAM_REG_DEBUG_REGISTER_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_DEBUG_REGISTER_VALUE&#160;&#160;&#160;0X0D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57632709b0022f883994ade7f4983075" name="a57632709b0022f883994ade7f4983075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57632709b0022f883994ade7f4983075">&#9670;&#160;</a></span>CAM_REG_EV_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_EV_CONTROL&#160;&#160;&#160;0X25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d74731909cff73cb7e0b5d87e87218e" name="a0d74731909cff73cb7e0b5d87e87218e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d74731909cff73cb7e0b5d87e87218e">&#9670;&#160;</a></span>CAM_REG_EXPOSURE_GAIN_WHILEBALANCE_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_EXPOSURE_GAIN_WHILEBALANCE_CONTROL&#160;&#160;&#160;0X2A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0102f12eb2a1ee4d8d0890c14317a063" name="a0102f12eb2a1ee4d8d0890c14317a063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0102f12eb2a1ee4d8d0890c14317a063">&#9670;&#160;</a></span>CAM_REG_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_FORMAT&#160;&#160;&#160;0X20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada5abddabe00897005cf4451eca27972" name="ada5abddabe00897005cf4451eca27972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5abddabe00897005cf4451eca27972">&#9670;&#160;</a></span>CAM_REG_MANUAL_EXPOSURE_BIT_15_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_MANUAL_EXPOSURE_BIT_15_8&#160;&#160;&#160;0X2E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f36a6e9d805f26cd73d5cfd7d0b1a7a" name="a0f36a6e9d805f26cd73d5cfd7d0b1a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f36a6e9d805f26cd73d5cfd7d0b1a7a">&#9670;&#160;</a></span>CAM_REG_MANUAL_EXPOSURE_BIT_19_16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_MANUAL_EXPOSURE_BIT_19_16&#160;&#160;&#160;0X2D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50b0ba770cb9339f59efe40a86e3e4b3" name="a50b0ba770cb9339f59efe40a86e3e4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50b0ba770cb9339f59efe40a86e3e4b3">&#9670;&#160;</a></span>CAM_REG_MANUAL_EXPOSURE_BIT_7_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_MANUAL_EXPOSURE_BIT_7_0&#160;&#160;&#160;0X2F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae701768cc86281a2b49d8c39dbd58b91" name="ae701768cc86281a2b49d8c39dbd58b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae701768cc86281a2b49d8c39dbd58b91">&#9670;&#160;</a></span>CAM_REG_MANUAL_GAIN_BIT_7_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_MANUAL_GAIN_BIT_7_0&#160;&#160;&#160;0X2C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1737ccbd04c59056dc94291edd1e078" name="ae1737ccbd04c59056dc94291edd1e078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1737ccbd04c59056dc94291edd1e078">&#9670;&#160;</a></span>CAM_REG_MANUAL_GAIN_BIT_9_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_MANUAL_GAIN_BIT_9_8&#160;&#160;&#160;0X2B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ae55fe64a598b12036f17390759d2e8" name="a8ae55fe64a598b12036f17390759d2e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae55fe64a598b12036f17390759d2e8">&#9670;&#160;</a></span>CAM_REG_MONTH_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_MONTH_ID&#160;&#160;&#160;0x42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff094b332ebbb47502e02d159aa6ff5f" name="aff094b332ebbb47502e02d159aa6ff5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff094b332ebbb47502e02d159aa6ff5f">&#9670;&#160;</a></span>CAM_REG_POWER_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_POWER_CONTROL&#160;&#160;&#160;0X02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a069302b0dab4b0081720720b9c8edb45" name="a069302b0dab4b0081720720b9c8edb45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069302b0dab4b0081720720b9c8edb45">&#9670;&#160;</a></span>CAM_REG_SATURATION_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_SATURATION_CONTROL&#160;&#160;&#160;0X24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15e2de1f4b7569a9a375a6d8bb04585e" name="a15e2de1f4b7569a9a375a6d8bb04585e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e2de1f4b7569a9a375a6d8bb04585e">&#9670;&#160;</a></span>CAM_REG_SENSOR_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_SENSOR_ID&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad62d2bb26fd5c141e6085ea5e6de1b67" name="ad62d2bb26fd5c141e6085ea5e6de1b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62d2bb26fd5c141e6085ea5e6de1b67">&#9670;&#160;</a></span>CAM_REG_SENSOR_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_SENSOR_RESET&#160;&#160;&#160;0X07</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb270a69d6c31aeb4084d0ee363035c4" name="abb270a69d6c31aeb4084d0ee363035c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb270a69d6c31aeb4084d0ee363035c4">&#9670;&#160;</a></span>CAM_REG_SENSOR_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_SENSOR_STATE&#160;&#160;&#160;0x44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fe03346c966db2d523a881fb9017194" name="a8fe03346c966db2d523a881fb9017194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe03346c966db2d523a881fb9017194">&#9670;&#160;</a></span>CAM_REG_SENSOR_STATE_IDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_SENSOR_STATE_IDLE&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bddf52778da199a2ae11179d49bd51a" name="a2bddf52778da199a2ae11179d49bd51a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bddf52778da199a2ae11179d49bd51a">&#9670;&#160;</a></span>CAM_REG_SHARPNESS_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_SHARPNESS_CONTROL&#160;&#160;&#160;0X28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58c4c361759e417205c23c7c15003e69" name="a58c4c361759e417205c23c7c15003e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c4c361759e417205c23c7c15003e69">&#9670;&#160;</a></span>CAM_REG_WHILEBALANCE_MODE_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_WHILEBALANCE_MODE_CONTROL&#160;&#160;&#160;0X26</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc08dbd25f7a8381c673138255664c8a" name="adc08dbd25f7a8381c673138255664c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc08dbd25f7a8381c673138255664c8a">&#9670;&#160;</a></span>CAM_REG_YEAR_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_REG_YEAR_ID&#160;&#160;&#160;0x41</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40a9bfcf40b637d8337e7af72325a2a8" name="a40a9bfcf40b637d8337e7af72325a2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a9bfcf40b637d8337e7af72325a2a8">&#9670;&#160;</a></span>CAM_SENSOR_RESET_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_SENSOR_RESET_ENABLE&#160;&#160;&#160;(1 &lt;&lt; 6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e5a063ba51b930b508481653459cf41" name="a8e5a063ba51b930b508481653459cf41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5a063ba51b930b508481653459cf41">&#9670;&#160;</a></span>CAM_SET_CAPTURE_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_SET_CAPTURE_MODE&#160;&#160;&#160;(0 &lt;&lt; 7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafe3ddc14c2f0443df04d244cdf976b0" name="aafe3ddc14c2f0443df04d244cdf976b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe3ddc14c2f0443df04d244cdf976b0">&#9670;&#160;</a></span>CAM_SET_VIDEO_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAM_SET_VIDEO_MODE&#160;&#160;&#160;(1 &lt;&lt; 7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a040eea39af965ddc1466d429de5b2026" name="a040eea39af965ddc1466d429de5b2026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a040eea39af965ddc1466d429de5b2026">&#9670;&#160;</a></span>CAMERA_OV3640</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAMERA_OV3640&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a157b70caa517675a392de469f78d7ff8" name="a157b70caa517675a392de469f78d7ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157b70caa517675a392de469f78d7ff8">&#9670;&#160;</a></span>CAMERA_OV5640</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAMERA_OV5640&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3e4bf5d4a00598bbc66284e3a31d4ba" name="af3e4bf5d4a00598bbc66284e3a31d4ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e4bf5d4a00598bbc66284e3a31d4ba">&#9670;&#160;</a></span>CAMERA_TYPE_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAMERA_TYPE_NUMBER&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb6045b59f0ca9ce215a0f694ce0c1a2" name="acb6045b59f0ca9ce215a0f694ce0c1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6045b59f0ca9ce215a0f694ce0c1a2">&#9670;&#160;</a></span>CAP_DONE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAP_DONE_MASK&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af17ac3bcf7e9f3ba9b18ebe4f02db00f" name="af17ac3bcf7e9f3ba9b18ebe4f02db00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17ac3bcf7e9f3ba9b18ebe4f02db00f">&#9670;&#160;</a></span>CAPRURE_MAX_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAPRURE_MAX_NUM&#160;&#160;&#160;0xff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1beabd8e1d6b83ee2a0de689791c50ea" name="a1beabd8e1d6b83ee2a0de689791c50ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1beabd8e1d6b83ee2a0de689791c50ea">&#9670;&#160;</a></span>FIFO_CLEAR_ID_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_CLEAR_ID_MASK&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8124b0eafee74eb0ed8673ec30eb4fd" name="ab8124b0eafee74eb0ed8673ec30eb4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8124b0eafee74eb0ed8673ec30eb4fd">&#9670;&#160;</a></span>FIFO_CLEAR_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_CLEAR_MASK&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a541c22ba6964a045778357c81a8d732c" name="a541c22ba6964a045778357c81a8d732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541c22ba6964a045778357c81a8d732c">&#9670;&#160;</a></span>FIFO_RDPTR_RST_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_RDPTR_RST_MASK&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cbd6ea3b650346f753f1f866639687d" name="a3cbd6ea3b650346f753f1f866639687d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cbd6ea3b650346f753f1f866639687d">&#9670;&#160;</a></span>FIFO_SIZE1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_SIZE1&#160;&#160;&#160;0x45</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48d1e04d10d7013b1a8bea1c0338e015" name="a48d1e04d10d7013b1a8bea1c0338e015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d1e04d10d7013b1a8bea1c0338e015">&#9670;&#160;</a></span>FIFO_SIZE2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_SIZE2&#160;&#160;&#160;0x46</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71b1afd3673603f6d6062728675d08da" name="a71b1afd3673603f6d6062728675d08da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b1afd3673603f6d6062728675d08da">&#9670;&#160;</a></span>FIFO_SIZE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_SIZE3&#160;&#160;&#160;0x47</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affe0137398848bbb88d72da90f29936b" name="affe0137398848bbb88d72da90f29936b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe0137398848bbb88d72da90f29936b">&#9670;&#160;</a></span>FIFO_START_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_START_MASK&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad739c3e2a5a808f3c3d6f53e8e871d36" name="ad739c3e2a5a808f3c3d6f53e8e871d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad739c3e2a5a808f3c3d6f53e8e871d36">&#9670;&#160;</a></span>FIFO_WRPTR_RST_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_WRPTR_RST_MASK&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32398bd23ac7bd37e3c7100b1e4bdbbd" name="a32398bd23ac7bd37e3c7100b1e4bdbbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32398bd23ac7bd37e3c7100b1e4bdbbd">&#9670;&#160;</a></span>FORMAT_JPEG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FORMAT_JPEG&#160;&#160;&#160;0X01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2955c12418707be451fb1665d6bb0efc" name="a2955c12418707be451fb1665d6bb0efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2955c12418707be451fb1665d6bb0efc">&#9670;&#160;</a></span>FORMAT_RGB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FORMAT_RGB&#160;&#160;&#160;0X02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf6c2b61070ddc982b7f86e084fcd117" name="adf6c2b61070ddc982b7f86e084fcd117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6c2b61070ddc982b7f86e084fcd117">&#9670;&#160;</a></span>FORMAT_YUV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FORMAT_YUV&#160;&#160;&#160;0X03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51da854d5155b18ce8e8dcf6cdc02132" name="a51da854d5155b18ce8e8dcf6cdc02132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51da854d5155b18ce8e8dcf6cdc02132">&#9670;&#160;</a></span>RESOLUTION_1280X720</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_1280X720&#160;&#160;&#160;(1 &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a759af3f0e0d953163e31e5f89018ca7f" name="a759af3f0e0d953163e31e5f89018ca7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759af3f0e0d953163e31e5f89018ca7f">&#9670;&#160;</a></span>RESOLUTION_1280X960</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_1280X960&#160;&#160;&#160;(1 &lt;&lt; 5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11f6a5ebe2239ffcfcd1bc61dee4ce15" name="a11f6a5ebe2239ffcfcd1bc61dee4ce15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f6a5ebe2239ffcfcd1bc61dee4ce15">&#9670;&#160;</a></span>RESOLUTION_128x128</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_128x128&#160;&#160;&#160;(1 &lt;&lt; 11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69d464191d4d07ab51148fd310b2cc41" name="a69d464191d4d07ab51148fd310b2cc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d464191d4d07ab51148fd310b2cc41">&#9670;&#160;</a></span>RESOLUTION_1600X1200</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_1600X1200&#160;&#160;&#160;(1 &lt;&lt; 6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaf5476d123d98c6cdd9b6b12d6e812c" name="acaf5476d123d98c6cdd9b6b12d6e812c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf5476d123d98c6cdd9b6b12d6e812c">&#9670;&#160;</a></span>RESOLUTION_160X120</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_160X120&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00c51696ac1a8ca091e811391fe00ff2" name="a00c51696ac1a8ca091e811391fe00ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c51696ac1a8ca091e811391fe00ff2">&#9670;&#160;</a></span>RESOLUTION_1920X1080</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_1920X1080&#160;&#160;&#160;(1 &lt;&lt; 7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9ad8f510772e43ca2cb9f4b096e4045" name="ad9ad8f510772e43ca2cb9f4b096e4045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ad8f510772e43ca2cb9f4b096e4045">&#9670;&#160;</a></span>RESOLUTION_2048X1536</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_2048X1536&#160;&#160;&#160;(1 &lt;&lt; 8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcaefabb364b09b14fa77e52fb0bd0d8" name="afcaefabb364b09b14fa77e52fb0bd0d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcaefabb364b09b14fa77e52fb0bd0d8">&#9670;&#160;</a></span>RESOLUTION_2592X1944</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_2592X1944&#160;&#160;&#160;(1 &lt;&lt; 9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18d69238349a671d74699456f8c99814" name="a18d69238349a671d74699456f8c99814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18d69238349a671d74699456f8c99814">&#9670;&#160;</a></span>RESOLUTION_320X240</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_320X240&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe56caf1a604f43d56623941dcde1a76" name="afe56caf1a604f43d56623941dcde1a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe56caf1a604f43d56623941dcde1a76">&#9670;&#160;</a></span>RESOLUTION_320x320</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_320x320&#160;&#160;&#160;(1 &lt;&lt; 10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab46b5de7825f799b8b09333191b755f1" name="ab46b5de7825f799b8b09333191b755f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46b5de7825f799b8b09333191b755f1">&#9670;&#160;</a></span>RESOLUTION_640X480</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_640X480&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a046691de3025d3bfd53dcabc711630e1" name="a046691de3025d3bfd53dcabc711630e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046691de3025d3bfd53dcabc711630e1">&#9670;&#160;</a></span>RESOLUTION_800X600</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_800X600&#160;&#160;&#160;(1 &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5668848f23a44c336eaa105fb5f50bf" name="aa5668848f23a44c336eaa105fb5f50bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5668848f23a44c336eaa105fb5f50bf">&#9670;&#160;</a></span>RESOLUTION_96x96</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESOLUTION_96x96&#160;&#160;&#160;(1 &lt;&lt; 12)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34f39ab794597303899bfe1b19c93738" name="a34f39ab794597303899bfe1b19c93738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f39ab794597303899bfe1b19c93738">&#9670;&#160;</a></span>SET_EXPOSURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_EXPOSURE&#160;&#160;&#160;0X01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab56700df5dc9d6b4220ea35af4cf5659" name="ab56700df5dc9d6b4220ea35af4cf5659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56700df5dc9d6b4220ea35af4cf5659">&#9670;&#160;</a></span>SET_GAIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_GAIN&#160;&#160;&#160;0X00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec249d59f66684fc511a6a38a1d305ee" name="aec249d59f66684fc511a6a38a1d305ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec249d59f66684fc511a6a38a1d305ee">&#9670;&#160;</a></span>SET_WHILEBALANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_WHILEBALANCE&#160;&#160;&#160;0X02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e26042239c6acec576d9677b63d8e66" name="a2e26042239c6acec576d9677b63d8e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e26042239c6acec576d9677b63d8e66">&#9670;&#160;</a></span>SHUTTER_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHUTTER_MASK&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54506b20ccb1c48f6be74be2d5db063e" name="a54506b20ccb1c48f6be74be2d5db063e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54506b20ccb1c48f6be74be2d5db063e">&#9670;&#160;</a></span>SINGLE_FIFO_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SINGLE_FIFO_READ&#160;&#160;&#160;0x3D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae739cc3c7b096d3dd0a3f384fab7e659" name="ae739cc3c7b096d3dd0a3f384fab7e659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae739cc3c7b096d3dd0a3f384fab7e659">&#9670;&#160;</a></span>SPECIAL_BLUEISH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_BLUEISH&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad472bedfe061d9eb3892a9add5366f71" name="ad472bedfe061d9eb3892a9add5366f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad472bedfe061d9eb3892a9add5366f71">&#9670;&#160;</a></span>SPECIAL_BW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_BW&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64c9b735b72bc52e08d4644e514b8b1a" name="a64c9b735b72bc52e08d4644e514b8b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c9b735b72bc52e08d4644e514b8b1a">&#9670;&#160;</a></span>SPECIAL_GREENISH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_GREENISH&#160;&#160;&#160;(1 &lt;&lt; 5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af17d76944134f05272d8259df93452b9" name="af17d76944134f05272d8259df93452b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17d76944134f05272d8259df93452b9">&#9670;&#160;</a></span>SPECIAL_NEGATIVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_NEGATIVE&#160;&#160;&#160;(1 &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1d9a78e0b9a8dfd8da75b1b7ca6838e" name="ae1d9a78e0b9a8dfd8da75b1b7ca6838e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d9a78e0b9a8dfd8da75b1b7ca6838e">&#9670;&#160;</a></span>SPECIAL_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_NORMAL&#160;&#160;&#160;(0 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b6ab5ab4e3e09faae466dd8aba4e808" name="a6b6ab5ab4e3e09faae466dd8aba4e808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6ab5ab4e3e09faae466dd8aba4e808">&#9670;&#160;</a></span>SPECIAL_REDISH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_REDISH&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff4b0eb80ce879d261ce05d3ca6d2107" name="aff4b0eb80ce879d261ce05d3ca6d2107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4b0eb80ce879d261ce05d3ca6d2107">&#9670;&#160;</a></span>SPECIAL_SEPIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_SEPIA&#160;&#160;&#160;(1 &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fafffbd87e2474cb97c1296dcd85987" name="a2fafffbd87e2474cb97c1296dcd85987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fafffbd87e2474cb97c1296dcd85987">&#9670;&#160;</a></span>SPECIAL_YELLOWISH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPECIAL_YELLOWISH&#160;&#160;&#160;(1 &lt;&lt; 8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a758ab82ae7e3a2b3cdd148e6260b58bf" name="a758ab82ae7e3a2b3cdd148e6260b58bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758ab82ae7e3a2b3cdd148e6260b58bf">&#9670;&#160;</a></span>VSYNC_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VSYNC_MASK&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der benutzerdefinierten Typen</h2>
+<a id="a81b801c80862c07bcbe65126db52164c" name="a81b801c80862c07bcbe65126db52164c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b801c80862c07bcbe65126db52164c">&#9670;&#160;</a></span>BUFFER_CALLBACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t(* BUFFER_CALLBACK) (uint8_t *buffer, uint8_t lenght)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback function prototype <br  />
+ </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="a3641d9105e4d78a2b9cbcc72ce7a1f44" name="a3641d9105e4d78a2b9cbcc72ce7a1f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3641d9105e4d78a2b9cbcc72ce7a1f44">&#9670;&#160;</a></span>CAM_AUTO_FOCUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44">CAM_AUTO_FOCUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure auto focus mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a3641d9105e4d78a2b9cbcc72ce7a1f44a5e6f202282c013355bb018161acfe141" name="a3641d9105e4d78a2b9cbcc72ce7a1f44a5e6f202282c013355bb018161acfe141"></a>CAM_AUTO_FOCUS_DEFAULT&#160;</td><td class="fielddoc"><p>default configuration; continuous auto focus </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3641d9105e4d78a2b9cbcc72ce7a1f44a4b37c89f1435728f2c15c948b809d574" name="a3641d9105e4d78a2b9cbcc72ce7a1f44a4b37c89f1435728f2c15c948b809d574"></a>CAM_AUTO_FOCUS_SINGLE&#160;</td><td class="fielddoc"><p>single auto focus <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3641d9105e4d78a2b9cbcc72ce7a1f44a470eac97be26dd1f48131d128fcba1c7" name="a3641d9105e4d78a2b9cbcc72ce7a1f44a470eac97be26dd1f48131d128fcba1c7"></a>CAM_AUTO_FOCUS_CONTINUOUS&#160;</td><td class="fielddoc"><p>continuous auto focus <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3641d9105e4d78a2b9cbcc72ce7a1f44ae3df384fb22095f8ceead1a842823cbe" name="a3641d9105e4d78a2b9cbcc72ce7a1f44ae3df384fb22095f8ceead1a842823cbe"></a>CAM_AUTO_FOCUS_PAUSE&#160;</td><td class="fielddoc"><p>pause continuous auto focus <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3641d9105e4d78a2b9cbcc72ce7a1f44a20a9b9bf92332c277812ff2c437882eb" name="a3641d9105e4d78a2b9cbcc72ce7a1f44a20a9b9bf92332c277812ff2c437882eb"></a>CAM_AUTO_FOCUS_DISABLE&#160;</td><td class="fielddoc"><p>disable auto focus <br  />
+ </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="adf950e5ae505c62fabb157a5385c2c71" name="adf950e5ae505c62fabb157a5385c2c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf950e5ae505c62fabb157a5385c2c71">&#9670;&#160;</a></span>CAM_BRIGHTNESS_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure camera brightness level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a0ced35cd858431788a18d11305942b2b" name="adf950e5ae505c62fabb157a5385c2c71a0ced35cd858431788a18d11305942b2b"></a>CAM_BRIGHTNESS_LEVEL_MINUS_4&#160;</td><td class="fielddoc"><p>Level -4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a24a5961269a5957ec20c130ae1d08273" name="adf950e5ae505c62fabb157a5385c2c71a24a5961269a5957ec20c130ae1d08273"></a>CAM_BRIGHTNESS_LEVEL_MINUS_3&#160;</td><td class="fielddoc"><p>Level -3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71aa38090974c30465438adab560a012a9c" name="adf950e5ae505c62fabb157a5385c2c71aa38090974c30465438adab560a012a9c"></a>CAM_BRIGHTNESS_LEVEL_MINUS_2&#160;</td><td class="fielddoc"><p>Level -2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a98c74b297dc8fb5d62ff570c3b494a99" name="adf950e5ae505c62fabb157a5385c2c71a98c74b297dc8fb5d62ff570c3b494a99"></a>CAM_BRIGHTNESS_LEVEL_MINUS_1&#160;</td><td class="fielddoc"><p>Level -1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a0aa2a4f98eb36a1ff46031213aa69dbf" name="adf950e5ae505c62fabb157a5385c2c71a0aa2a4f98eb36a1ff46031213aa69dbf"></a>CAM_BRIGHTNESS_LEVEL_DEFAULT&#160;</td><td class="fielddoc"><p>Level Default </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a1acca8ec51ab8406ec2861df57a3be2e" name="adf950e5ae505c62fabb157a5385c2c71a1acca8ec51ab8406ec2861df57a3be2e"></a>CAM_BRIGHTNESS_LEVEL_1&#160;</td><td class="fielddoc"><p>Level +1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71ae37e08e5e5ffcda7d38d4bf9af87f1d9" name="adf950e5ae505c62fabb157a5385c2c71ae37e08e5e5ffcda7d38d4bf9af87f1d9"></a>CAM_BRIGHTNESS_LEVEL_2&#160;</td><td class="fielddoc"><p>Level +2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a25b6b6f8e0f0e29bf6466114509d3e2e" name="adf950e5ae505c62fabb157a5385c2c71a25b6b6f8e0f0e29bf6466114509d3e2e"></a>CAM_BRIGHTNESS_LEVEL_3&#160;</td><td class="fielddoc"><p>Level +3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adf950e5ae505c62fabb157a5385c2c71a166e43e536a1b7684bf5ddc47e45885c" name="adf950e5ae505c62fabb157a5385c2c71a166e43e536a1b7684bf5ddc47e45885c"></a>CAM_BRIGHTNESS_LEVEL_4&#160;</td><td class="fielddoc"><p>Level +4 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1396f1daef6526339ee8abe10a55c375" name="a1396f1daef6526339ee8abe10a55c375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1396f1daef6526339ee8abe10a55c375">&#9670;&#160;</a></span>CAM_COLOR_FX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a1396f1daef6526339ee8abe10a55c375">CAM_COLOR_FX</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure special effects. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375aa49d8377e2747f77e4bf613c850194ed" name="a1396f1daef6526339ee8abe10a55c375aa49d8377e2747f77e4bf613c850194ed"></a>CAM_COLOR_FX_NONE&#160;</td><td class="fielddoc"><p>no effect <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375a11048290f31c05cbdb76f4b34a16d351" name="a1396f1daef6526339ee8abe10a55c375a11048290f31c05cbdb76f4b34a16d351"></a>CAM_COLOR_FX_BLUEISH&#160;</td><td class="fielddoc"><p>cool light <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375a69103867116a636e85511892cc61104f" name="a1396f1daef6526339ee8abe10a55c375a69103867116a636e85511892cc61104f"></a>CAM_COLOR_FX_REDISH&#160;</td><td class="fielddoc"><p>warm <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375abc189051b7ce7f3db2d97027064c22fd" name="a1396f1daef6526339ee8abe10a55c375abc189051b7ce7f3db2d97027064c22fd"></a>CAM_COLOR_FX_BW&#160;</td><td class="fielddoc"><p>Black/white <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375a62e9c1cde01042a1a1301d4b203a4295" name="a1396f1daef6526339ee8abe10a55c375a62e9c1cde01042a1a1301d4b203a4295"></a>CAM_COLOR_FX_SEPIA&#160;</td><td class="fielddoc"><p>Sepia <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375aa44e99955a02f7b181fa01b1f606cf05" name="a1396f1daef6526339ee8abe10a55c375aa44e99955a02f7b181fa01b1f606cf05"></a>CAM_COLOR_FX_NEGATIVE&#160;</td><td class="fielddoc"><p>positive/negative inversion <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375a7051f683fb111209375716eee162ba3b" name="a1396f1daef6526339ee8abe10a55c375a7051f683fb111209375716eee162ba3b"></a>CAM_COLOR_FX_GRASS_GREEN&#160;</td><td class="fielddoc"><p>Grass green </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375a965a6a727e8960b91144dc036e44506a" name="a1396f1daef6526339ee8abe10a55c375a965a6a727e8960b91144dc036e44506a"></a>CAM_COLOR_FX_OVER_EXPOSURE&#160;</td><td class="fielddoc"><p>Over exposure </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375ac9ec846d3dab758529de003a1a9244d8" name="a1396f1daef6526339ee8abe10a55c375ac9ec846d3dab758529de003a1a9244d8"></a>CAM_COLOR_FX_SOLARIZE&#160;</td><td class="fielddoc"><p>Solarize <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1396f1daef6526339ee8abe10a55c375a1d8c4ae0e69935cfd0289e0c122aa58e" name="a1396f1daef6526339ee8abe10a55c375a1d8c4ae0e69935cfd0289e0c122aa58e"></a>CAM_COLOR_FX_YELLOWISH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a039dba5eae31265427b4829d0db59231" name="a039dba5eae31265427b4829d0db59231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039dba5eae31265427b4829d0db59231">&#9670;&#160;</a></span>CAM_CONTRAST_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure camera contrast level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231a9b033b978300e447a7e121ceb56c8fe5" name="a039dba5eae31265427b4829d0db59231a9b033b978300e447a7e121ceb56c8fe5"></a>CAM_CONTRAST_LEVEL_MINUS_3&#160;</td><td class="fielddoc"><p>Level -3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231ad13726f2dfe529fe673b5902ffc9ac9a" name="a039dba5eae31265427b4829d0db59231ad13726f2dfe529fe673b5902ffc9ac9a"></a>CAM_CONTRAST_LEVEL_MINUS_2&#160;</td><td class="fielddoc"><p>Level -2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231a3886a3200df9f8f761bb1fa2cc7b3a13" name="a039dba5eae31265427b4829d0db59231a3886a3200df9f8f761bb1fa2cc7b3a13"></a>CAM_CONTRAST_LEVEL_MINUS_1&#160;</td><td class="fielddoc"><p>Level -1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231ab46683fb5e0b681da8d34fb95d39c07c" name="a039dba5eae31265427b4829d0db59231ab46683fb5e0b681da8d34fb95d39c07c"></a>CAM_CONTRAST_LEVEL_DEFAULT&#160;</td><td class="fielddoc"><p>Level Default </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231aac51725ee26af7d2bc2581254b8d2aec" name="a039dba5eae31265427b4829d0db59231aac51725ee26af7d2bc2581254b8d2aec"></a>CAM_CONTRAST_LEVEL_1&#160;</td><td class="fielddoc"><p>Level +1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231a617219ff57ab254702c5485762ba9eee" name="a039dba5eae31265427b4829d0db59231a617219ff57ab254702c5485762ba9eee"></a>CAM_CONTRAST_LEVEL_2&#160;</td><td class="fielddoc"><p>Level +2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a039dba5eae31265427b4829d0db59231a418a4649ee36450b711a34f38605303d" name="a039dba5eae31265427b4829d0db59231a418a4649ee36450b711a34f38605303d"></a>CAM_CONTRAST_LEVEL_3&#160;</td><td class="fielddoc"><p>Level +3 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ab97c4e8f129e7b064def02a3e9e19aff" name="ab97c4e8f129e7b064def02a3e9e19aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97c4e8f129e7b064def02a3e9e19aff">&#9670;&#160;</a></span>CAM_EV_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab97c4e8f129e7b064def02a3e9e19aff">CAM_EV_LEVEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure camera EV level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affacfb9c23415a7a622d739a294396e9aa5" name="ab97c4e8f129e7b064def02a3e9e19affacfb9c23415a7a622d739a294396e9aa5"></a>CAM_EV_LEVEL_MINUS_3&#160;</td><td class="fielddoc"><p>Level -3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affa2eb5f0d1f02c82b42b49291d3ed8a7d6" name="ab97c4e8f129e7b064def02a3e9e19affa2eb5f0d1f02c82b42b49291d3ed8a7d6"></a>CAM_EV_LEVEL_MINUS_2&#160;</td><td class="fielddoc"><p>Level -2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affaf17f251b5ab3d1f6fea9971614135211" name="ab97c4e8f129e7b064def02a3e9e19affaf17f251b5ab3d1f6fea9971614135211"></a>CAM_EV_LEVEL_MINUS_1&#160;</td><td class="fielddoc"><p>Level -1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affa589e2e4864f518630aab919b36f3a8f6" name="ab97c4e8f129e7b064def02a3e9e19affa589e2e4864f518630aab919b36f3a8f6"></a>CAM_EV_LEVEL_DEFAULT&#160;</td><td class="fielddoc"><p>Level Default </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affa30bffff8f7c413498cdfca7c69d52d0d" name="ab97c4e8f129e7b064def02a3e9e19affa30bffff8f7c413498cdfca7c69d52d0d"></a>CAM_EV_LEVEL_1&#160;</td><td class="fielddoc"><p>Level +1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affa961fd26f93b132487d6c4730bb9816ca" name="ab97c4e8f129e7b064def02a3e9e19affa961fd26f93b132487d6c4730bb9816ca"></a>CAM_EV_LEVEL_2&#160;</td><td class="fielddoc"><p>Level +2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab97c4e8f129e7b064def02a3e9e19affa637dd6bf4e0512ad42736de67de2d35f" name="ab97c4e8f129e7b064def02a3e9e19affa637dd6bf4e0512ad42736de67de2d35f"></a>CAM_EV_LEVEL_3&#160;</td><td class="fielddoc"><p>Level +3 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aad9c52a28f327c5d815f76befe687015" name="aad9c52a28f327c5d815f76befe687015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9c52a28f327c5d815f76befe687015">&#9670;&#160;</a></span>CAM_IMAGE_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure camera resolution. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a03362277ce6d8880e21b186451001f3a" name="aad9c52a28f327c5d815f76befe687015a03362277ce6d8880e21b186451001f3a"></a>CAM_IMAGE_MODE_QQVGA&#160;</td><td class="fielddoc"><p>160x120 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a7491cfab5664b60bfafa41bf26e59a5f" name="aad9c52a28f327c5d815f76befe687015a7491cfab5664b60bfafa41bf26e59a5f"></a>CAM_IMAGE_MODE_QVGA&#160;</td><td class="fielddoc"><p>320x240 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a43e66f40b7746cfa3626595dfafe1315" name="aad9c52a28f327c5d815f76befe687015a43e66f40b7746cfa3626595dfafe1315"></a>CAM_IMAGE_MODE_VGA&#160;</td><td class="fielddoc"><p>640x480 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a3c4e48a704ef557d74fb651d4443f105" name="aad9c52a28f327c5d815f76befe687015a3c4e48a704ef557d74fb651d4443f105"></a>CAM_IMAGE_MODE_SVGA&#160;</td><td class="fielddoc"><p>800x600 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a02b5580d07deb175b21529743e43497a" name="aad9c52a28f327c5d815f76befe687015a02b5580d07deb175b21529743e43497a"></a>CAM_IMAGE_MODE_HD&#160;</td><td class="fielddoc"><p>1280x720 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a305826f88a7e28698f8dafc3e76f4ca8" name="aad9c52a28f327c5d815f76befe687015a305826f88a7e28698f8dafc3e76f4ca8"></a>CAM_IMAGE_MODE_SXGAM&#160;</td><td class="fielddoc"><p>1280x960 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a96ff299d23aa8d61a7991669ddffed63" name="aad9c52a28f327c5d815f76befe687015a96ff299d23aa8d61a7991669ddffed63"></a>CAM_IMAGE_MODE_UXGA&#160;</td><td class="fielddoc"><p>1600x1200 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a673bccb9bab53474c4cac256a18b7290" name="aad9c52a28f327c5d815f76befe687015a673bccb9bab53474c4cac256a18b7290"></a>CAM_IMAGE_MODE_FHD&#160;</td><td class="fielddoc"><p>1920x1080 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a5aada59aa0f3d06c022c9674da6f31a0" name="aad9c52a28f327c5d815f76befe687015a5aada59aa0f3d06c022c9674da6f31a0"></a>CAM_IMAGE_MODE_QXGA&#160;</td><td class="fielddoc"><p>2048x1536 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015ad2563a3923a421d35d64192ad7e09b85" name="aad9c52a28f327c5d815f76befe687015ad2563a3923a421d35d64192ad7e09b85"></a>CAM_IMAGE_MODE_WQXGA2&#160;</td><td class="fielddoc"><p>2592x1944 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad9c52a28f327c5d815f76befe687015a13d183bda4b7548947c2576d812c63b4" name="aad9c52a28f327c5d815f76befe687015a13d183bda4b7548947c2576d812c63b4"></a>CAM_IMAGE_MODE_96X96&#160;</td><td class="fielddoc"><p>96x96 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae9748ceecc6f11421cb46fc489606338" name="ae9748ceecc6f11421cb46fc489606338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9748ceecc6f11421cb46fc489606338">&#9670;&#160;</a></span>CAM_IMAGE_PIX_FMT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ae9748ceecc6f11421cb46fc489606338">CAM_IMAGE_PIX_FMT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure image pixel format. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="ae9748ceecc6f11421cb46fc489606338ad6a378f425b18247bc2adce64fa3af9a" name="ae9748ceecc6f11421cb46fc489606338ad6a378f425b18247bc2adce64fa3af9a"></a>CAM_IMAGE_PIX_FMT_RGB565&#160;</td><td class="fielddoc"><p>RGB565 format </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9748ceecc6f11421cb46fc489606338a8a7afaef9a95f8d85c7147481f395f36" name="ae9748ceecc6f11421cb46fc489606338a8a7afaef9a95f8d85c7147481f395f36"></a>CAM_IMAGE_PIX_FMT_JPG&#160;</td><td class="fielddoc"><p>JPEG format </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9748ceecc6f11421cb46fc489606338ab3e1c0bf1206a328aa95779d868024a2" name="ae9748ceecc6f11421cb46fc489606338ab3e1c0bf1206a328aa95779d868024a2"></a>CAM_IMAGE_PIX_FMT_YUV&#160;</td><td class="fielddoc"><p>YUV format </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9748ceecc6f11421cb46fc489606338ad29ea6bdf677352692fedfaeec0ee750" name="ae9748ceecc6f11421cb46fc489606338ad29ea6bdf677352692fedfaeec0ee750"></a>CAM_IMAGE_PIX_FMT_NONE&#160;</td><td class="fielddoc"><p>No defined format </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae0e2fcb3eed1b1c2efa712d3193fb06c" name="ae0e2fcb3eed1b1c2efa712d3193fb06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">&#9670;&#160;</a></span>CAM_SATURATION_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure camera saturation level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06ca05ab3b468ce93dbc99a1c90d413770c8" name="ae0e2fcb3eed1b1c2efa712d3193fb06ca05ab3b468ce93dbc99a1c90d413770c8"></a>CAM_SATURATION_LEVEL_MINUS_3&#160;</td><td class="fielddoc"><p>Level -3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06caf16bcd8eff4b1ee04f05e23477cfee7d" name="ae0e2fcb3eed1b1c2efa712d3193fb06caf16bcd8eff4b1ee04f05e23477cfee7d"></a>CAM_SATURATION_LEVEL_MINUS_2&#160;</td><td class="fielddoc"><p>Level -2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06ca08ffde39a79d384401800af7cdd024ed" name="ae0e2fcb3eed1b1c2efa712d3193fb06ca08ffde39a79d384401800af7cdd024ed"></a>CAM_SATURATION_LEVEL_MINUS_1&#160;</td><td class="fielddoc"><p>Level -1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06ca8f84a5176da8b2bed2fcd4d4d8b100bb" name="ae0e2fcb3eed1b1c2efa712d3193fb06ca8f84a5176da8b2bed2fcd4d4d8b100bb"></a>CAM_SATURATION_LEVEL_DEFAULT&#160;</td><td class="fielddoc"><p>Level Default </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06ca4221f46e3c8cded55ed3212a1d09c316" name="ae0e2fcb3eed1b1c2efa712d3193fb06ca4221f46e3c8cded55ed3212a1d09c316"></a>CAM_SATURATION_LEVEL_1&#160;</td><td class="fielddoc"><p>Level +1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06ca8e80f78fbb53bd65d1356123fb6d4393" name="ae0e2fcb3eed1b1c2efa712d3193fb06ca8e80f78fbb53bd65d1356123fb6d4393"></a>CAM_SATURATION_LEVEL_2&#160;</td><td class="fielddoc"><p>Level +2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0e2fcb3eed1b1c2efa712d3193fb06caadfb354c1c22f2b11455da4b70863d6f" name="ae0e2fcb3eed1b1c2efa712d3193fb06caadfb354c1c22f2b11455da4b70863d6f"></a>CAM_SATURATION_LEVEL_3&#160;</td><td class="fielddoc"><p>Level +3 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="afe52c72b2eda519bcd2b9db8df0d13f7" name="afe52c72b2eda519bcd2b9db8df0d13f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe52c72b2eda519bcd2b9db8df0d13f7">&#9670;&#160;</a></span>CAM_SHARPNESS_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#afe52c72b2eda519bcd2b9db8df0d13f7">CAM_SHARPNESS_LEVEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure camera Sharpness level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7a56078d8749e436aac4f2c2ef92597ab1" name="afe52c72b2eda519bcd2b9db8df0d13f7a56078d8749e436aac4f2c2ef92597ab1"></a>CAM_SHARPNESS_LEVEL_AUTO&#160;</td><td class="fielddoc"><p>Sharpness Auto </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7aae9e8ea1af173d3418582874765cda8d" name="afe52c72b2eda519bcd2b9db8df0d13f7aae9e8ea1af173d3418582874765cda8d"></a>CAM_SHARPNESS_LEVEL_1&#160;</td><td class="fielddoc"><p>Sharpness Level 1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7abe8405599dc09f7210f025b922a9134c" name="afe52c72b2eda519bcd2b9db8df0d13f7abe8405599dc09f7210f025b922a9134c"></a>CAM_SHARPNESS_LEVEL_2&#160;</td><td class="fielddoc"><p>Sharpness Level 2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7aa6751398f8b32bb16bd83457e4f7e11a" name="afe52c72b2eda519bcd2b9db8df0d13f7aa6751398f8b32bb16bd83457e4f7e11a"></a>CAM_SHARPNESS_LEVEL_3&#160;</td><td class="fielddoc"><p>Sharpness Level 3 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7a770607f4263a3e91f9c7e95dd1462f81" name="afe52c72b2eda519bcd2b9db8df0d13f7a770607f4263a3e91f9c7e95dd1462f81"></a>CAM_SHARPNESS_LEVEL_4&#160;</td><td class="fielddoc"><p>Sharpness Level 4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7a1075693be8bcef3d585a897294599311" name="afe52c72b2eda519bcd2b9db8df0d13f7a1075693be8bcef3d585a897294599311"></a>CAM_SHARPNESS_LEVEL_5&#160;</td><td class="fielddoc"><p>Sharpness Level 5 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7a6414026ceddb166ede78020ccdc2c302" name="afe52c72b2eda519bcd2b9db8df0d13f7a6414026ceddb166ede78020ccdc2c302"></a>CAM_SHARPNESS_LEVEL_6&#160;</td><td class="fielddoc"><p>Sharpness Level 6 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7a3997104f0c7c04db4bb400ce61da2404" name="afe52c72b2eda519bcd2b9db8df0d13f7a3997104f0c7c04db4bb400ce61da2404"></a>CAM_SHARPNESS_LEVEL_7&#160;</td><td class="fielddoc"><p>Sharpness Level 7 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe52c72b2eda519bcd2b9db8df0d13f7a579c04f9239f7758a46792a8184ea54a" name="afe52c72b2eda519bcd2b9db8df0d13f7a579c04f9239f7758a46792a8184ea54a"></a>CAM_SHARPNESS_LEVEL_8&#160;</td><td class="fielddoc"><p>Sharpness Level 8 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a79f9eea25f8ca9df7e0773ab408baed7" name="a79f9eea25f8ca9df7e0773ab408baed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f9eea25f8ca9df7e0773ab408baed7">&#9670;&#160;</a></span>CAM_VIDEO_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a79f9eea25f8ca9df7e0773ab408baed7">CAM_VIDEO_MODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure resolution in video streaming mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a79f9eea25f8ca9df7e0773ab408baed7a94446b4b6cb86a83016ed33022a8f09e" name="a79f9eea25f8ca9df7e0773ab408baed7a94446b4b6cb86a83016ed33022a8f09e"></a>CAM_VIDEO_MODE_0&#160;</td><td class="fielddoc"><p>320x240 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a79f9eea25f8ca9df7e0773ab408baed7a573f34bb7a6e52f8b74da47385f3c550" name="a79f9eea25f8ca9df7e0773ab408baed7a573f34bb7a6e52f8b74da47385f3c550"></a>CAM_VIDEO_MODE_1&#160;</td><td class="fielddoc"><p>640x480 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a643d0ad26131376e247aab82485e0095" name="a643d0ad26131376e247aab82485e0095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643d0ad26131376e247aab82485e0095">&#9670;&#160;</a></span>CAM_WHITE_BALANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a643d0ad26131376e247aab82485e0095">CAM_WHITE_BALANCE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure white balance mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a643d0ad26131376e247aab82485e0095ab158e9dcb33756e8036f68502c627cb8" name="a643d0ad26131376e247aab82485e0095ab158e9dcb33756e8036f68502c627cb8"></a>CAM_WHITE_BALANCE_MODE_DEFAULT&#160;</td><td class="fielddoc"><p>Auto </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a643d0ad26131376e247aab82485e0095a0066ad0339abd61e6a2878bca5bc4803" name="a643d0ad26131376e247aab82485e0095a0066ad0339abd61e6a2878bca5bc4803"></a>CAM_WHITE_BALANCE_MODE_SUNNY&#160;</td><td class="fielddoc"><p>Sunny </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a643d0ad26131376e247aab82485e0095a376561d470ebdb1fbfbc6464d556cbf3" name="a643d0ad26131376e247aab82485e0095a376561d470ebdb1fbfbc6464d556cbf3"></a>CAM_WHITE_BALANCE_MODE_OFFICE&#160;</td><td class="fielddoc"><p>Office </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a643d0ad26131376e247aab82485e0095a774ec5e6f557a2ed4d2a1607917bf42a" name="a643d0ad26131376e247aab82485e0095a774ec5e6f557a2ed4d2a1607917bf42a"></a>CAM_WHITE_BALANCE_MODE_CLOUDY&#160;</td><td class="fielddoc"><p>Cloudy </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a643d0ad26131376e247aab82485e0095a587bdf93698d9b3a3d8b7f97304b139e" name="a643d0ad26131376e247aab82485e0095a587bdf93698d9b3a3d8b7f97304b139e"></a>CAM_WHITE_BALANCE_MODE_HOME&#160;</td><td class="fielddoc"><p>Home </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a859449669e9de69e33ddd851c3eac6c1" name="a859449669e9de69e33ddd851c3eac6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859449669e9de69e33ddd851c3eac6c1">&#9670;&#160;</a></span>CamStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a859449669e9de69e33ddd851c3eac6c1">CamStatus</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Camera status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a859449669e9de69e33ddd851c3eac6c1ad78fefb3ad26c90b550454e8b8505a1e" name="a859449669e9de69e33ddd851c3eac6c1ad78fefb3ad26c90b550454e8b8505a1e"></a>CAM_ERR_SUCCESS&#160;</td><td class="fielddoc"><p>Operation succeeded </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a859449669e9de69e33ddd851c3eac6c1a667dfc004f98c4948c41661580a45a28" name="a859449669e9de69e33ddd851c3eac6c1a667dfc004f98c4948c41661580a45a28"></a>CAM_ERR_NO_CALLBACK&#160;</td><td class="fielddoc"><p>No callback function is registered </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="accfb274f183d9616092ab4a631bec3e4" name="accfb274f183d9616092ab4a631bec3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accfb274f183d9616092ab4a631bec3e4">&#9670;&#160;</a></span>arducam_mega_capture_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_capture_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a></td>          <td class="paramname"><span class="paramname"><em>mode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ae9748ceecc6f11421cb46fc489606338">CAM_IMAGE_PIX_FMT</a></td>          <td class="paramname"><span class="paramname"><em>pixel_format</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d4a6c05cd5f5375d2935f251c358296" name="a2d4a6c05cd5f5375d2935f251c358296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4a6c05cd5f5375d2935f251c358296">&#9670;&#160;</a></span>arducam_mega_get_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a> arducam_mega_get_brightness </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>brightness</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b78859383cd02ed95264f28a5a5a220" name="a3b78859383cd02ed95264f28a5a5a220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b78859383cd02ed95264f28a5a5a220">&#9670;&#160;</a></span>arducam_mega_get_contrast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a> arducam_mega_get_contrast </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>contrast</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2df434c9f0b0281436292a6a823cf072" name="a2df434c9f0b0281436292a6a823cf072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df434c9f0b0281436292a6a823cf072">&#9670;&#160;</a></span>arducam_mega_get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_get_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a375e6574eb760872ebd4270bc3fa49ff" name="a375e6574eb760872ebd4270bc3fa49ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375e6574eb760872ebd4270bc3fa49ff">&#9670;&#160;</a></span>arducam_mega_get_resolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a> arducam_mega_get_resolution </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>resolution</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6bc61d9422d08b5a0e9a35dab9abed0" name="af6bc61d9422d08b5a0e9a35dab9abed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bc61d9422d08b5a0e9a35dab9abed0">&#9670;&#160;</a></span>arducam_mega_get_saturation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a> arducam_mega_get_saturation </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>saturation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a810e03a1d0bca32ef73c377a4c0e7a98" name="a810e03a1d0bca32ef73c377a4c0e7a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810e03a1d0bca32ef73c377a4c0e7a98">&#9670;&#160;</a></span>arducam_mega_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a21bd18527fd94b86a5657e8d742dd6" name="a1a21bd18527fd94b86a5657e8d742dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a21bd18527fd94b86a5657e8d742dd6">&#9670;&#160;</a></span>arducam_mega_print_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_print_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bda6b901c9105ae54a6de53a56624d4" name="a3bda6b901c9105ae54a6de53a56624d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bda6b901c9105ae54a6de53a56624d4">&#9670;&#160;</a></span>arducam_mega_save_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_save_image </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filename</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mount_point</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>image_length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada6888757ce6ec1622b5e63e15ea3549" name="ada6888757ce6ec1622b5e63e15ea3549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6888757ce6ec1622b5e63e15ea3549">&#9670;&#160;</a></span>arducam_mega_set_autofocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_autofocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3641d9105e4d78a2b9cbcc72ce7a1f44">CAM_AUTO_FOCUS</a></td>          <td class="paramname"><span class="paramname"><em>autofocus</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a125c665d94e3d20ddf23f9a271d282" name="a3a125c665d94e3d20ddf23f9a271d282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a125c665d94e3d20ddf23f9a271d282">&#9670;&#160;</a></span>arducam_mega_set_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_brightness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a></td>          <td class="paramname"><span class="paramname"><em>brightness</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae42a1100e5325d586ca8e983228e72c0" name="ae42a1100e5325d586ca8e983228e72c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42a1100e5325d586ca8e983228e72c0">&#9670;&#160;</a></span>arducam_mega_set_contrast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_contrast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a></td>          <td class="paramname"><span class="paramname"><em>contrast</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85546f6fd3162942cd8bc8c667ffb923" name="a85546f6fd3162942cd8bc8c667ffb923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85546f6fd3162942cd8bc8c667ffb923">&#9670;&#160;</a></span>arducam_mega_set_saturation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_saturation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a></td>          <td class="paramname"><span class="paramname"><em>saturation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab956b4af8b7cede870faaa09820d2f0b" name="ab956b4af8b7cede870faaa09820d2f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab956b4af8b7cede870faaa09820d2f0b">&#9670;&#160;</a></span>camera_read_byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t camera_read_byte </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="arducam__mega_8h.html">arducam_mega.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

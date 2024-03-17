@@ -1,0 +1,113 @@
+\doxysection{arducam\+\_\+mega\+\_\+data Strukturreferenz}
+\hypertarget{structarducam__mega__data}{}\label{structarducam__mega__data}\index{arducam\_mega\_data@{arducam\_mega\_data}}
+
+
+{\ttfamily \#include $<$arducam\+\_\+mega.\+h$>$}
+
+\doxysubsubsection*{Datenfelder}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structarducam__mega__data_aa354b1ad6f5d28553ff7e67ef63d8866}{total\+Length}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structarducam__mega__data_a8c0fec7da32a4f7cdf0c38c4e8bc6c8d}{received\+Length}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_aed314ed493daf4112d7ecce3a558a279}{block\+Size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_a91c2b830a251fbbdbcf5a91da4225422}{camera\+Id}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_a3ff4329587e2ff2226476a5481b059c0}{camera\+Data\+Format}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_a9fd10d1b3a9ff1cb3a30efeded756f64}{burst\+First\+Flag}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_addb71232e180f6f2e67f654fd374c7dc}{preview\+Mode}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_a5a3a18c94cd364e39506534fb9ceb02b}{current\+Pixel\+Format}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structarducam__mega__data_ae6880f3013d005277f370466b1f9d693}{current\+Picture\+Mode}}
+\item 
+struct \mbox{\hyperlink{structcamera__info}{camera\+\_\+info}} \mbox{\hyperlink{structarducam__mega__data_a209f9c97dec021f696b157e49b70ee0e}{my\+Camera\+Info}}
+\item 
+const struct Camera\+Operations \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structarducam__mega__data_a627480e787b4b1dce0394bf3da483f13}{arducam\+Camera\+Op}}
+\item 
+\mbox{\hyperlink{arducam__mega_8h_a81b801c80862c07bcbe65126db52164c}{BUFFER\+\_\+\+CALLBACK}} \mbox{\hyperlink{structarducam__mega__data_a00a3841bf923f1abcfe752ee6d192d42}{call\+Back\+Function}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Felder}
+\Hypertarget{structarducam__mega__data_a627480e787b4b1dce0394bf3da483f13}\label{structarducam__mega__data_a627480e787b4b1dce0394bf3da483f13} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!arducamCameraOp@{arducamCameraOp}}
+\index{arducamCameraOp@{arducamCameraOp}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{arducamCameraOp}{arducamCameraOp}}
+{\footnotesize\ttfamily const struct Camera\+Operations\texorpdfstring{$\ast$}{*} arducam\+\_\+mega\+\_\+data\+::arducam\+Camera\+Op}
+
+Camera function interface \Hypertarget{structarducam__mega__data_aed314ed493daf4112d7ecce3a558a279}\label{structarducam__mega__data_aed314ed493daf4112d7ecce3a558a279} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!blockSize@{blockSize}}
+\index{blockSize@{blockSize}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{blockSize}{blockSize}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::block\+Size}
+
+The length of the callback function transmission \Hypertarget{structarducam__mega__data_a9fd10d1b3a9ff1cb3a30efeded756f64}\label{structarducam__mega__data_a9fd10d1b3a9ff1cb3a30efeded756f64} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!burstFirstFlag@{burstFirstFlag}}
+\index{burstFirstFlag@{burstFirstFlag}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{burstFirstFlag}{burstFirstFlag}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::burst\+First\+Flag}
+
+Flag bit for reading data for the first time in burst mode \Hypertarget{structarducam__mega__data_a00a3841bf923f1abcfe752ee6d192d42}\label{structarducam__mega__data_a00a3841bf923f1abcfe752ee6d192d42} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!callBackFunction@{callBackFunction}}
+\index{callBackFunction@{callBackFunction}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{callBackFunction}{callBackFunction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{arducam__mega_8h_a81b801c80862c07bcbe65126db52164c}{BUFFER\+\_\+\+CALLBACK}} arducam\+\_\+mega\+\_\+data\+::call\+Back\+Function}
+
+Camera callback function \Hypertarget{structarducam__mega__data_a3ff4329587e2ff2226476a5481b059c0}\label{structarducam__mega__data_a3ff4329587e2ff2226476a5481b059c0} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!cameraDataFormat@{cameraDataFormat}}
+\index{cameraDataFormat@{cameraDataFormat}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{cameraDataFormat}{cameraDataFormat}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::camera\+Data\+Format}
+
+The currently set image pixel format \Hypertarget{structarducam__mega__data_a91c2b830a251fbbdbcf5a91da4225422}\label{structarducam__mega__data_a91c2b830a251fbbdbcf5a91da4225422} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!cameraId@{cameraId}}
+\index{cameraId@{cameraId}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{cameraId}{cameraId}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::camera\+Id}
+
+Model of camera module \Hypertarget{structarducam__mega__data_ae6880f3013d005277f370466b1f9d693}\label{structarducam__mega__data_ae6880f3013d005277f370466b1f9d693} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!currentPictureMode@{currentPictureMode}}
+\index{currentPictureMode@{currentPictureMode}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{currentPictureMode}{currentPictureMode}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::current\+Picture\+Mode}
+
+Currently set resolution \Hypertarget{structarducam__mega__data_a5a3a18c94cd364e39506534fb9ceb02b}\label{structarducam__mega__data_a5a3a18c94cd364e39506534fb9ceb02b} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!currentPixelFormat@{currentPixelFormat}}
+\index{currentPixelFormat@{currentPixelFormat}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{currentPixelFormat}{currentPixelFormat}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::current\+Pixel\+Format}
+
+The currently set image pixel format \Hypertarget{structarducam__mega__data_a209f9c97dec021f696b157e49b70ee0e}\label{structarducam__mega__data_a209f9c97dec021f696b157e49b70ee0e} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!myCameraInfo@{myCameraInfo}}
+\index{myCameraInfo@{myCameraInfo}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{myCameraInfo}{myCameraInfo}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcamera__info}{camera\+\_\+info}} arducam\+\_\+mega\+\_\+data\+::my\+Camera\+Info}
+
+Basic information of the current camera \Hypertarget{structarducam__mega__data_addb71232e180f6f2e67f654fd374c7dc}\label{structarducam__mega__data_addb71232e180f6f2e67f654fd374c7dc} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!previewMode@{previewMode}}
+\index{previewMode@{previewMode}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{previewMode}{previewMode}}
+{\footnotesize\ttfamily uint8\+\_\+t arducam\+\_\+mega\+\_\+data\+::preview\+Mode}
+
+Stream mode flag \Hypertarget{structarducam__mega__data_a8c0fec7da32a4f7cdf0c38c4e8bc6c8d}\label{structarducam__mega__data_a8c0fec7da32a4f7cdf0c38c4e8bc6c8d} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!receivedLength@{receivedLength}}
+\index{receivedLength@{receivedLength}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{receivedLength}{receivedLength}}
+{\footnotesize\ttfamily uint32\+\_\+t arducam\+\_\+mega\+\_\+data\+::received\+Length}
+
+The remaining length of the picture \Hypertarget{structarducam__mega__data_aa354b1ad6f5d28553ff7e67ef63d8866}\label{structarducam__mega__data_aa354b1ad6f5d28553ff7e67ef63d8866} 
+\index{arducam\_mega\_data@{arducam\_mega\_data}!totalLength@{totalLength}}
+\index{totalLength@{totalLength}!arducam\_mega\_data@{arducam\_mega\_data}}
+\doxysubsubsection{\texorpdfstring{totalLength}{totalLength}}
+{\footnotesize\ttfamily uint32\+\_\+t arducam\+\_\+mega\+\_\+data\+::total\+Length}
+
+The total length of the picture 
+
+Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{arducam__mega_8h}{arducam\+\_\+mega.\+h}}\end{DoxyCompactItemize}

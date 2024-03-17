@@ -1,0 +1,67 @@
+\doxysection{src/uart.c-\/\+Dateireferenz}
+\hypertarget{uart_8c}{}\label{uart_8c}\index{src/uart.c@{src/uart.c}}
+{\ttfamily \#include $<$zephyr/device.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/drivers/uart.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/kernel.\+h$>$}\newline
+{\ttfamily \#include "{}uart.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uart_8c_a70db483b47dc281c02d080944dc06ecf}{UART\+\_\+\+DEVICE\+\_\+\+NODE}}~DT\+\_\+\+NODELABEL(uart5)
+\item 
+\#define \mbox{\hyperlink{uart_8c_ad4d025ecf1bdbf8b244ca688df8e478d}{MSG\+\_\+\+SIZE}}~32
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{uart_8c_ac3aad3dea14b6a538b8a69d8ebbc7fc4}{K\+\_\+\+MSGQ\+\_\+\+DEFINE}} (uart\+\_\+msgq, \mbox{\hyperlink{uart_8c_ad4d025ecf1bdbf8b244ca688df8e478d}{MSG\+\_\+\+SIZE}}, 20, 4)
+\item 
+void \mbox{\hyperlink{uart_8c_a357768a271ed917062d3c71cde8d60f4}{serial\+\_\+cb}} (const struct device \texorpdfstring{$\ast$}{*}dev, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+void \mbox{\hyperlink{uart_8c_a85a4f51b48e831e0183e00ddbaa095a4}{print\+\_\+uart}} (char \texorpdfstring{$\ast$}{*}buf)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{uart_8c_aef379cdeb9b371b8efd584ff51b30993}{uart\+\_\+main}} (char \texorpdfstring{$\ast$}{*}buff, size\+\_\+t buffer\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{uart_8c_ad4d025ecf1bdbf8b244ca688df8e478d}\label{uart_8c_ad4d025ecf1bdbf8b244ca688df8e478d} 
+\index{uart.c@{uart.c}!MSG\_SIZE@{MSG\_SIZE}}
+\index{MSG\_SIZE@{MSG\_SIZE}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{MSG\_SIZE}{MSG\_SIZE}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+SIZE~32}
+
+\Hypertarget{uart_8c_a70db483b47dc281c02d080944dc06ecf}\label{uart_8c_a70db483b47dc281c02d080944dc06ecf} 
+\index{uart.c@{uart.c}!UART\_DEVICE\_NODE@{UART\_DEVICE\_NODE}}
+\index{UART\_DEVICE\_NODE@{UART\_DEVICE\_NODE}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART\_DEVICE\_NODE}{UART\_DEVICE\_NODE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+DEVICE\+\_\+\+NODE~DT\+\_\+\+NODELABEL(uart5)}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{uart_8c_ac3aad3dea14b6a538b8a69d8ebbc7fc4}\label{uart_8c_ac3aad3dea14b6a538b8a69d8ebbc7fc4} 
+\index{uart.c@{uart.c}!K\_MSGQ\_DEFINE@{K\_MSGQ\_DEFINE}}
+\index{K\_MSGQ\_DEFINE@{K\_MSGQ\_DEFINE}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{K\_MSGQ\_DEFINE()}{K\_MSGQ\_DEFINE()}}
+{\footnotesize\ttfamily K\+\_\+\+MSGQ\+\_\+\+DEFINE (\begin{DoxyParamCaption}\item[{uart\+\_\+msgq}]{,  }\item[{\mbox{\hyperlink{uart_8c_ad4d025ecf1bdbf8b244ca688df8e478d}{MSG\+\_\+\+SIZE}}}]{,  }\item[{20}]{,  }\item[{4}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8c_a85a4f51b48e831e0183e00ddbaa095a4}\label{uart_8c_a85a4f51b48e831e0183e00ddbaa095a4} 
+\index{uart.c@{uart.c}!print\_uart@{print\_uart}}
+\index{print\_uart@{print\_uart}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{print\_uart()}{print\_uart()}}
+{\footnotesize\ttfamily void print\+\_\+uart (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buf }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8c_a357768a271ed917062d3c71cde8d60f4}\label{uart_8c_a357768a271ed917062d3c71cde8d60f4} 
+\index{uart.c@{uart.c}!serial\_cb@{serial\_cb}}
+\index{serial\_cb@{serial\_cb}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{serial\_cb()}{serial\_cb()}}
+{\footnotesize\ttfamily void serial\+\_\+cb (\begin{DoxyParamCaption}\item[{const struct device \texorpdfstring{$\ast$}{*}}]{dev,  }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8c_aef379cdeb9b371b8efd584ff51b30993}\label{uart_8c_aef379cdeb9b371b8efd584ff51b30993} 
+\index{uart.c@{uart.c}!uart\_main@{uart\_main}}
+\index{uart\_main@{uart\_main}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_main()}{uart\_main()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} uart\+\_\+main (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buff,  }\item[{size\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+

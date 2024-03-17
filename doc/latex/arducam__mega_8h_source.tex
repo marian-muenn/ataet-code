@@ -1,0 +1,319 @@
+\doxysection{arducam\+\_\+mega.\+h}
+\hypertarget{arducam__mega_8h_source}{}\label{arducam__mega_8h_source}\index{src/arducam\_mega.h@{src/arducam\_mega.h}}
+\mbox{\hyperlink{arducam__mega_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ MIT\ License\ */}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ Copyright\ (c)\ [year]\ [fullname]\ */}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{/*\ Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a\ copy}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),\ to\ deal}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ in\ the\ Software\ without\ restriction,\ including\ without\ limitation\ the\ rights}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,\ and/or\ sell\ */}}
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the\ Software\ is\ */}}
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:\ */}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ all\ */}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ copies\ or\ substantial\ portions\ of\ the\ Software.\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR\ */}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,\ */}}
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00023\ \textcolor{comment}{/*\ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER\ */}}
+\DoxyCodeLine{00024\ \textcolor{comment}{/*\ LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING\ FROM,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00026\ \textcolor{comment}{/*\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ SOFTWARE.\ */}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifndef\ \_\_ARDUCAM\_MEGA\_H\_\_}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ \_\_ARDUCAM\_MEGA\_H\_\_}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <zephyr/device.h>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <zephyr/drivers/gpio.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <zephyr/drivers/spi.h>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ ARDUCHIP\_FRAMES\ 0x01}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ ARDUCHIP\_TEST1\ 0x00\ \ }\textcolor{comment}{//\ TEST\ register}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ ARDUCHIP\_FIFO\ 0x04\ \ \ }\textcolor{comment}{//\ FIFO\ and\ I2C\ control}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ ARDUCHIP\_FIFO\_2\ 0x07\ }\textcolor{comment}{//\ FIFO\ and\ I2C\ control}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ FIFO\_CLEAR\_MASK\ 0x80}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ FIFO\_CLEAR\_ID\_MASK\ 0x01}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ FIFO\_START\_MASK\ 0x02}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ FIFO\_RDPTR\_RST\_MASK\ 0x10}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ FIFO\_WRPTR\_RST\_MASK\ 0x20}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ ARDUCHIP\_TRIG\ 0x44\ }\textcolor{comment}{//\ Trigger\ source}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ VSYNC\_MASK\ 0x01}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ SHUTTER\_MASK\ 0x02}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ CAP\_DONE\_MASK\ 0x04}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ FIFO\_SIZE1\ 0x45\ }\textcolor{comment}{//\ Camera\ write\ FIFO\ size[7:0]\ for\ burst\ to\ read}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ FIFO\_SIZE2\ 0x46\ }\textcolor{comment}{//\ Camera\ write\ FIFO\ size[15:8]}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ FIFO\_SIZE3\ 0x47\ }\textcolor{comment}{//\ Camera\ write\ FIFO\ size[18:16]}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ BURST\_FIFO\_READ\ 0x3C\ \ }\textcolor{comment}{//\ Burst\ FIFO\ read\ operation}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ SINGLE\_FIFO\_READ\ 0x3D\ }\textcolor{comment}{//\ Single\ FIFO\ read\ operation}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ BUF\_MAX\_LENGTH\ 255}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ CAPRURE\_MAX\_NUM\ 0xff}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ CAM\_REG\_POWER\_CONTROL\ 0X02}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ CAM\_REG\_SENSOR\_RESET\ 0X07}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ CAM\_REG\_FORMAT\ 0X20}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ CAM\_REG\_CAPTURE\_RESOLUTION\ 0X21}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ CAM\_REG\_BRIGHTNESS\_CONTROL\ 0X22}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ CAM\_REG\_CONTRAST\_CONTROL\ 0X23}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ CAM\_REG\_SATURATION\_CONTROL\ 0X24}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ CAM\_REG\_EV\_CONTROL\ 0X25}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ CAM\_REG\_WHILEBALANCE\_MODE\_CONTROL\ 0X26}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ CAM\_REG\_COLOR\_EFFECT\_CONTROL\ 0X27}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ CAM\_REG\_SHARPNESS\_CONTROL\ 0X28}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ CAM\_REG\_AUTO\_FOCUS\_CONTROL\ 0X29}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ CAM\_REG\_EXPOSURE\_GAIN\_WHILEBALANCE\_CONTROL\ 0X2A}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ CAM\_REG\_MANUAL\_GAIN\_BIT\_9\_8\ 0X2B}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ CAM\_REG\_MANUAL\_GAIN\_BIT\_7\_0\ 0X2C}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ CAM\_REG\_MANUAL\_EXPOSURE\_BIT\_19\_16\ 0X2D}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ CAM\_REG\_MANUAL\_EXPOSURE\_BIT\_15\_8\ 0X2E}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ CAM\_REG\_MANUAL\_EXPOSURE\_BIT\_7\_0\ 0X2F}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ CAM\_REG\_SENSOR\_ID\ 0x40}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ CAM\_REG\_YEAR\_ID\ 0x41}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ CAM\_REG\_MONTH\_ID\ 0x42}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ CAM\_REG\_DAY\_ID\ 0x43}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ CAM\_REG\_SENSOR\_STATE\ 0x44}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ CAM\_REG\_DEBUG\_DEVICE\_ADDRESS\ 0X0A}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ CAM\_REG\_DEBUG\_REGISTER\_HIGH\ 0X0B}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ CAM\_REG\_DEBUG\_REGISTER\_LOW\ 0X0C}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ CAM\_REG\_DEBUG\_REGISTER\_VALUE\ 0X0D}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ CAM\_REG\_SENSOR\_STATE\_IDLE\ (1\ <<\ 1)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ CAM\_SENSOR\_RESET\_ENABLE\ (1\ <<\ 6)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ CAM\_FORMAT\_BASICS\ (0\ <<\ 0)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ CAM\_SET\_CAPTURE\_MODE\ (0\ <<\ 7)}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ CAM\_SET\_VIDEO\_MODE\ (1\ <<\ 7)}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ SET\_WHILEBALANCE\ 0X02}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ SET\_EXPOSURE\ 0X01}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ SET\_GAIN\ 0X00}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ CAMERA\_TYPE\_NUMBER\ 2}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ CAMERA\_OV5640\ 0}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ CAMERA\_OV3640\ 1}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ FORMAT\_JPEG\ 0X01}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ FORMAT\_RGB\ 0X02}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ FORMAT\_YUV\ 0X03}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ RESOLUTION\_160X120\ (1\ <<\ 0)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ RESOLUTION\_320X240\ (1\ <<\ 1)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ RESOLUTION\_640X480\ (1\ <<\ 2)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ RESOLUTION\_800X600\ (1\ <<\ 3)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ RESOLUTION\_1280X720\ (1\ <<\ 4)}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ RESOLUTION\_1280X960\ (1\ <<\ 5)}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ RESOLUTION\_1600X1200\ (1\ <<\ 6)}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ RESOLUTION\_1920X1080\ (1\ <<\ 7)}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ RESOLUTION\_2048X1536\ (1\ <<\ 8)}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ RESOLUTION\_2592X1944\ (1\ <<\ 9)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ RESOLUTION\_320x320\ (1\ <<\ 10)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ RESOLUTION\_128x128\ (1\ <<\ 11)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ RESOLUTION\_96x96\ (1\ <<\ 12)}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ SPECIAL\_NORMAL\ (0\ <<\ 0)}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ SPECIAL\_BLUEISH\ (1\ <<\ 0)}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ SPECIAL\_REDISH\ (1\ <<\ 1)}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ SPECIAL\_BW\ (1\ <<\ 2)}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ SPECIAL\_SEPIA\ (1\ <<\ 3)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ SPECIAL\_NEGATIVE\ (1\ <<\ 4)}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ SPECIAL\_GREENISH\ (1\ <<\ 5)}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ SPECIAL\_YELLOWISH\ (1\ <<\ 8)}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00138\ \ \ \mbox{\hyperlink{arducam__mega_8h_a859449669e9de69e33ddd851c3eac6c1ad78fefb3ad26c90b550454e8b8505a1e}{CAM\_ERR\_SUCCESS}}\ =\ 0,\ \ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \mbox{\hyperlink{arducam__mega_8h_a859449669e9de69e33ddd851c3eac6c1a667dfc004f98c4948c41661580a45a28}{CAM\_ERR\_NO\_CALLBACK}}\ =\ -\/1,\ }
+\DoxyCodeLine{00140\ \}\ \mbox{\hyperlink{arducam__mega_8h_a859449669e9de69e33ddd851c3eac6c1}{CamStatus}};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00147\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a03362277ce6d8880e21b186451001f3a}{CAM\_IMAGE\_MODE\_QQVGA}}\ =\ 0x00,\ \ \ }
+\DoxyCodeLine{00148\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a7491cfab5664b60bfafa41bf26e59a5f}{CAM\_IMAGE\_MODE\_QVGA}}\ =\ 0x01,\ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a43e66f40b7746cfa3626595dfafe1315}{CAM\_IMAGE\_MODE\_VGA}}\ =\ 0x02,\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a3c4e48a704ef557d74fb651d4443f105}{CAM\_IMAGE\_MODE\_SVGA}}\ =\ 0x03,\ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a02b5580d07deb175b21529743e43497a}{CAM\_IMAGE\_MODE\_HD}}\ =\ 0x04,\ \ \ \ \ \ }
+\DoxyCodeLine{00152\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a305826f88a7e28698f8dafc3e76f4ca8}{CAM\_IMAGE\_MODE\_SXGAM}}\ =\ 0x05,\ \ \ }
+\DoxyCodeLine{00153\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a96ff299d23aa8d61a7991669ddffed63}{CAM\_IMAGE\_MODE\_UXGA}}\ =\ 0x06,\ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a673bccb9bab53474c4cac256a18b7290}{CAM\_IMAGE\_MODE\_FHD}}\ =\ 0x07,\ \ \ \ \ }
+\DoxyCodeLine{00155\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a5aada59aa0f3d06c022c9674da6f31a0}{CAM\_IMAGE\_MODE\_QXGA}}\ =\ 0x08,\ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015ad2563a3923a421d35d64192ad7e09b85}{CAM\_IMAGE\_MODE\_WQXGA2}}\ =\ 0x09,\ \ }
+\DoxyCodeLine{00157\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015a13d183bda4b7548947c2576d812c63b4}{CAM\_IMAGE\_MODE\_96X96}}\ =\ 0x0a,\ \ \ }
+\DoxyCodeLine{00159\ \ \ CAM\_IMAGE\_MODE\_128X128\ =\ 0x0b,\ }
+\DoxyCodeLine{00160\ \ \ CAM\_IMAGE\_MODE\_320X320\ =\ 0x0c,\ }
+\DoxyCodeLine{00161\ \ \ CAM\_IMAGE\_MODE\_12\ =\ 0x0d,\ \ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ CAM\_IMAGE\_MODE\_13\ =\ 0x0e,\ \ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ CAM\_IMAGE\_MODE\_14\ =\ 0x0f,\ \ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ CAM\_IMAGE\_MODE\_15\ =\ 0x10,\ \ \ \ \ \ }
+\DoxyCodeLine{00166\ \}\ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\_IMAGE\_MODE}};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00173\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231a9b033b978300e447a7e121ceb56c8fe5}{CAM\_CONTRAST\_LEVEL\_MINUS\_3}}\ =\ 6,\ }
+\DoxyCodeLine{00174\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231ad13726f2dfe529fe673b5902ffc9ac9a}{CAM\_CONTRAST\_LEVEL\_MINUS\_2}}\ =\ 4,\ }
+\DoxyCodeLine{00175\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231a3886a3200df9f8f761bb1fa2cc7b3a13}{CAM\_CONTRAST\_LEVEL\_MINUS\_1}}\ =\ 2,\ }
+\DoxyCodeLine{00176\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231ab46683fb5e0b681da8d34fb95d39c07c}{CAM\_CONTRAST\_LEVEL\_DEFAULT}}\ =\ 0,\ }
+\DoxyCodeLine{00177\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231aac51725ee26af7d2bc2581254b8d2aec}{CAM\_CONTRAST\_LEVEL\_1}}\ =\ 1,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231a617219ff57ab254702c5485762ba9eee}{CAM\_CONTRAST\_LEVEL\_2}}\ =\ 3,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231a418a4649ee36450b711a34f38605303d}{CAM\_CONTRAST\_LEVEL\_3}}\ =\ 5,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00180\ \}\ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\_CONTRAST\_LEVEL}};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00187\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affacfb9c23415a7a622d739a294396e9aa5}{CAM\_EV\_LEVEL\_MINUS\_3}}\ =\ 6,\ }
+\DoxyCodeLine{00188\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affa2eb5f0d1f02c82b42b49291d3ed8a7d6}{CAM\_EV\_LEVEL\_MINUS\_2}}\ =\ 4,\ }
+\DoxyCodeLine{00189\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affaf17f251b5ab3d1f6fea9971614135211}{CAM\_EV\_LEVEL\_MINUS\_1}}\ =\ 2,\ }
+\DoxyCodeLine{00190\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affa589e2e4864f518630aab919b36f3a8f6}{CAM\_EV\_LEVEL\_DEFAULT}}\ =\ 0,\ }
+\DoxyCodeLine{00191\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affa30bffff8f7c413498cdfca7c69d52d0d}{CAM\_EV\_LEVEL\_1}}\ =\ 1,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00192\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affa961fd26f93b132487d6c4730bb9816ca}{CAM\_EV\_LEVEL\_2}}\ =\ 3,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19affa637dd6bf4e0512ad42736de67de2d35f}{CAM\_EV\_LEVEL\_3}}\ =\ 5,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00194\ \}\ \mbox{\hyperlink{arducam__mega_8h_ab97c4e8f129e7b064def02a3e9e19aff}{CAM\_EV\_LEVEL}};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00200\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00201\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06ca05ab3b468ce93dbc99a1c90d413770c8}{CAM\_SATURATION\_LEVEL\_MINUS\_3}}\ =\ 6,\ }
+\DoxyCodeLine{00202\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06caf16bcd8eff4b1ee04f05e23477cfee7d}{CAM\_SATURATION\_LEVEL\_MINUS\_2}}\ =\ 4,\ }
+\DoxyCodeLine{00203\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06ca08ffde39a79d384401800af7cdd024ed}{CAM\_SATURATION\_LEVEL\_MINUS\_1}}\ =\ 2,\ }
+\DoxyCodeLine{00204\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06ca8f84a5176da8b2bed2fcd4d4d8b100bb}{CAM\_SATURATION\_LEVEL\_DEFAULT}}\ =\ 0,\ }
+\DoxyCodeLine{00205\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06ca4221f46e3c8cded55ed3212a1d09c316}{CAM\_SATURATION\_LEVEL\_1}}\ =\ 1,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06ca8e80f78fbb53bd65d1356123fb6d4393}{CAM\_SATURATION\_LEVEL\_2}}\ =\ 3,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00207\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06caadfb354c1c22f2b11455da4b70863d6f}{CAM\_SATURATION\_LEVEL\_3}}\ =\ 5,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00208\ \}\ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\_SATURATION\_LEVEL}};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00215\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a0ced35cd858431788a18d11305942b2b}{CAM\_BRIGHTNESS\_LEVEL\_MINUS\_4}}\ =\ 8,\ }
+\DoxyCodeLine{00216\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a24a5961269a5957ec20c130ae1d08273}{CAM\_BRIGHTNESS\_LEVEL\_MINUS\_3}}\ =\ 6,\ }
+\DoxyCodeLine{00217\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71aa38090974c30465438adab560a012a9c}{CAM\_BRIGHTNESS\_LEVEL\_MINUS\_2}}\ =\ 4,\ }
+\DoxyCodeLine{00218\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a98c74b297dc8fb5d62ff570c3b494a99}{CAM\_BRIGHTNESS\_LEVEL\_MINUS\_1}}\ =\ 2,\ }
+\DoxyCodeLine{00219\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a0aa2a4f98eb36a1ff46031213aa69dbf}{CAM\_BRIGHTNESS\_LEVEL\_DEFAULT}}\ =\ 0,\ }
+\DoxyCodeLine{00220\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a1acca8ec51ab8406ec2861df57a3be2e}{CAM\_BRIGHTNESS\_LEVEL\_1}}\ =\ 1,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00221\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71ae37e08e5e5ffcda7d38d4bf9af87f1d9}{CAM\_BRIGHTNESS\_LEVEL\_2}}\ =\ 3,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00222\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a25b6b6f8e0f0e29bf6466114509d3e2e}{CAM\_BRIGHTNESS\_LEVEL\_3}}\ =\ 5,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00223\ \ \ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71a166e43e536a1b7684bf5ddc47e45885c}{CAM\_BRIGHTNESS\_LEVEL\_4}}\ =\ 7,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00224\ \}\ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\_BRIGHTNESS\_LEVEL}};}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00230\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00231\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7a56078d8749e436aac4f2c2ef92597ab1}{CAM\_SHARPNESS\_LEVEL\_AUTO}}\ =\ 0,\ }
+\DoxyCodeLine{00232\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7aae9e8ea1af173d3418582874765cda8d}{CAM\_SHARPNESS\_LEVEL\_1}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00233\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7abe8405599dc09f7210f025b922a9134c}{CAM\_SHARPNESS\_LEVEL\_2}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00234\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7aa6751398f8b32bb16bd83457e4f7e11a}{CAM\_SHARPNESS\_LEVEL\_3}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00235\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7a770607f4263a3e91f9c7e95dd1462f81}{CAM\_SHARPNESS\_LEVEL\_4}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00236\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7a1075693be8bcef3d585a897294599311}{CAM\_SHARPNESS\_LEVEL\_5}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00237\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7a6414026ceddb166ede78020ccdc2c302}{CAM\_SHARPNESS\_LEVEL\_6}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00238\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7a3997104f0c7c04db4bb400ce61da2404}{CAM\_SHARPNESS\_LEVEL\_7}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00239\ \ \ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7a579c04f9239f7758a46792a8184ea54a}{CAM\_SHARPNESS\_LEVEL\_8}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00240\ \}\ \mbox{\hyperlink{arducam__mega_8h_afe52c72b2eda519bcd2b9db8df0d13f7}{CAM\_SHARPNESS\_LEVEL}};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00246\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00247\ \ \ \mbox{\hyperlink{arducam__mega_8h_a79f9eea25f8ca9df7e0773ab408baed7a94446b4b6cb86a83016ed33022a8f09e}{CAM\_VIDEO\_MODE\_0}}\ =\ 1,\ }
+\DoxyCodeLine{00248\ \ \ \mbox{\hyperlink{arducam__mega_8h_a79f9eea25f8ca9df7e0773ab408baed7a573f34bb7a6e52f8b74da47385f3c550}{CAM\_VIDEO\_MODE\_1}}\ =\ 2,\ }
+\DoxyCodeLine{00249\ \}\ \mbox{\hyperlink{arducam__mega_8h_a79f9eea25f8ca9df7e0773ab408baed7}{CAM\_VIDEO\_MODE}};}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00255\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00256\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338ad6a378f425b18247bc2adce64fa3af9a}{CAM\_IMAGE\_PIX\_FMT\_RGB565}}\ =\ 0x02,\ }
+\DoxyCodeLine{00257\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338a8a7afaef9a95f8d85c7147481f395f36}{CAM\_IMAGE\_PIX\_FMT\_JPG}}\ =\ 0x01,\ \ \ \ }
+\DoxyCodeLine{00258\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338ab3e1c0bf1206a328aa95779d868024a2}{CAM\_IMAGE\_PIX\_FMT\_YUV}}\ =\ 0x03,\ \ \ \ }
+\DoxyCodeLine{00259\ \ \ \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338ad29ea6bdf677352692fedfaeec0ee750}{CAM\_IMAGE\_PIX\_FMT\_NONE}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00260\ \}\ \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338}{CAM\_IMAGE\_PIX\_FMT}};}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00266\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00267\ \ \ \mbox{\hyperlink{arducam__mega_8h_a643d0ad26131376e247aab82485e0095ab158e9dcb33756e8036f68502c627cb8}{CAM\_WHITE\_BALANCE\_MODE\_DEFAULT}}\ =\ 0,\ }
+\DoxyCodeLine{00268\ \ \ \mbox{\hyperlink{arducam__mega_8h_a643d0ad26131376e247aab82485e0095a0066ad0339abd61e6a2878bca5bc4803}{CAM\_WHITE\_BALANCE\_MODE\_SUNNY}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00269\ \ \ \mbox{\hyperlink{arducam__mega_8h_a643d0ad26131376e247aab82485e0095a376561d470ebdb1fbfbc6464d556cbf3}{CAM\_WHITE\_BALANCE\_MODE\_OFFICE}},\ \ \ \ \ \ }
+\DoxyCodeLine{00270\ \ \ \mbox{\hyperlink{arducam__mega_8h_a643d0ad26131376e247aab82485e0095a774ec5e6f557a2ed4d2a1607917bf42a}{CAM\_WHITE\_BALANCE\_MODE\_CLOUDY}},\ \ \ \ \ \ }
+\DoxyCodeLine{00271\ \ \ \mbox{\hyperlink{arducam__mega_8h_a643d0ad26131376e247aab82485e0095a587bdf93698d9b3a3d8b7f97304b139e}{CAM\_WHITE\_BALANCE\_MODE\_HOME}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00272\ \}\ \mbox{\hyperlink{arducam__mega_8h_a643d0ad26131376e247aab82485e0095}{CAM\_WHITE\_BALANCE}};}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00278\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00279\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375aa49d8377e2747f77e4bf613c850194ed}{CAM\_COLOR\_FX\_NONE}}\ =\ 0,\ \ \ \ \ \ }
+\DoxyCodeLine{00280\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375a11048290f31c05cbdb76f4b34a16d351}{CAM\_COLOR\_FX\_BLUEISH}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00281\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375a69103867116a636e85511892cc61104f}{CAM\_COLOR\_FX\_REDISH}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00282\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375abc189051b7ce7f3db2d97027064c22fd}{CAM\_COLOR\_FX\_BW}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00283\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375a62e9c1cde01042a1a1301d4b203a4295}{CAM\_COLOR\_FX\_SEPIA}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00284\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375aa44e99955a02f7b181fa01b1f606cf05}{CAM\_COLOR\_FX\_NEGATIVE}},\ \ \ \ \ \ }
+\DoxyCodeLine{00285\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375a7051f683fb111209375716eee162ba3b}{CAM\_COLOR\_FX\_GRASS\_GREEN}},\ \ \ }
+\DoxyCodeLine{00286\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375a965a6a727e8960b91144dc036e44506a}{CAM\_COLOR\_FX\_OVER\_EXPOSURE}},\ }
+\DoxyCodeLine{00287\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375ac9ec846d3dab758529de003a1a9244d8}{CAM\_COLOR\_FX\_SOLARIZE}},\ \ \ \ \ \ }
+\DoxyCodeLine{00288\ \ \ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375a1d8c4ae0e69935cfd0289e0c122aa58e}{CAM\_COLOR\_FX\_YELLOWISH}},}
+\DoxyCodeLine{00289\ \}\ \mbox{\hyperlink{arducam__mega_8h_a1396f1daef6526339ee8abe10a55c375}{CAM\_COLOR\_FX}};}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00295\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00296\ \ \ \mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44a5e6f202282c013355bb018161acfe141}{CAM\_AUTO\_FOCUS\_DEFAULT}}\ =}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00298\ \ \ \mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44a4b37c89f1435728f2c15c948b809d574}{CAM\_AUTO\_FOCUS\_SINGLE}},\ }
+\DoxyCodeLine{00299\ \ \ \mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44a470eac97be26dd1f48131d128fcba1c7}{CAM\_AUTO\_FOCUS\_CONTINUOUS}},\ }
+\DoxyCodeLine{00300\ \ \ \mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44ae3df384fb22095f8ceead1a842823cbe}{CAM\_AUTO\_FOCUS\_PAUSE}},\ \ \ \ \ \ }
+\DoxyCodeLine{00301\ \ \ \mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44a20a9b9bf92332c277812ff2c437882eb}{CAM\_AUTO\_FOCUS\_DISABLE}},\ \ \ \ }
+\DoxyCodeLine{00302\ \}\ \mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44}{CAM\_AUTO\_FOCUS}};}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ \textcolor{keyword}{typedef}\ uint8\_t\ (*\mbox{\hyperlink{arducam__mega_8h_a81b801c80862c07bcbe65126db52164c}{BUFFER\_CALLBACK}})(}
+\DoxyCodeLine{00305\ \ \ \ \ uint8\_t\ *buffer,\ uint8\_t\ lenght);\ }
+\DoxyCodeLine{00307\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcamera__info}{camera\_info}}\ \{}
+\DoxyCodeLine{00308\ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structcamera__info_a1e930660829aa365b8bb45d43f57be9d}{cameraId}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00309\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcamera__info_ae06df90f907e74d91f263541d1010098}{supportResolution}};\ \ \ \ \ }
+\DoxyCodeLine{00310\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcamera__info_a4f214c5038fb9d80805b556061d7e860}{supportSpecialEffects}};\ }
+\DoxyCodeLine{00312\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcamera__info_a31f85896aa9ce13d503ff75309f8bf5d}{exposureValueMax}};\ }
+\DoxyCodeLine{00314\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcamera__info_ab99997041278f5190adbb0321b18021a}{exposureValueMin}};\ \ }
+\DoxyCodeLine{00316\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcamera__info_afc062dc51dcd443e4bf2654b90e99036}{gainValueMax}};\ }
+\DoxyCodeLine{00317\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcamera__info_a9f7da2132dd08e68f9238634ebe0b0e0}{gainValueMin}};\ }
+\DoxyCodeLine{00318\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \mbox{\hyperlink{structcamera__info_a6e81f09b09c189301547ee665c0084a8}{supportFocus}};\ }
+\DoxyCodeLine{00320\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structcamera__info_a0ec4ea69ee3039600a4f8ad397b9fe14}{supportSharpness}};\ }
+\DoxyCodeLine{00322\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structcamera__info_a2d0f5796920a1d7f4f5a4767e78039c6}{deviceAddress}};}
+\DoxyCodeLine{00323\ \};}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structarducam__mega__data}{arducam\_mega\_data}}\ \{}
+\DoxyCodeLine{00326\ \ \ uint32\_t\ \mbox{\hyperlink{structarducam__mega__data_aa354b1ad6f5d28553ff7e67ef63d8866}{totalLength}};\ \ \ \ }
+\DoxyCodeLine{00327\ \ \ uint32\_t\ \mbox{\hyperlink{structarducam__mega__data_a8c0fec7da32a4f7cdf0c38c4e8bc6c8d}{receivedLength}};\ }
+\DoxyCodeLine{00328\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_aed314ed493daf4112d7ecce3a558a279}{blockSize}};\ }
+\DoxyCodeLine{00329\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_a91c2b830a251fbbdbcf5a91da4225422}{cameraId}};\ \ }
+\DoxyCodeLine{00330\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_a3ff4329587e2ff2226476a5481b059c0}{cameraDataFormat}};\ }
+\DoxyCodeLine{00331\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_a9fd10d1b3a9ff1cb3a30efeded756f64}{burstFirstFlag}};\ \ \ }
+\DoxyCodeLine{00333\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_addb71232e180f6f2e67f654fd374c7dc}{previewMode}};\ \ \ \ \ \ }
+\DoxyCodeLine{00334\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_a5a3a18c94cd364e39506534fb9ceb02b}{currentPixelFormat}};\ }
+\DoxyCodeLine{00335\ \ \ uint8\_t\ \mbox{\hyperlink{structarducam__mega__data_ae6880f3013d005277f370466b1f9d693}{currentPictureMode}};\ }
+\DoxyCodeLine{00336\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcamera__info}{camera\_info}}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \mbox{\hyperlink{structarducam__mega__data_a209f9c97dec021f696b157e49b70ee0e}{myCameraInfo}};\ }
+\DoxyCodeLine{00338\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }CameraOperations}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ *\mbox{\hyperlink{structarducam__mega__data_a627480e787b4b1dce0394bf3da483f13}{arducamCameraOp}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00340\ \ \ \mbox{\hyperlink{arducam__mega_8h_a81b801c80862c07bcbe65126db52164c}{BUFFER\_CALLBACK}}\ \mbox{\hyperlink{structarducam__mega__data_a00a3841bf923f1abcfe752ee6d192d42}{callBackFunction}};\ }
+\DoxyCodeLine{00341\ \};}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structarducam__mega__config}{arducam\_mega\_config}}\ \{}
+\DoxyCodeLine{00344\ \ \ \textcolor{keyword}{struct\ }gpio\_dt\_spec\ \mbox{\hyperlink{structarducam__mega__config_a3c2b296ea6e7f0514d70985c3685cd39}{gpio\_dt}};}
+\DoxyCodeLine{00345\ \ \ \textcolor{keyword}{struct\ }spi\_dt\_spec\ \mbox{\hyperlink{structarducam__mega__config_aafccfc7a7687e2e0e4711f5bf07555c0}{spi\_dt}};}
+\DoxyCodeLine{00346\ \ \ \textcolor{keyword}{struct\ }spi\_config\ \mbox{\hyperlink{structarducam__mega__config_a7edfd6b5fc8704e254f6561c325f0a48}{spi\_cfg}};}
+\DoxyCodeLine{00347\ \ \ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\_IMAGE\_MODE}}\ \mbox{\hyperlink{structarducam__mega__config_a7c7b0c20c235f9556c3dc95c9838f6e3}{resolution}};}
+\DoxyCodeLine{00348\ \};}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_a810e03a1d0bca32ef73c377a4c0e7a98}{arducam\_mega\_init}}();}
+\DoxyCodeLine{00351\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_accfb274f183d9616092ab4a631bec3e4}{arducam\_mega\_capture\_image}}(\mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\_IMAGE\_MODE}}\ mode,}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338}{CAM\_IMAGE\_PIX\_FMT}}\ pixel\_format);}
+\DoxyCodeLine{00353\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_a3bda6b901c9105ae54a6de53a56624d4}{arducam\_mega\_save\_image}}(\textcolor{keywordtype}{char}\ *filename,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *mount\_point,}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ image\_length);}
+\DoxyCodeLine{00355\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_a2df434c9f0b0281436292a6a823cf072}{arducam\_mega\_get\_id}}();}
+\DoxyCodeLine{00356\ \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\_IMAGE\_MODE}}\ \mbox{\hyperlink{arducam__mega_8h_a375e6574eb760872ebd4270bc3fa49ff}{arducam\_mega\_get\_resolution}}(\textcolor{keywordtype}{char}\ *resolution);}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\_SATURATION\_LEVEL}}\ \mbox{\hyperlink{arducam__mega_8h_af6bc61d9422d08b5a0e9a35dab9abed0}{arducam\_mega\_get\_saturation}}(\textcolor{keywordtype}{char}\ *saturation);}
+\DoxyCodeLine{00359\ \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\_CONTRAST\_LEVEL}}\ \mbox{\hyperlink{arducam__mega_8h_a3b78859383cd02ed95264f28a5a5a220}{arducam\_mega\_get\_contrast}}(\textcolor{keywordtype}{char}\ *contrast);}
+\DoxyCodeLine{00360\ \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\_BRIGHTNESS\_LEVEL}}\ \mbox{\hyperlink{arducam__mega_8h_a2d4a6c05cd5f5375d2935f251c358296}{arducam\_mega\_get\_brightness}}(\textcolor{keywordtype}{char}\ *brightness);}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_a85546f6fd3162942cd8bc8c667ffb923}{arducam\_mega\_set\_saturation}}(\mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\_SATURATION\_LEVEL}}\ saturation);}
+\DoxyCodeLine{00363\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_ae42a1100e5325d586ca8e983228e72c0}{arducam\_mega\_set\_contrast}}(\mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\_CONTRAST\_LEVEL}}\ contrast);}
+\DoxyCodeLine{00364\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_a3a125c665d94e3d20ddf23f9a271d282}{arducam\_mega\_set\_brightness}}(\mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\_BRIGHTNESS\_LEVEL}}\ brightness);}
+\DoxyCodeLine{00365\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_ada6888757ce6ec1622b5e63e15ea3549}{arducam\_mega\_set\_autofocus}}(\mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44}{CAM\_AUTO\_FOCUS}}\ autofocus);}
+\DoxyCodeLine{00366\ uint8\_t\ \mbox{\hyperlink{arducam__mega_8h_ab956b4af8b7cede870faaa09820d2f0b}{camera\_read\_byte}}();}
+\DoxyCodeLine{00367\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{arducam__mega_8h_a1a21bd18527fd94b86a5657e8d742dd6}{arducam\_mega\_print\_info}}();}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_ARDUCAM\_MEGA\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

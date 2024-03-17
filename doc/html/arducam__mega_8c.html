@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Victron IOT: src/arducam_mega.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Victron IOT<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('arducam__mega_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle"><div class="title">arducam_mega.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="arducam__mega_8h_source.html">arducam_mega.h</a>&quot;</code><br />
+<code>#include &lt;zephyr/device.h&gt;</code><br />
+<code>#include &lt;zephyr/drivers/spi.h&gt;</code><br />
+<code>#include &lt;zephyr/fs/fs.h&gt;</code><br />
+<code>#include &lt;zephyr/internal/syscall_handler.h&gt;</code><br />
+<code>#include &lt;zephyr/logging/log.h&gt;</code><br />
+<code>#include &lt;zephyr/sys/printk.h&gt;</code><br />
+<code>#include &lt;zephyr/types.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:af410eea597f86573114f14171154f29e" id="r_af410eea597f86573114f14171154f29e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af410eea597f86573114f14171154f29e">LOG_MODULE_NAME</a>&#160;&#160;&#160;arducam_mega</td></tr>
+<tr class="separator:af410eea597f86573114f14171154f29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99ded389af74001a6298fc9e44e74e5" id="r_ab99ded389af74001a6298fc9e44e74e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab99ded389af74001a6298fc9e44e74e5">MAX_PATH</a>&#160;&#160;&#160;51200</td></tr>
+<tr class="separator:ab99ded389af74001a6298fc9e44e74e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa123f4ff509360133c96b727243e23" id="r_aefa123f4ff509360133c96b727243e23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefa123f4ff509360133c96b727243e23">CONCAT_BUFF_LEN</a>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:aefa123f4ff509360133c96b727243e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7" id="r_a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;0xff</td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ce3824ec7a3243b3b966e64017d50c" id="r_a38ce3824ec7a3243b3b966e64017d50c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38ce3824ec7a3243b3b966e64017d50c">SPI_DEV</a>&#160;&#160;&#160;spi3</td></tr>
+<tr class="separator:a38ce3824ec7a3243b3b966e64017d50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368c28e20330d34a53164072eb4e1572" id="r_a368c28e20330d34a53164072eb4e1572"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a368c28e20330d34a53164072eb4e1572">SPI_DEV_NAME</a>&#160;&#160;&#160;DEVICE_DT_NAME(DT_NODELABEL(<a class="el" href="#a38ce3824ec7a3243b3b966e64017d50c">SPI_DEV</a>))</td></tr>
+<tr class="separator:a368c28e20330d34a53164072eb4e1572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a68af80fd221df51a874389f1e99b2409" id="r_a68af80fd221df51a874389f1e99b2409"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af80fd221df51a874389f1e99b2409">LOG_MODULE_REGISTER</a> (<a class="el" href="#af410eea597f86573114f14171154f29e">LOG_MODULE_NAME</a>)</td></tr>
+<tr class="separator:a68af80fd221df51a874389f1e99b2409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2567228d2b751e8d188d8939e5c03f" id="r_a1d2567228d2b751e8d188d8939e5c03f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d2567228d2b751e8d188d8939e5c03f">camera_bus_read</a> (uint8_t address)</td></tr>
+<tr class="separator:a1d2567228d2b751e8d188d8939e5c03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372fbecef79d5745d1af9430952844f1" id="r_a372fbecef79d5745d1af9430952844f1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a372fbecef79d5745d1af9430952844f1">camera_read_reg</a> (uint8_t addr)</td></tr>
+<tr class="separator:a372fbecef79d5745d1af9430952844f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9de71615e7f05437ee749cce960c6d" id="r_adb9de71615e7f05437ee749cce960c6d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb9de71615e7f05437ee749cce960c6d">camera_bus_write</a> (uint8_t address, uint8_t value)</td></tr>
+<tr class="separator:adb9de71615e7f05437ee749cce960c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06d2bee62cc94708dbc07fcca1d9d81" id="r_af06d2bee62cc94708dbc07fcca1d9d81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af06d2bee62cc94708dbc07fcca1d9d81">camera_write_reg</a> (uint8_t addr, uint8_t val)</td></tr>
+<tr class="separator:af06d2bee62cc94708dbc07fcca1d9d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16ff965c6a533ceeb03e6e1ae56359f" id="r_aa16ff965c6a533ceeb03e6e1ae56359f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa16ff965c6a533ceeb03e6e1ae56359f">camera_wait_idle</a> ()</td></tr>
+<tr class="separator:aa16ff965c6a533ceeb03e6e1ae56359f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed773e93f9e72510be8fd4204c6cc50" id="r_aeed773e93f9e72510be8fd4204c6cc50"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeed773e93f9e72510be8fd4204c6cc50">camera_get_bit</a> (uint8_t addr, uint8_t bit)</td></tr>
+<tr class="separator:aeed773e93f9e72510be8fd4204c6cc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab956b4af8b7cede870faaa09820d2f0b" id="r_ab956b4af8b7cede870faaa09820d2f0b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab956b4af8b7cede870faaa09820d2f0b">camera_read_byte</a> ()</td></tr>
+<tr class="separator:ab956b4af8b7cede870faaa09820d2f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08f3399aeee51c5886944a57d180c69" id="r_af08f3399aeee51c5886944a57d180c69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af08f3399aeee51c5886944a57d180c69">camera_save_fifo</a> (const char *base_path, uint32_t length, char *filename)</td></tr>
+<tr class="separator:af08f3399aeee51c5886944a57d180c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfb274f183d9616092ab4a631bec3e4" id="r_accfb274f183d9616092ab4a631bec3e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accfb274f183d9616092ab4a631bec3e4">arducam_mega_capture_image</a> (<a class="el" href="arducam__mega_8h.html#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a> mode, <a class="el" href="arducam__mega_8h.html#ae9748ceecc6f11421cb46fc489606338">CAM_IMAGE_PIX_FMT</a> pixel_format)</td></tr>
+<tr class="separator:accfb274f183d9616092ab4a631bec3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bda6b901c9105ae54a6de53a56624d4" id="r_a3bda6b901c9105ae54a6de53a56624d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bda6b901c9105ae54a6de53a56624d4">arducam_mega_save_image</a> (char *filename, const char *mount_point, int image_length)</td></tr>
+<tr class="separator:a3bda6b901c9105ae54a6de53a56624d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df434c9f0b0281436292a6a823cf072" id="r_a2df434c9f0b0281436292a6a823cf072"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df434c9f0b0281436292a6a823cf072">arducam_mega_get_id</a> ()</td></tr>
+<tr class="separator:a2df434c9f0b0281436292a6a823cf072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810e03a1d0bca32ef73c377a4c0e7a98" id="r_a810e03a1d0bca32ef73c377a4c0e7a98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a810e03a1d0bca32ef73c377a4c0e7a98">arducam_mega_init</a> ()</td></tr>
+<tr class="separator:a810e03a1d0bca32ef73c377a4c0e7a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375e6574eb760872ebd4270bc3fa49ff" id="r_a375e6574eb760872ebd4270bc3fa49ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arducam__mega_8h.html#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375e6574eb760872ebd4270bc3fa49ff">arducam_mega_get_resolution</a> (char *resolution)</td></tr>
+<tr class="separator:a375e6574eb760872ebd4270bc3fa49ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bc61d9422d08b5a0e9a35dab9abed0" id="r_af6bc61d9422d08b5a0e9a35dab9abed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arducam__mega_8h.html#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bc61d9422d08b5a0e9a35dab9abed0">arducam_mega_get_saturation</a> (char *saturation)</td></tr>
+<tr class="separator:af6bc61d9422d08b5a0e9a35dab9abed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4a6c05cd5f5375d2935f251c358296" id="r_a2d4a6c05cd5f5375d2935f251c358296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arducam__mega_8h.html#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d4a6c05cd5f5375d2935f251c358296">arducam_mega_get_brightness</a> (char *brightness)</td></tr>
+<tr class="separator:a2d4a6c05cd5f5375d2935f251c358296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b78859383cd02ed95264f28a5a5a220" id="r_a3b78859383cd02ed95264f28a5a5a220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="arducam__mega_8h.html#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b78859383cd02ed95264f28a5a5a220">arducam_mega_get_contrast</a> (char *contrast)</td></tr>
+<tr class="separator:a3b78859383cd02ed95264f28a5a5a220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85546f6fd3162942cd8bc8c667ffb923" id="r_a85546f6fd3162942cd8bc8c667ffb923"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85546f6fd3162942cd8bc8c667ffb923">arducam_mega_set_saturation</a> (<a class="el" href="arducam__mega_8h.html#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a> saturation)</td></tr>
+<tr class="separator:a85546f6fd3162942cd8bc8c667ffb923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6888757ce6ec1622b5e63e15ea3549" id="r_ada6888757ce6ec1622b5e63e15ea3549"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6888757ce6ec1622b5e63e15ea3549">arducam_mega_set_autofocus</a> (<a class="el" href="arducam__mega_8h.html#a3641d9105e4d78a2b9cbcc72ce7a1f44">CAM_AUTO_FOCUS</a> autofocus)</td></tr>
+<tr class="separator:ada6888757ce6ec1622b5e63e15ea3549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42a1100e5325d586ca8e983228e72c0" id="r_ae42a1100e5325d586ca8e983228e72c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42a1100e5325d586ca8e983228e72c0">arducam_mega_set_contrast</a> (<a class="el" href="arducam__mega_8h.html#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a> contrast)</td></tr>
+<tr class="separator:ae42a1100e5325d586ca8e983228e72c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a125c665d94e3d20ddf23f9a271d282" id="r_a3a125c665d94e3d20ddf23f9a271d282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a125c665d94e3d20ddf23f9a271d282">arducam_mega_set_brightness</a> (<a class="el" href="arducam__mega_8h.html#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a> brightness)</td></tr>
+<tr class="separator:a3a125c665d94e3d20ddf23f9a271d282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a21bd18527fd94b86a5657e8d742dd6" id="r_a1a21bd18527fd94b86a5657e8d742dd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a21bd18527fd94b86a5657e8d742dd6">arducam_mega_print_info</a> ()</td></tr>
+<tr class="separator:a1a21bd18527fd94b86a5657e8d742dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a87032b71a721976c0e5e569fe008bf1c" id="r_a87032b71a721976c0e5e569fe008bf1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87032b71a721976c0e5e569fe008bf1c">received_length</a></td></tr>
+<tr class="separator:a87032b71a721976c0e5e569fe008bf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401e92d4e6afa09344209ed0b2f05a57" id="r_a401e92d4e6afa09344209ed0b2f05a57"><td class="memItemLeft" align="right" valign="top">struct spi_config&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a401e92d4e6afa09344209ed0b2f05a57">spi_cfg</a></td></tr>
+<tr class="separator:a401e92d4e6afa09344209ed0b2f05a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c17876783563f7981eb77afa831e3d5" id="r_a7c17876783563f7981eb77afa831e3d5"><td class="memItemLeft" align="right" valign="top">const struct device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c17876783563f7981eb77afa831e3d5">spi</a></td></tr>
+<tr class="separator:a7c17876783563f7981eb77afa831e3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a id="a6b20d41d6252e9871430c242cb1a56e7" name="a6b20d41d6252e9871430c242cb1a56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b20d41d6252e9871430c242cb1a56e7">&#9670;&#160;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUFFER_SIZE&#160;&#160;&#160;0xff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefa123f4ff509360133c96b727243e23" name="aefa123f4ff509360133c96b727243e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa123f4ff509360133c96b727243e23">&#9670;&#160;</a></span>CONCAT_BUFF_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONCAT_BUFF_LEN&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af410eea597f86573114f14171154f29e" name="af410eea597f86573114f14171154f29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af410eea597f86573114f14171154f29e">&#9670;&#160;</a></span>LOG_MODULE_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_MODULE_NAME&#160;&#160;&#160;arducam_mega</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab99ded389af74001a6298fc9e44e74e5" name="ab99ded389af74001a6298fc9e44e74e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99ded389af74001a6298fc9e44e74e5">&#9670;&#160;</a></span>MAX_PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_PATH&#160;&#160;&#160;51200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38ce3824ec7a3243b3b966e64017d50c" name="a38ce3824ec7a3243b3b966e64017d50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ce3824ec7a3243b3b966e64017d50c">&#9670;&#160;</a></span>SPI_DEV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_DEV&#160;&#160;&#160;spi3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a368c28e20330d34a53164072eb4e1572" name="a368c28e20330d34a53164072eb4e1572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368c28e20330d34a53164072eb4e1572">&#9670;&#160;</a></span>SPI_DEV_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_DEV_NAME&#160;&#160;&#160;DEVICE_DT_NAME(DT_NODELABEL(<a class="el" href="#a38ce3824ec7a3243b3b966e64017d50c">SPI_DEV</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="accfb274f183d9616092ab4a631bec3e4" name="accfb274f183d9616092ab4a631bec3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accfb274f183d9616092ab4a631bec3e4">&#9670;&#160;</a></span>arducam_mega_capture_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_capture_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arducam__mega_8h.html#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a></td>          <td class="paramname"><span class="paramname"><em>mode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="arducam__mega_8h.html#ae9748ceecc6f11421cb46fc489606338">CAM_IMAGE_PIX_FMT</a></td>          <td class="paramname"><span class="paramname"><em>pixel_format</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d4a6c05cd5f5375d2935f251c358296" name="a2d4a6c05cd5f5375d2935f251c358296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4a6c05cd5f5375d2935f251c358296">&#9670;&#160;</a></span>arducam_mega_get_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arducam__mega_8h.html#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a> arducam_mega_get_brightness </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>brightness</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b78859383cd02ed95264f28a5a5a220" name="a3b78859383cd02ed95264f28a5a5a220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b78859383cd02ed95264f28a5a5a220">&#9670;&#160;</a></span>arducam_mega_get_contrast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arducam__mega_8h.html#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a> arducam_mega_get_contrast </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>contrast</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2df434c9f0b0281436292a6a823cf072" name="a2df434c9f0b0281436292a6a823cf072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df434c9f0b0281436292a6a823cf072">&#9670;&#160;</a></span>arducam_mega_get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_get_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a375e6574eb760872ebd4270bc3fa49ff" name="a375e6574eb760872ebd4270bc3fa49ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375e6574eb760872ebd4270bc3fa49ff">&#9670;&#160;</a></span>arducam_mega_get_resolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arducam__mega_8h.html#aad9c52a28f327c5d815f76befe687015">CAM_IMAGE_MODE</a> arducam_mega_get_resolution </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>resolution</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6bc61d9422d08b5a0e9a35dab9abed0" name="af6bc61d9422d08b5a0e9a35dab9abed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bc61d9422d08b5a0e9a35dab9abed0">&#9670;&#160;</a></span>arducam_mega_get_saturation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="arducam__mega_8h.html#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a> arducam_mega_get_saturation </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>saturation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a810e03a1d0bca32ef73c377a4c0e7a98" name="a810e03a1d0bca32ef73c377a4c0e7a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810e03a1d0bca32ef73c377a4c0e7a98">&#9670;&#160;</a></span>arducam_mega_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a21bd18527fd94b86a5657e8d742dd6" name="a1a21bd18527fd94b86a5657e8d742dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a21bd18527fd94b86a5657e8d742dd6">&#9670;&#160;</a></span>arducam_mega_print_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_print_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bda6b901c9105ae54a6de53a56624d4" name="a3bda6b901c9105ae54a6de53a56624d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bda6b901c9105ae54a6de53a56624d4">&#9670;&#160;</a></span>arducam_mega_save_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_save_image </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filename</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mount_point</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>image_length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada6888757ce6ec1622b5e63e15ea3549" name="ada6888757ce6ec1622b5e63e15ea3549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6888757ce6ec1622b5e63e15ea3549">&#9670;&#160;</a></span>arducam_mega_set_autofocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_autofocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arducam__mega_8h.html#a3641d9105e4d78a2b9cbcc72ce7a1f44">CAM_AUTO_FOCUS</a></td>          <td class="paramname"><span class="paramname"><em>autofocus</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a125c665d94e3d20ddf23f9a271d282" name="a3a125c665d94e3d20ddf23f9a271d282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a125c665d94e3d20ddf23f9a271d282">&#9670;&#160;</a></span>arducam_mega_set_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_brightness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arducam__mega_8h.html#adf950e5ae505c62fabb157a5385c2c71">CAM_BRIGHTNESS_LEVEL</a></td>          <td class="paramname"><span class="paramname"><em>brightness</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae42a1100e5325d586ca8e983228e72c0" name="ae42a1100e5325d586ca8e983228e72c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42a1100e5325d586ca8e983228e72c0">&#9670;&#160;</a></span>arducam_mega_set_contrast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_contrast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arducam__mega_8h.html#a039dba5eae31265427b4829d0db59231">CAM_CONTRAST_LEVEL</a></td>          <td class="paramname"><span class="paramname"><em>contrast</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85546f6fd3162942cd8bc8c667ffb923" name="a85546f6fd3162942cd8bc8c667ffb923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85546f6fd3162942cd8bc8c667ffb923">&#9670;&#160;</a></span>arducam_mega_set_saturation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int arducam_mega_set_saturation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arducam__mega_8h.html#ae0e2fcb3eed1b1c2efa712d3193fb06c">CAM_SATURATION_LEVEL</a></td>          <td class="paramname"><span class="paramname"><em>saturation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d2567228d2b751e8d188d8939e5c03f" name="a1d2567228d2b751e8d188d8939e5c03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2567228d2b751e8d188d8939e5c03f">&#9670;&#160;</a></span>camera_bus_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t camera_bus_read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb9de71615e7f05437ee749cce960c6d" name="adb9de71615e7f05437ee749cce960c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9de71615e7f05437ee749cce960c6d">&#9670;&#160;</a></span>camera_bus_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t camera_bus_write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>address</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeed773e93f9e72510be8fd4204c6cc50" name="aeed773e93f9e72510be8fd4204c6cc50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed773e93f9e72510be8fd4204c6cc50">&#9670;&#160;</a></span>camera_get_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t camera_get_bit </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>addr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>bit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab956b4af8b7cede870faaa09820d2f0b" name="ab956b4af8b7cede870faaa09820d2f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab956b4af8b7cede870faaa09820d2f0b">&#9670;&#160;</a></span>camera_read_byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t camera_read_byte </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a372fbecef79d5745d1af9430952844f1" name="a372fbecef79d5745d1af9430952844f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372fbecef79d5745d1af9430952844f1">&#9670;&#160;</a></span>camera_read_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t camera_read_reg </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af08f3399aeee51c5886944a57d180c69" name="af08f3399aeee51c5886944a57d180c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08f3399aeee51c5886944a57d180c69">&#9670;&#160;</a></span>camera_save_fifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void camera_save_fifo </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>base_path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>length</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa16ff965c6a533ceeb03e6e1ae56359f" name="aa16ff965c6a533ceeb03e6e1ae56359f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16ff965c6a533ceeb03e6e1ae56359f">&#9670;&#160;</a></span>camera_wait_idle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void camera_wait_idle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af06d2bee62cc94708dbc07fcca1d9d81" name="af06d2bee62cc94708dbc07fcca1d9d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06d2bee62cc94708dbc07fcca1d9d81">&#9670;&#160;</a></span>camera_write_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void camera_write_reg </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>addr</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68af80fd221df51a874389f1e99b2409" name="a68af80fd221df51a874389f1e99b2409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68af80fd221df51a874389f1e99b2409">&#9670;&#160;</a></span>LOG_MODULE_REGISTER()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOG_MODULE_REGISTER </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#af410eea597f86573114f14171154f29e">LOG_MODULE_NAME</a></td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a id="a87032b71a721976c0e5e569fe008bf1c" name="a87032b71a721976c0e5e569fe008bf1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87032b71a721976c0e5e569fe008bf1c">&#9670;&#160;</a></span>received_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int received_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c17876783563f7981eb77afa831e3d5" name="a7c17876783563f7981eb77afa831e3d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c17876783563f7981eb77afa831e3d5">&#9670;&#160;</a></span>spi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct device* spi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a401e92d4e6afa09344209ed0b2f05a57" name="a401e92d4e6afa09344209ed0b2f05a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401e92d4e6afa09344209ed0b2f05a57">&#9670;&#160;</a></span>spi_cfg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct spi_config spi_cfg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .frequency = DT_PROP(DT_NODELABEL(<a class="code hl_define" href="#a38ce3824ec7a3243b3b966e64017d50c">SPI_DEV</a>), clock_frequency),</div>
+<div class="line">    .operation = SPI_HOLD_ON_CS | SPI_OP_MODE_MASTER | SPI_TRANSFER_MSB |</div>
+<div class="line">                 SPI_WORD_SET(8) | SPI_LINES_SINGLE,</div>
+<div class="line">    .cs = SPI_CS_CONTROL_INIT(DT_NODELABEL(arducam), 0u),</div>
+<div class="line">    .slave = 0,</div>
+<div class="line">}</div>
+<div class="ttc" id="aarducam__mega_8c_html_a38ce3824ec7a3243b3b966e64017d50c"><div class="ttname"><a href="#a38ce3824ec7a3243b3b966e64017d50c">SPI_DEV</a></div><div class="ttdeci">#define SPI_DEV</div><div class="ttdef"><b>Definition</b> arducam_mega.c:47</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="arducam__mega_8c.html">arducam_mega.c</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

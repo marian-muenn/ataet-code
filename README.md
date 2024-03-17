@@ -10,8 +10,10 @@
   - beinhaltet die Kernel-Konfiguration
 - `./doc`
   - beinhaltet die Dokumtation des C Codes
-- ./west
+- `./west`
   - beinhaltet Metadaten für das Build Tool
+- `./kicad`
+  - beinhaltet das Kicad-Projekt zur Platine
 
 ## Installation der benötigten Tool
 

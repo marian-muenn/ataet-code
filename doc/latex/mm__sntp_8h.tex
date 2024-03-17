@@ -1,0 +1,29 @@
+\doxysection{src/mm\+\_\+sntp.h-\/\+Dateireferenz}
+\hypertarget{mm__sntp_8h}{}\label{mm__sntp_8h}\index{src/mm\_sntp.h@{src/mm\_sntp.h}}
+{\ttfamily \#include $<$zephyr/logging/log.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/net/sntp.\+h$>$}\newline
+{\ttfamily \#include "{}mm\+\_\+config.\+h"{}}\newline
+{\ttfamily \#include "{}mm\+\_\+nslookup.\+h"{}}\newline
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{mm__sntp_8h_a6693878dc5b7f6a795d7df68a283d8af}{get\+\_\+sntp\+\_\+time\+\_\+ip}} (char \texorpdfstring{$\ast$}{*}ipv4\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Bezieht die Epoch-\/\+Zeit vom NTP-\/\+Server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{mm__sntp_8h_a6693878dc5b7f6a795d7df68a283d8af}\label{mm__sntp_8h_a6693878dc5b7f6a795d7df68a283d8af} 
+\index{mm\_sntp.h@{mm\_sntp.h}!get\_sntp\_time\_ip@{get\_sntp\_time\_ip}}
+\index{get\_sntp\_time\_ip@{get\_sntp\_time\_ip}!mm\_sntp.h@{mm\_sntp.h}}
+\doxysubsubsection{\texorpdfstring{get\_sntp\_time\_ip()}{get\_sntp\_time\_ip()}}
+{\footnotesize\ttfamily uint64\+\_\+t get\+\_\+sntp\+\_\+time\+\_\+ip (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{ipv4\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Bezieht die Epoch-\/\+Zeit vom NTP-\/\+Server. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em ipv4\+\_\+addr} & IP-\/\+Adresse des Zeitservers \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,111 @@
+\doxysection{src/mm\+\_\+mqtt.c-\/\+Dateireferenz}
+\hypertarget{mm__mqtt_8c}{}\label{mm__mqtt_8c}\index{src/mm\_mqtt.c@{src/mm\_mqtt.c}}
+{\ttfamily \#include "{}mm\+\_\+mqtt.\+h"{}}\newline
+{\ttfamily \#include "{}mm\+\_\+certs.\+h"{}}\newline
+{\ttfamily \#include "{}mm\+\_\+config.\+h"{}}\newline
+{\ttfamily \#include "{}zephyr/kernel.\+h"{}}\newline
+{\ttfamily \#include "{}zephyr/logging/log.\+h"{}}\newline
+{\ttfamily \#include "{}zephyr/net/mqtt.\+h"{}}\newline
+{\ttfamily \#include "{}zephyr/net/tls\+\_\+credentials.\+h"{}}\newline
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mm__mqtt_8c_af5b436b3709421eb125c038bc11748c0}{TLS\+\_\+\+SNI\+\_\+\+HOSTNAME}}~"{}zapdos.\+eit.\+htwk-\/leipzig.\+de"{}
+\item 
+\#define \mbox{\hyperlink{mm__mqtt_8c_a9420139d7403dee310eb48da4aff3363}{APP\+\_\+\+CA\+\_\+\+CERT\+\_\+\+TAG}}~1
+\item 
+\#define \mbox{\hyperlink{mm__mqtt_8c_a6d1eb376a62859e7c40b095b074c7d45}{RC\+\_\+\+STR}}(rc)~((rc) == 0 ? "{}OK"{} \+: "{}ERROR"{})
+\item 
+\#define \mbox{\hyperlink{mm__mqtt_8c_af35beb5d0dd18bd4626420b5619e9b5f}{PRINT\+\_\+\+RESULT}}(func,  rc)~LOG\+\_\+\+INF("{}\%s\+: \%d $<$\%s$>$"{}, (func), rc, \mbox{\hyperlink{mm__mqtt_8c_a6d1eb376a62859e7c40b095b074c7d45}{RC\+\_\+\+STR}}(rc))
+\item 
+\#define \mbox{\hyperlink{mm__mqtt_8c_a5d2105bac4523c4c56b87b64e338a58f}{SUCCESS\+\_\+\+OR\+\_\+\+EXIT}}(rc)
+\item 
+\#define \mbox{\hyperlink{mm__mqtt_8c_afd7e7019dcd8d4d816109e659aa73479}{SUCCESS\+\_\+\+OR\+\_\+\+BREAK}}(rc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mm__mqtt_8c_a45ab75f6536f8188ba04874704755e58}{LOG\+\_\+\+MODULE\+\_\+\+REGISTER}} (mqtt, LOG\+\_\+\+LEVEL\+\_\+\+DBG)
+\item 
+void \mbox{\hyperlink{mm__mqtt_8c_ac28a9f79364475e13fba91fe286727af}{mqtt\+\_\+evt\+\_\+handler}} (struct mqtt\+\_\+client \texorpdfstring{$\ast$}{*}const client, const struct mqtt\+\_\+evt \texorpdfstring{$\ast$}{*}evt)
+\item 
+int \mbox{\hyperlink{mm__mqtt_8c_abd76069b33c5ffd3189b5a11d35d2c37}{start\+\_\+app}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{mm__mqtt_8c_a9420139d7403dee310eb48da4aff3363}\label{mm__mqtt_8c_a9420139d7403dee310eb48da4aff3363} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!APP\_CA\_CERT\_TAG@{APP\_CA\_CERT\_TAG}}
+\index{APP\_CA\_CERT\_TAG@{APP\_CA\_CERT\_TAG}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{APP\_CA\_CERT\_TAG}{APP\_CA\_CERT\_TAG}}
+{\footnotesize\ttfamily \#define APP\+\_\+\+CA\+\_\+\+CERT\+\_\+\+TAG~1}
+
+\Hypertarget{mm__mqtt_8c_af35beb5d0dd18bd4626420b5619e9b5f}\label{mm__mqtt_8c_af35beb5d0dd18bd4626420b5619e9b5f} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!PRINT\_RESULT@{PRINT\_RESULT}}
+\index{PRINT\_RESULT@{PRINT\_RESULT}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{PRINT\_RESULT}{PRINT\_RESULT}}
+{\footnotesize\ttfamily \#define PRINT\+\_\+\+RESULT(\begin{DoxyParamCaption}\item[{}]{func,  }\item[{}]{rc }\end{DoxyParamCaption})~LOG\+\_\+\+INF("{}\%s\+: \%d $<$\%s$>$"{}, (func), rc, \mbox{\hyperlink{mm__mqtt_8c_a6d1eb376a62859e7c40b095b074c7d45}{RC\+\_\+\+STR}}(rc))}
+
+\Hypertarget{mm__mqtt_8c_a6d1eb376a62859e7c40b095b074c7d45}\label{mm__mqtt_8c_a6d1eb376a62859e7c40b095b074c7d45} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!RC\_STR@{RC\_STR}}
+\index{RC\_STR@{RC\_STR}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{RC\_STR}{RC\_STR}}
+{\footnotesize\ttfamily \#define RC\+\_\+\+STR(\begin{DoxyParamCaption}\item[{}]{rc }\end{DoxyParamCaption})~((rc) == 0 ? "{}OK"{} \+: "{}ERROR"{})}
+
+\Hypertarget{mm__mqtt_8c_afd7e7019dcd8d4d816109e659aa73479}\label{mm__mqtt_8c_afd7e7019dcd8d4d816109e659aa73479} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!SUCCESS\_OR\_BREAK@{SUCCESS\_OR\_BREAK}}
+\index{SUCCESS\_OR\_BREAK@{SUCCESS\_OR\_BREAK}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{SUCCESS\_OR\_BREAK}{SUCCESS\_OR\_BREAK}}
+{\footnotesize\ttfamily \#define SUCCESS\+\_\+\+OR\+\_\+\+BREAK(\begin{DoxyParamCaption}\item[{}]{rc }\end{DoxyParamCaption})}
+
+{\bfseries Wert\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if\ (rc\ !=\ 0)\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{mm__mqtt_8c_a5d2105bac4523c4c56b87b64e338a58f}\label{mm__mqtt_8c_a5d2105bac4523c4c56b87b64e338a58f} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!SUCCESS\_OR\_EXIT@{SUCCESS\_OR\_EXIT}}
+\index{SUCCESS\_OR\_EXIT@{SUCCESS\_OR\_EXIT}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{SUCCESS\_OR\_EXIT}{SUCCESS\_OR\_EXIT}}
+{\footnotesize\ttfamily \#define SUCCESS\+\_\+\+OR\+\_\+\+EXIT(\begin{DoxyParamCaption}\item[{}]{rc }\end{DoxyParamCaption})}
+
+{\bfseries Wert\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if\ (rc\ !=\ 0)\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{mm__mqtt_8c_af5b436b3709421eb125c038bc11748c0}\label{mm__mqtt_8c_af5b436b3709421eb125c038bc11748c0} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!TLS\_SNI\_HOSTNAME@{TLS\_SNI\_HOSTNAME}}
+\index{TLS\_SNI\_HOSTNAME@{TLS\_SNI\_HOSTNAME}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{TLS\_SNI\_HOSTNAME}{TLS\_SNI\_HOSTNAME}}
+{\footnotesize\ttfamily \#define TLS\+\_\+\+SNI\+\_\+\+HOSTNAME~"{}zapdos.\+eit.\+htwk-\/leipzig.\+de"{}}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{mm__mqtt_8c_a45ab75f6536f8188ba04874704755e58}\label{mm__mqtt_8c_a45ab75f6536f8188ba04874704755e58} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}}
+\index{LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_MODULE\_REGISTER()}{LOG\_MODULE\_REGISTER()}}
+{\footnotesize\ttfamily LOG\+\_\+\+MODULE\+\_\+\+REGISTER (\begin{DoxyParamCaption}\item[{mqtt}]{,  }\item[{LOG\+\_\+\+LEVEL\+\_\+\+DBG}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{mm__mqtt_8c_ac28a9f79364475e13fba91fe286727af}\label{mm__mqtt_8c_ac28a9f79364475e13fba91fe286727af} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!mqtt\_evt\_handler@{mqtt\_evt\_handler}}
+\index{mqtt\_evt\_handler@{mqtt\_evt\_handler}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_evt\_handler()}{mqtt\_evt\_handler()}}
+{\footnotesize\ttfamily void mqtt\+\_\+evt\+\_\+handler (\begin{DoxyParamCaption}\item[{struct mqtt\+\_\+client \texorpdfstring{$\ast$}{*}const}]{client,  }\item[{const struct mqtt\+\_\+evt \texorpdfstring{$\ast$}{*}}]{evt }\end{DoxyParamCaption})}
+
+\Hypertarget{mm__mqtt_8c_abd76069b33c5ffd3189b5a11d35d2c37}\label{mm__mqtt_8c_abd76069b33c5ffd3189b5a11d35d2c37} 
+\index{mm\_mqtt.c@{mm\_mqtt.c}!start\_app@{start\_app}}
+\index{start\_app@{start\_app}!mm\_mqtt.c@{mm\_mqtt.c}}
+\doxysubsubsection{\texorpdfstring{start\_app()}{start\_app()}}
+{\footnotesize\ttfamily int start\+\_\+app (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

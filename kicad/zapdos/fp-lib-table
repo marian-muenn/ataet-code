@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "nucleo")(type "KiCad")(uri "${KIPRJMOD}/NUCLEOF756ZG")(options "")(descr ""))
+  (lib (name "esp")(type "KiCad")(uri "${KIPRJMOD}/ESP32-DEVKITC")(options "")(descr ""))
+  (lib (name "pi_hat")(type "KiCad")(uri "${KIPRJMOD}/pi_hat.pretty")(options "")(descr ""))
+)

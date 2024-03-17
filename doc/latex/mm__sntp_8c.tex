@@ -1,0 +1,49 @@
+\doxysection{src/mm\+\_\+sntp.c-\/\+Dateireferenz}
+\hypertarget{mm__sntp_8c}{}\label{mm__sntp_8c}\index{src/mm\_sntp.c@{src/mm\_sntp.c}}
+{\ttfamily \#include "{}mm\+\_\+sntp.\+h"{}}\newline
+{\ttfamily \#include $<$zephyr/posix/time.\+h$>$}\newline
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mm__sntp_8c_acbee62c27f54371fc2c5259a834a0f9b}{SNTP\+\_\+\+PORT}}~123
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mm__sntp_8c_a95e48a922a2a59c7cbe30f34d1beff7c}{LOG\+\_\+\+MODULE\+\_\+\+REGISTER}} (net\+\_\+sntp\+\_\+client\+\_\+sample, LOG\+\_\+\+LEVEL\+\_\+\+DBG)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{mm__sntp_8c_ad6d92fed751140a3794b8b04fe2ac12a}{get\+\_\+sntp\+\_\+time\+\_\+ip}} (char \texorpdfstring{$\ast$}{*}ip4\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Bezieht die Epoch-\/\+Zeit vom NTP-\/\+Server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{mm__sntp_8c_acbee62c27f54371fc2c5259a834a0f9b}\label{mm__sntp_8c_acbee62c27f54371fc2c5259a834a0f9b} 
+\index{mm\_sntp.c@{mm\_sntp.c}!SNTP\_PORT@{SNTP\_PORT}}
+\index{SNTP\_PORT@{SNTP\_PORT}!mm\_sntp.c@{mm\_sntp.c}}
+\doxysubsubsection{\texorpdfstring{SNTP\_PORT}{SNTP\_PORT}}
+{\footnotesize\ttfamily \#define SNTP\+\_\+\+PORT~123}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{mm__sntp_8c_ad6d92fed751140a3794b8b04fe2ac12a}\label{mm__sntp_8c_ad6d92fed751140a3794b8b04fe2ac12a} 
+\index{mm\_sntp.c@{mm\_sntp.c}!get\_sntp\_time\_ip@{get\_sntp\_time\_ip}}
+\index{get\_sntp\_time\_ip@{get\_sntp\_time\_ip}!mm\_sntp.c@{mm\_sntp.c}}
+\doxysubsubsection{\texorpdfstring{get\_sntp\_time\_ip()}{get\_sntp\_time\_ip()}}
+{\footnotesize\ttfamily uint64\+\_\+t get\+\_\+sntp\+\_\+time\+\_\+ip (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{ipv4\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Bezieht die Epoch-\/\+Zeit vom NTP-\/\+Server. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em ipv4\+\_\+addr} & IP-\/\+Adresse des Zeitservers \\
+\hline
+\end{DoxyParams}
+\Hypertarget{mm__sntp_8c_a95e48a922a2a59c7cbe30f34d1beff7c}\label{mm__sntp_8c_a95e48a922a2a59c7cbe30f34d1beff7c} 
+\index{mm\_sntp.c@{mm\_sntp.c}!LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}}
+\index{LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}!mm\_sntp.c@{mm\_sntp.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_MODULE\_REGISTER()}{LOG\_MODULE\_REGISTER()}}
+{\footnotesize\ttfamily LOG\+\_\+\+MODULE\+\_\+\+REGISTER (\begin{DoxyParamCaption}\item[{net\+\_\+sntp\+\_\+client\+\_\+sample}]{,  }\item[{LOG\+\_\+\+LEVEL\+\_\+\+DBG}]{ }\end{DoxyParamCaption})}
+

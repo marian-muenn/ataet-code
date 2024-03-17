@@ -1,0 +1,72 @@
+\doxysection{src/main.c-\/\+Dateireferenz}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/\+\_\+stdint.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/device.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/drivers/sensor.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/kernel.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/logging/log.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/sys/base64.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/sys/printk.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/sys/reboot.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/sys/util.\+h$>$}\newline
+{\ttfamily \#include "{}arducam\+\_\+mega.\+h"{}}\newline
+{\ttfamily \#include "{}devices/mm\+\_\+ds18b20.\+h"{}}\newline
+{\ttfamily \#include "{}net/mm\+\_\+modem.\+h"{}}\newline
+{\ttfamily \#include "{}net/mm\+\_\+mqtt.\+h"{}}\newline
+{\ttfamily \#include "{}net/mm\+\_\+sntp.\+h"{}}\newline
+{\ttfamily \#include "{}uart.\+h"{}}\newline
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8c_a7598a5aa27de26c56c2ab6828b4589bb}{LOG\+\_\+\+MODULE\+\_\+\+REGISTER}} (\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}})
+\item 
+\mbox{\hyperlink{main_8c_aa6ad0696197b6a0719fa6e40f1e06337}{K\+\_\+\+MSGQ\+\_\+\+DEFINE}} (mqtt\+\_\+msgq, sizeof(struct mqtt\+\_\+payload), 10, 1)
+\item 
+\mbox{\hyperlink{main_8c_ae8ec8845f0198f5d94e2c80f39a19811}{K\+\_\+\+HEAP\+\_\+\+DEFINE}} (mqtt\+\_\+heap, 140000)
+\item 
+void \mbox{\hyperlink{main_8c_ae8c09f3eb701bb9ef3587d6704a1d277}{print\+\_\+logo}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220}{init\+\_\+board}} ()
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{main_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220}\label{main_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220} 
+\index{main.c@{main.c}!init\_board@{init\_board}}
+\index{init\_board@{init\_board}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{init\_board()}{init\_board()}}
+{\footnotesize\ttfamily void init\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8c_ae8ec8845f0198f5d94e2c80f39a19811}\label{main_8c_ae8ec8845f0198f5d94e2c80f39a19811} 
+\index{main.c@{main.c}!K\_HEAP\_DEFINE@{K\_HEAP\_DEFINE}}
+\index{K\_HEAP\_DEFINE@{K\_HEAP\_DEFINE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{K\_HEAP\_DEFINE()}{K\_HEAP\_DEFINE()}}
+{\footnotesize\ttfamily K\+\_\+\+HEAP\+\_\+\+DEFINE (\begin{DoxyParamCaption}\item[{mqtt\+\_\+heap}]{,  }\item[{140000}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8c_aa6ad0696197b6a0719fa6e40f1e06337}\label{main_8c_aa6ad0696197b6a0719fa6e40f1e06337} 
+\index{main.c@{main.c}!K\_MSGQ\_DEFINE@{K\_MSGQ\_DEFINE}}
+\index{K\_MSGQ\_DEFINE@{K\_MSGQ\_DEFINE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{K\_MSGQ\_DEFINE()}{K\_MSGQ\_DEFINE()}}
+{\footnotesize\ttfamily K\+\_\+\+MSGQ\+\_\+\+DEFINE (\begin{DoxyParamCaption}\item[{mqtt\+\_\+msgq}]{,  }\item[{sizeof(struct mqtt\+\_\+payload)}]{,  }\item[{10}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8c_a7598a5aa27de26c56c2ab6828b4589bb}\label{main_8c_a7598a5aa27de26c56c2ab6828b4589bb} 
+\index{main.c@{main.c}!LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}}
+\index{LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_MODULE\_REGISTER()}{LOG\_MODULE\_REGISTER()}}
+{\footnotesize\ttfamily LOG\+\_\+\+MODULE\+\_\+\+REGISTER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8c_ae8c09f3eb701bb9ef3587d6704a1d277}\label{main_8c_ae8c09f3eb701bb9ef3587d6704a1d277} 
+\index{main.c@{main.c}!print\_logo@{print\_logo}}
+\index{print\_logo@{print\_logo}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{print\_logo()}{print\_logo()}}
+{\footnotesize\ttfamily void print\+\_\+logo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,287 @@
+\doxysection{src/arducam\+\_\+mega.c-\/\+Dateireferenz}
+\hypertarget{arducam__mega_8c}{}\label{arducam__mega_8c}\index{src/arducam\_mega.c@{src/arducam\_mega.c}}
+{\ttfamily \#include "{}arducam\+\_\+mega.\+h"{}}\newline
+{\ttfamily \#include $<$zephyr/device.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/drivers/spi.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/fs/fs.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/internal/syscall\+\_\+handler.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/logging/log.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/sys/printk.\+h$>$}\newline
+{\ttfamily \#include $<$zephyr/types.\+h$>$}\newline
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{arducam__mega_8c_af410eea597f86573114f14171154f29e}{LOG\+\_\+\+MODULE\+\_\+\+NAME}}~arducam\+\_\+mega
+\item 
+\#define \mbox{\hyperlink{arducam__mega_8c_ab99ded389af74001a6298fc9e44e74e5}{MAX\+\_\+\+PATH}}~51200
+\item 
+\#define \mbox{\hyperlink{arducam__mega_8c_aefa123f4ff509360133c96b727243e23}{CONCAT\+\_\+\+BUFF\+\_\+\+LEN}}~30
+\item 
+\#define \mbox{\hyperlink{arducam__mega_8c_a6b20d41d6252e9871430c242cb1a56e7}{BUFFER\+\_\+\+SIZE}}~0xff
+\item 
+\#define \mbox{\hyperlink{arducam__mega_8c_a38ce3824ec7a3243b3b966e64017d50c}{SPI\+\_\+\+DEV}}~spi3
+\item 
+\#define \mbox{\hyperlink{arducam__mega_8c_a368c28e20330d34a53164072eb4e1572}{SPI\+\_\+\+DEV\+\_\+\+NAME}}~DEVICE\+\_\+\+DT\+\_\+\+NAME(DT\+\_\+\+NODELABEL(\mbox{\hyperlink{arducam__mega_8c_a38ce3824ec7a3243b3b966e64017d50c}{SPI\+\_\+\+DEV}}))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{arducam__mega_8c_a68af80fd221df51a874389f1e99b2409}{LOG\+\_\+\+MODULE\+\_\+\+REGISTER}} (\mbox{\hyperlink{arducam__mega_8c_af410eea597f86573114f14171154f29e}{LOG\+\_\+\+MODULE\+\_\+\+NAME}})
+\item 
+uint8\+\_\+t \mbox{\hyperlink{arducam__mega_8c_a1d2567228d2b751e8d188d8939e5c03f}{camera\+\_\+bus\+\_\+read}} (uint8\+\_\+t address)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{arducam__mega_8c_a372fbecef79d5745d1af9430952844f1}{camera\+\_\+read\+\_\+reg}} (uint8\+\_\+t addr)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{arducam__mega_8c_adb9de71615e7f05437ee749cce960c6d}{camera\+\_\+bus\+\_\+write}} (uint8\+\_\+t address, uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{arducam__mega_8c_af06d2bee62cc94708dbc07fcca1d9d81}{camera\+\_\+write\+\_\+reg}} (uint8\+\_\+t addr, uint8\+\_\+t val)
+\item 
+void \mbox{\hyperlink{arducam__mega_8c_aa16ff965c6a533ceeb03e6e1ae56359f}{camera\+\_\+wait\+\_\+idle}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{arducam__mega_8c_aeed773e93f9e72510be8fd4204c6cc50}{camera\+\_\+get\+\_\+bit}} (uint8\+\_\+t addr, uint8\+\_\+t bit)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{arducam__mega_8c_ab956b4af8b7cede870faaa09820d2f0b}{camera\+\_\+read\+\_\+byte}} ()
+\item 
+void \mbox{\hyperlink{arducam__mega_8c_af08f3399aeee51c5886944a57d180c69}{camera\+\_\+save\+\_\+fifo}} (const char \texorpdfstring{$\ast$}{*}base\+\_\+path, uint32\+\_\+t length, char \texorpdfstring{$\ast$}{*}filename)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_accfb274f183d9616092ab4a631bec3e4}{arducam\+\_\+mega\+\_\+capture\+\_\+image}} (\mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\+\_\+\+IMAGE\+\_\+\+MODE}} mode, \mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338}{CAM\+\_\+\+IMAGE\+\_\+\+PIX\+\_\+\+FMT}} pixel\+\_\+format)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a3bda6b901c9105ae54a6de53a56624d4}{arducam\+\_\+mega\+\_\+save\+\_\+image}} (char \texorpdfstring{$\ast$}{*}filename, const char \texorpdfstring{$\ast$}{*}mount\+\_\+point, int image\+\_\+length)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a2df434c9f0b0281436292a6a823cf072}{arducam\+\_\+mega\+\_\+get\+\_\+id}} ()
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a810e03a1d0bca32ef73c377a4c0e7a98}{arducam\+\_\+mega\+\_\+init}} ()
+\item 
+\mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\+\_\+\+IMAGE\+\_\+\+MODE}} \mbox{\hyperlink{arducam__mega_8c_a375e6574eb760872ebd4270bc3fa49ff}{arducam\+\_\+mega\+\_\+get\+\_\+resolution}} (char \texorpdfstring{$\ast$}{*}resolution)
+\item 
+\mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\+\_\+\+SATURATION\+\_\+\+LEVEL}} \mbox{\hyperlink{arducam__mega_8c_af6bc61d9422d08b5a0e9a35dab9abed0}{arducam\+\_\+mega\+\_\+get\+\_\+saturation}} (char \texorpdfstring{$\ast$}{*}saturation)
+\item 
+\mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL}} \mbox{\hyperlink{arducam__mega_8c_a2d4a6c05cd5f5375d2935f251c358296}{arducam\+\_\+mega\+\_\+get\+\_\+brightness}} (char \texorpdfstring{$\ast$}{*}brightness)
+\item 
+\mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\+\_\+\+CONTRAST\+\_\+\+LEVEL}} \mbox{\hyperlink{arducam__mega_8c_a3b78859383cd02ed95264f28a5a5a220}{arducam\+\_\+mega\+\_\+get\+\_\+contrast}} (char \texorpdfstring{$\ast$}{*}contrast)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a85546f6fd3162942cd8bc8c667ffb923}{arducam\+\_\+mega\+\_\+set\+\_\+saturation}} (\mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\+\_\+\+SATURATION\+\_\+\+LEVEL}} saturation)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_ada6888757ce6ec1622b5e63e15ea3549}{arducam\+\_\+mega\+\_\+set\+\_\+autofocus}} (\mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44}{CAM\+\_\+\+AUTO\+\_\+\+FOCUS}} autofocus)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_ae42a1100e5325d586ca8e983228e72c0}{arducam\+\_\+mega\+\_\+set\+\_\+contrast}} (\mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\+\_\+\+CONTRAST\+\_\+\+LEVEL}} contrast)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a3a125c665d94e3d20ddf23f9a271d282}{arducam\+\_\+mega\+\_\+set\+\_\+brightness}} (\mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL}} brightness)
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a1a21bd18527fd94b86a5657e8d742dd6}{arducam\+\_\+mega\+\_\+print\+\_\+info}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{arducam__mega_8c_a87032b71a721976c0e5e569fe008bf1c}{received\+\_\+length}}
+\item 
+struct spi\+\_\+config \mbox{\hyperlink{arducam__mega_8c_a401e92d4e6afa09344209ed0b2f05a57}{spi\+\_\+cfg}}
+\item 
+const struct device \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{arducam__mega_8c_a7c17876783563f7981eb77afa831e3d5}{spi}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{arducam__mega_8c_a6b20d41d6252e9871430c242cb1a56e7}\label{arducam__mega_8c_a6b20d41d6252e9871430c242cb1a56e7} 
+\index{arducam\_mega.c@{arducam\_mega.c}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define BUFFER\+\_\+\+SIZE~0xff}
+
+\Hypertarget{arducam__mega_8c_aefa123f4ff509360133c96b727243e23}\label{arducam__mega_8c_aefa123f4ff509360133c96b727243e23} 
+\index{arducam\_mega.c@{arducam\_mega.c}!CONCAT\_BUFF\_LEN@{CONCAT\_BUFF\_LEN}}
+\index{CONCAT\_BUFF\_LEN@{CONCAT\_BUFF\_LEN}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{CONCAT\_BUFF\_LEN}{CONCAT\_BUFF\_LEN}}
+{\footnotesize\ttfamily \#define CONCAT\+\_\+\+BUFF\+\_\+\+LEN~30}
+
+\Hypertarget{arducam__mega_8c_af410eea597f86573114f14171154f29e}\label{arducam__mega_8c_af410eea597f86573114f14171154f29e} 
+\index{arducam\_mega.c@{arducam\_mega.c}!LOG\_MODULE\_NAME@{LOG\_MODULE\_NAME}}
+\index{LOG\_MODULE\_NAME@{LOG\_MODULE\_NAME}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_MODULE\_NAME}{LOG\_MODULE\_NAME}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+MODULE\+\_\+\+NAME~arducam\+\_\+mega}
+
+\Hypertarget{arducam__mega_8c_ab99ded389af74001a6298fc9e44e74e5}\label{arducam__mega_8c_ab99ded389af74001a6298fc9e44e74e5} 
+\index{arducam\_mega.c@{arducam\_mega.c}!MAX\_PATH@{MAX\_PATH}}
+\index{MAX\_PATH@{MAX\_PATH}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_PATH}{MAX\_PATH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+PATH~51200}
+
+\Hypertarget{arducam__mega_8c_a38ce3824ec7a3243b3b966e64017d50c}\label{arducam__mega_8c_a38ce3824ec7a3243b3b966e64017d50c} 
+\index{arducam\_mega.c@{arducam\_mega.c}!SPI\_DEV@{SPI\_DEV}}
+\index{SPI\_DEV@{SPI\_DEV}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_DEV}{SPI\_DEV}}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+DEV~spi3}
+
+\Hypertarget{arducam__mega_8c_a368c28e20330d34a53164072eb4e1572}\label{arducam__mega_8c_a368c28e20330d34a53164072eb4e1572} 
+\index{arducam\_mega.c@{arducam\_mega.c}!SPI\_DEV\_NAME@{SPI\_DEV\_NAME}}
+\index{SPI\_DEV\_NAME@{SPI\_DEV\_NAME}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_DEV\_NAME}{SPI\_DEV\_NAME}}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+DEV\+\_\+\+NAME~DEVICE\+\_\+\+DT\+\_\+\+NAME(DT\+\_\+\+NODELABEL(\mbox{\hyperlink{arducam__mega_8c_a38ce3824ec7a3243b3b966e64017d50c}{SPI\+\_\+\+DEV}}))}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{arducam__mega_8c_accfb274f183d9616092ab4a631bec3e4}\label{arducam__mega_8c_accfb274f183d9616092ab4a631bec3e4} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_capture\_image@{arducam\_mega\_capture\_image}}
+\index{arducam\_mega\_capture\_image@{arducam\_mega\_capture\_image}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_capture\_image()}{arducam\_mega\_capture\_image()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+capture\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\+\_\+\+IMAGE\+\_\+\+MODE}}}]{mode,  }\item[{\mbox{\hyperlink{arducam__mega_8h_ae9748ceecc6f11421cb46fc489606338}{CAM\+\_\+\+IMAGE\+\_\+\+PIX\+\_\+\+FMT}}}]{pixel\+\_\+format }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a2d4a6c05cd5f5375d2935f251c358296}\label{arducam__mega_8c_a2d4a6c05cd5f5375d2935f251c358296} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_get\_brightness@{arducam\_mega\_get\_brightness}}
+\index{arducam\_mega\_get\_brightness@{arducam\_mega\_get\_brightness}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_get\_brightness()}{arducam\_mega\_get\_brightness()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL}} arducam\+\_\+mega\+\_\+get\+\_\+brightness (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{brightness }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a3b78859383cd02ed95264f28a5a5a220}\label{arducam__mega_8c_a3b78859383cd02ed95264f28a5a5a220} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_get\_contrast@{arducam\_mega\_get\_contrast}}
+\index{arducam\_mega\_get\_contrast@{arducam\_mega\_get\_contrast}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_get\_contrast()}{arducam\_mega\_get\_contrast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\+\_\+\+CONTRAST\+\_\+\+LEVEL}} arducam\+\_\+mega\+\_\+get\+\_\+contrast (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{contrast }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a2df434c9f0b0281436292a6a823cf072}\label{arducam__mega_8c_a2df434c9f0b0281436292a6a823cf072} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_get\_id@{arducam\_mega\_get\_id}}
+\index{arducam\_mega\_get\_id@{arducam\_mega\_get\_id}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_get\_id()}{arducam\_mega\_get\_id()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a375e6574eb760872ebd4270bc3fa49ff}\label{arducam__mega_8c_a375e6574eb760872ebd4270bc3fa49ff} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_get\_resolution@{arducam\_mega\_get\_resolution}}
+\index{arducam\_mega\_get\_resolution@{arducam\_mega\_get\_resolution}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_get\_resolution()}{arducam\_mega\_get\_resolution()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{arducam__mega_8h_aad9c52a28f327c5d815f76befe687015}{CAM\+\_\+\+IMAGE\+\_\+\+MODE}} arducam\+\_\+mega\+\_\+get\+\_\+resolution (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{resolution }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_af6bc61d9422d08b5a0e9a35dab9abed0}\label{arducam__mega_8c_af6bc61d9422d08b5a0e9a35dab9abed0} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_get\_saturation@{arducam\_mega\_get\_saturation}}
+\index{arducam\_mega\_get\_saturation@{arducam\_mega\_get\_saturation}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_get\_saturation()}{arducam\_mega\_get\_saturation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\+\_\+\+SATURATION\+\_\+\+LEVEL}} arducam\+\_\+mega\+\_\+get\+\_\+saturation (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{saturation }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a810e03a1d0bca32ef73c377a4c0e7a98}\label{arducam__mega_8c_a810e03a1d0bca32ef73c377a4c0e7a98} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_init@{arducam\_mega\_init}}
+\index{arducam\_mega\_init@{arducam\_mega\_init}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_init()}{arducam\_mega\_init()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a1a21bd18527fd94b86a5657e8d742dd6}\label{arducam__mega_8c_a1a21bd18527fd94b86a5657e8d742dd6} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_print\_info@{arducam\_mega\_print\_info}}
+\index{arducam\_mega\_print\_info@{arducam\_mega\_print\_info}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_print\_info()}{arducam\_mega\_print\_info()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+print\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a3bda6b901c9105ae54a6de53a56624d4}\label{arducam__mega_8c_a3bda6b901c9105ae54a6de53a56624d4} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_save\_image@{arducam\_mega\_save\_image}}
+\index{arducam\_mega\_save\_image@{arducam\_mega\_save\_image}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_save\_image()}{arducam\_mega\_save\_image()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+save\+\_\+image (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{mount\+\_\+point,  }\item[{int}]{image\+\_\+length }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_ada6888757ce6ec1622b5e63e15ea3549}\label{arducam__mega_8c_ada6888757ce6ec1622b5e63e15ea3549} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_set\_autofocus@{arducam\_mega\_set\_autofocus}}
+\index{arducam\_mega\_set\_autofocus@{arducam\_mega\_set\_autofocus}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_set\_autofocus()}{arducam\_mega\_set\_autofocus()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+set\+\_\+autofocus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{arducam__mega_8h_a3641d9105e4d78a2b9cbcc72ce7a1f44}{CAM\+\_\+\+AUTO\+\_\+\+FOCUS}}}]{autofocus }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a3a125c665d94e3d20ddf23f9a271d282}\label{arducam__mega_8c_a3a125c665d94e3d20ddf23f9a271d282} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_set\_brightness@{arducam\_mega\_set\_brightness}}
+\index{arducam\_mega\_set\_brightness@{arducam\_mega\_set\_brightness}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_set\_brightness()}{arducam\_mega\_set\_brightness()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+set\+\_\+brightness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{arducam__mega_8h_adf950e5ae505c62fabb157a5385c2c71}{CAM\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL}}}]{brightness }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_ae42a1100e5325d586ca8e983228e72c0}\label{arducam__mega_8c_ae42a1100e5325d586ca8e983228e72c0} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_set\_contrast@{arducam\_mega\_set\_contrast}}
+\index{arducam\_mega\_set\_contrast@{arducam\_mega\_set\_contrast}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_set\_contrast()}{arducam\_mega\_set\_contrast()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+set\+\_\+contrast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{arducam__mega_8h_a039dba5eae31265427b4829d0db59231}{CAM\+\_\+\+CONTRAST\+\_\+\+LEVEL}}}]{contrast }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a85546f6fd3162942cd8bc8c667ffb923}\label{arducam__mega_8c_a85546f6fd3162942cd8bc8c667ffb923} 
+\index{arducam\_mega.c@{arducam\_mega.c}!arducam\_mega\_set\_saturation@{arducam\_mega\_set\_saturation}}
+\index{arducam\_mega\_set\_saturation@{arducam\_mega\_set\_saturation}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{arducam\_mega\_set\_saturation()}{arducam\_mega\_set\_saturation()}}
+{\footnotesize\ttfamily int arducam\+\_\+mega\+\_\+set\+\_\+saturation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{arducam__mega_8h_ae0e2fcb3eed1b1c2efa712d3193fb06c}{CAM\+\_\+\+SATURATION\+\_\+\+LEVEL}}}]{saturation }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a1d2567228d2b751e8d188d8939e5c03f}\label{arducam__mega_8c_a1d2567228d2b751e8d188d8939e5c03f} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_bus\_read@{camera\_bus\_read}}
+\index{camera\_bus\_read@{camera\_bus\_read}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_bus\_read()}{camera\_bus\_read()}}
+{\footnotesize\ttfamily uint8\+\_\+t camera\+\_\+bus\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_adb9de71615e7f05437ee749cce960c6d}\label{arducam__mega_8c_adb9de71615e7f05437ee749cce960c6d} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_bus\_write@{camera\_bus\_write}}
+\index{camera\_bus\_write@{camera\_bus\_write}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_bus\_write()}{camera\_bus\_write()}}
+{\footnotesize\ttfamily uint8\+\_\+t camera\+\_\+bus\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_aeed773e93f9e72510be8fd4204c6cc50}\label{arducam__mega_8c_aeed773e93f9e72510be8fd4204c6cc50} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_get\_bit@{camera\_get\_bit}}
+\index{camera\_get\_bit@{camera\_get\_bit}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_get\_bit()}{camera\_get\_bit()}}
+{\footnotesize\ttfamily uint8\+\_\+t camera\+\_\+get\+\_\+bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_ab956b4af8b7cede870faaa09820d2f0b}\label{arducam__mega_8c_ab956b4af8b7cede870faaa09820d2f0b} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_read\_byte@{camera\_read\_byte}}
+\index{camera\_read\_byte@{camera\_read\_byte}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_read\_byte()}{camera\_read\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t camera\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a372fbecef79d5745d1af9430952844f1}\label{arducam__mega_8c_a372fbecef79d5745d1af9430952844f1} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_read\_reg@{camera\_read\_reg}}
+\index{camera\_read\_reg@{camera\_read\_reg}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_read\_reg()}{camera\_read\_reg()}}
+{\footnotesize\ttfamily uint8\+\_\+t camera\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_af08f3399aeee51c5886944a57d180c69}\label{arducam__mega_8c_af08f3399aeee51c5886944a57d180c69} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_save\_fifo@{camera\_save\_fifo}}
+\index{camera\_save\_fifo@{camera\_save\_fifo}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_save\_fifo()}{camera\_save\_fifo()}}
+{\footnotesize\ttfamily void camera\+\_\+save\+\_\+fifo (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{base\+\_\+path,  }\item[{uint32\+\_\+t}]{length,  }\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_aa16ff965c6a533ceeb03e6e1ae56359f}\label{arducam__mega_8c_aa16ff965c6a533ceeb03e6e1ae56359f} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_wait\_idle@{camera\_wait\_idle}}
+\index{camera\_wait\_idle@{camera\_wait\_idle}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_wait\_idle()}{camera\_wait\_idle()}}
+{\footnotesize\ttfamily void camera\+\_\+wait\+\_\+idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_af06d2bee62cc94708dbc07fcca1d9d81}\label{arducam__mega_8c_af06d2bee62cc94708dbc07fcca1d9d81} 
+\index{arducam\_mega.c@{arducam\_mega.c}!camera\_write\_reg@{camera\_write\_reg}}
+\index{camera\_write\_reg@{camera\_write\_reg}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{camera\_write\_reg()}{camera\_write\_reg()}}
+{\footnotesize\ttfamily void camera\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+\Hypertarget{arducam__mega_8c_a68af80fd221df51a874389f1e99b2409}\label{arducam__mega_8c_a68af80fd221df51a874389f1e99b2409} 
+\index{arducam\_mega.c@{arducam\_mega.c}!LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}}
+\index{LOG\_MODULE\_REGISTER@{LOG\_MODULE\_REGISTER}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_MODULE\_REGISTER()}{LOG\_MODULE\_REGISTER()}}
+{\footnotesize\ttfamily LOG\+\_\+\+MODULE\+\_\+\+REGISTER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{arducam__mega_8c_af410eea597f86573114f14171154f29e}{LOG\+\_\+\+MODULE\+\_\+\+NAME}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{arducam__mega_8c_a87032b71a721976c0e5e569fe008bf1c}\label{arducam__mega_8c_a87032b71a721976c0e5e569fe008bf1c} 
+\index{arducam\_mega.c@{arducam\_mega.c}!received\_length@{received\_length}}
+\index{received\_length@{received\_length}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{received\_length}{received\_length}}
+{\footnotesize\ttfamily int received\+\_\+length}
+
+\Hypertarget{arducam__mega_8c_a7c17876783563f7981eb77afa831e3d5}\label{arducam__mega_8c_a7c17876783563f7981eb77afa831e3d5} 
+\index{arducam\_mega.c@{arducam\_mega.c}!spi@{spi}}
+\index{spi@{spi}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{spi}{spi}}
+{\footnotesize\ttfamily const struct device\texorpdfstring{$\ast$}{*} spi}
+
+\Hypertarget{arducam__mega_8c_a401e92d4e6afa09344209ed0b2f05a57}\label{arducam__mega_8c_a401e92d4e6afa09344209ed0b2f05a57} 
+\index{arducam\_mega.c@{arducam\_mega.c}!spi\_cfg@{spi\_cfg}}
+\index{spi\_cfg@{spi\_cfg}!arducam\_mega.c@{arducam\_mega.c}}
+\doxysubsubsection{\texorpdfstring{spi\_cfg}{spi\_cfg}}
+{\footnotesize\ttfamily struct spi\+\_\+config spi\+\_\+cfg}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .frequency\ =\ DT\_PROP(DT\_NODELABEL(\mbox{\hyperlink{arducam__mega_8c_a38ce3824ec7a3243b3b966e64017d50c}{SPI\_DEV}}),\ clock\_frequency),}
+\DoxyCodeLine{\ \ \ \ .operation\ =\ SPI\_HOLD\_ON\_CS\ |\ SPI\_OP\_MODE\_MASTER\ |\ SPI\_TRANSFER\_MSB\ |}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SPI\_WORD\_SET(8)\ |\ SPI\_LINES\_SINGLE,}
+\DoxyCodeLine{\ \ \ \ .cs\ =\ SPI\_CS\_CONTROL\_INIT(DT\_NODELABEL(arducam),\ 0u),}
+\DoxyCodeLine{\ \ \ \ .slave\ =\ 0,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
